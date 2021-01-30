@@ -1,0 +1,125 @@
+uuid: c18e443e-0cd9-4711-a66b-3bfe7d709c95
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.discussion.body
+    - field.field.node.discussion.field_coments
+    - field.field.node.discussion.field_initiative
+    - node.type.discussion
+  module:
+    - comment
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c21b7fd1-fef3-4dc6-8cf9-6c66c043d62c:
+            uuid: c21b7fd1-fef3-4dc6-8cf9-6c66c043d62c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:discussion:links'
+            additional: {  }
+            weight: 0
+          eb6b865b-57dc-4540-988b-e7c512e9bb6b:
+            uuid: eb6b865b-57dc-4540-988b-e7c512e9bb6b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          e7805eae-742b-4b83-9388-94acf1ea00d8:
+            uuid: e7805eae-742b-4b83-9388-94acf1ea00d8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:field_initiative'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
+          5493006b-a382-4160-b66c-360677b1a36b:
+            uuid: 5493006b-a382-4160-b66c-360677b1a36b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:field_coments'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+                type: comment_default
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+id: node.discussion.default
+targetEntityType: node
+bundle: discussion
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_coments:
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_initiative:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

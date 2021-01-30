@@ -1,0 +1,8 @@
+uuid: 9c9eb82e-6a47-428d-8659-5f981e272d68
+langcode: ru
+status: true
+dependencies: {  }
+name: Библиотека
+vid: library
+description: ''
+weight: 0

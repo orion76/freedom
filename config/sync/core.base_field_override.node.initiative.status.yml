@@ -1,0 +1,22 @@
+uuid: ecce4868-1bc3-43df-a929-b0fc0983c57e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.initiative
+id: node.initiative.status
+field_name: status
+entity_type: node
+bundle: initiative
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

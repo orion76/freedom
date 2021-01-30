@@ -1,0 +1,18 @@
+uuid: 287e66b8-c347-4983-b344-be63f85ba035
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.initiative
+id: node.initiative.title
+field_name: title
+entity_type: node
+bundle: initiative
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

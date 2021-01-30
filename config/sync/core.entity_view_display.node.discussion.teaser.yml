@@ -1,0 +1,78 @@
+uuid: 037790af-164f-4413-a38d-36a595b1ee4d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.discussion.body
+    - field.field.node.discussion.field_coments
+    - field.field.node.discussion.field_initiative
+    - node.type.discussion
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4c5d3fd9-5375-4f38-b62f-ff66016646f9:
+            uuid: 4c5d3fd9-5375-4f38-b62f-ff66016646f9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:discussion:links'
+            additional: {  }
+            weight: 0
+          05bbf32b-dc7c-4acd-8c06-142ce6dd1850:
+            uuid: 05bbf32b-dc7c-4acd-8c06-142ce6dd1850
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+id: node.discussion.teaser
+targetEntityType: node
+bundle: discussion
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_coments: true
+  field_initiative: true
+  langcode: true

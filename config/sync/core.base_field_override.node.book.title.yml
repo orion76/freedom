@@ -1,0 +1,18 @@
+uuid: 3c3db06a-f353-4abe-965e-260edb523d92
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.book
+id: node.book.title
+field_name: title
+entity_type: node
+bundle: book
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

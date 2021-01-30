@@ -1,0 +1,138 @@
+uuid: 53c40174-e224-42b1-bd7b-064e0494cec2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.initiative.body
+    - field.field.node.initiative.field_type
+    - node.type.initiative
+    - views.view.initiative_discussions
+    - views.view.initiative_pools
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c5b77458-e816-48b9-aab6-b88e226b8cd2:
+            uuid: c5b77458-e816-48b9-aab6-b88e226b8cd2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:initiative:field_type'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 0
+          0d3b3889-f8aa-469e-8022-57260c3cb08d:
+            uuid: 0d3b3889-f8aa-469e-8022-57260c3cb08d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:initiative:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          052e94a4-710e-4abe-8780-e852dc3d2e02:
+            uuid: 052e94a4-710e-4abe-8780-e852dc3d2e02
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:links'
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components:
+          d6dca62d-2db9-4eb6-9654-2a6fe22dd625:
+            uuid: d6dca62d-2db9-4eb6-9654-2a6fe22dd625
+            region: first
+            configuration:
+              id: 'views_block:initiative_discussions-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          b333e0ab-6d0c-4593-a0a8-769bc3737200:
+            uuid: b333e0ab-6d0c-4593-a0a8-769bc3737200
+            region: second
+            configuration:
+              id: 'views_block:initiative_pools-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+    allow_custom: false
+id: node.initiative.default
+targetEntityType: node
+bundle: initiative
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_type:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

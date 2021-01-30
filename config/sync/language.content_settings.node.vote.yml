@@ -1,0 +1,11 @@
+uuid: c38c1abf-3be9-4333-b6a1-a3e40054e9bf
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.vote
+id: node.vote
+target_entity_type_id: node
+target_bundle: vote
+default_langcode: site_default
+language_alterable: false

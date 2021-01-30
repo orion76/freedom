@@ -1,0 +1,14 @@
+uuid: 583a1677-4097-47bb-9c25-ba99468bf895
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.member_fraction
+  module:
+    - user
+id: user_remove_role_action.member_fraction
+label: 'Удалить роль Член фракции из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_fraction

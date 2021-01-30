@@ -1,0 +1,8 @@
+uuid: d9cf75a4-9d68-4de2-9184-5654730aa19d
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Тип инициативы'
+vid: initiative_type
+description: ''
+weight: 0

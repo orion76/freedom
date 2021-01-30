@@ -1,0 +1,29 @@
+uuid: 14ca074d-043c-4bc5-bdef-e12fa4164ab2
+langcode: ru
+status: true
+dependencies: {  }
+id: member_fraction
+label: 'Член фракции'
+weight: -5
+is_admin: null
+permissions:
+  - 'access polls'
+  - 'create book content'
+  - 'create discussion content'
+  - 'create initiative content'
+  - 'create polls'
+  - 'create terms in initiative_type'
+  - 'create vote content'
+  - 'edit own book content'
+  - 'edit own discussion content'
+  - 'edit own initiative content'
+  - 'edit own polls'
+  - 'edit own vote content'
+  - 'use text format full_html'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view discussion revisions'
+  - 'view initiative revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view vote revisions'

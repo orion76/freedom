@@ -1,0 +1,22 @@
+uuid: 4f65170d-7534-4ab9-a874-72cfdbdb4db6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.initiative
+id: node.initiative.promote
+field_name: promote
+entity_type: node
+bundle: initiative
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,9 @@
+uuid: dfabf355-6d4f-489c-8b2e-108e86990f9a
+langcode: ru
+status: true
+dependencies: {  }
+id: member_party
+label: 'Член партии'
+weight: -6
+is_admin: null
+permissions: {  }

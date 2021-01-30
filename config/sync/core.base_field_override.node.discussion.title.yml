@@ -1,0 +1,18 @@
+uuid: b8848c10-1e55-404a-99ee-c6e213c1ddb2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.discussion
+id: node.discussion.title
+field_name: title
+entity_type: node
+bundle: discussion
+label: Тема
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

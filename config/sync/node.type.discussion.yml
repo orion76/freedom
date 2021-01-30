@@ -1,0 +1,18 @@
+uuid: b805fb9e-49ba-4d32-abc6-e82d97d5872d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Обсуждение
+type: discussion
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

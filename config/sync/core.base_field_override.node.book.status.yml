@@ -1,0 +1,22 @@
+uuid: 1318bd34-e577-4449-aac8-dbe43db50bdf
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.book
+id: node.book.status
+field_name: status
+entity_type: node
+bundle: book
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

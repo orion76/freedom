@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: radix_sub_footer
 theme: radix_sub
-region: navbar_branding
-weight: -4
+region: footer
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

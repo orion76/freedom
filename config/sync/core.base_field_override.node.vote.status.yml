@@ -1,0 +1,22 @@
+uuid: b4863efc-9403-4bc1-8952-e38495238f69
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.vote
+id: node.vote.status
+field_name: status
+entity_type: node
+bundle: vote
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

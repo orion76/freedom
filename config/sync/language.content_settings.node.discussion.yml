@@ -1,0 +1,11 @@
+uuid: e0bdaa98-f4cd-4cf2-a49e-4d40d17dcb24
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.discussion
+id: node.discussion
+target_entity_type_id: node
+target_bundle: discussion
+default_langcode: site_default
+language_alterable: false

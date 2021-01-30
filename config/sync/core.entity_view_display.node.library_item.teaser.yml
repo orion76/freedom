@@ -1,0 +1,47 @@
+uuid: 175a8fca-16d5-4762-b9f4-736c36243e5e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.library_item.body
+    - field.field.node.library_item.field_link
+    - field.field.node.library_item.field_section
+    - node.type.library_item
+  module:
+    - link
+    - text
+    - user
+id: node.library_item.teaser
+targetEntityType: node
+bundle: library_item
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_link:
+    type: link
+    weight: 1
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_section: true
+  langcode: true

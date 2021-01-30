@@ -1,0 +1,18 @@
+uuid: b9a2bd7e-a008-40d2-affb-cf642c163a9a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Видео
+type: video
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

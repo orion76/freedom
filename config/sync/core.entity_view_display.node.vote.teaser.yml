@@ -1,0 +1,78 @@
+uuid: 86c520ec-48d1-4873-aeb0-00d900ea55ab
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vote.body
+    - field.field.node.vote.field_poll
+    - field.field.node.vote.field_target
+    - node.type.vote
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          066e9a8c-cee6-40a5-854b-9379090606b2:
+            uuid: 066e9a8c-cee6-40a5-854b-9379090606b2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:vote:links'
+            additional: {  }
+            weight: 0
+          dde92e26-f003-4508-901c-ce6e473593e8:
+            uuid: dde92e26-f003-4508-901c-ce6e473593e8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:vote:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+id: node.vote.teaser
+targetEntityType: node
+bundle: vote
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_poll: true
+  field_target: true
+  langcode: true

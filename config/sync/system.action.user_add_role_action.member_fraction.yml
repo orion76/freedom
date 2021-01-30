@@ -1,0 +1,14 @@
+uuid: b93f5e12-9812-4935-b167-c42f36abc676
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.member_fraction
+  module:
+    - user
+id: user_add_role_action.member_fraction
+label: 'Добавьте роль Член фракции выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_fraction

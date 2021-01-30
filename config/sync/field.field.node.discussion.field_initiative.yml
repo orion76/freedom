@@ -1,0 +1,28 @@
+uuid: edbddbf1-94ca-418e-b824-6a276157b13b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_initiative
+    - node.type.discussion
+    - node.type.initiative
+id: node.discussion.field_initiative
+field_name: field_initiative
+entity_type: node
+bundle: discussion
+label: Инициатива
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      initiative: initiative
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

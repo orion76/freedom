@@ -1,0 +1,28 @@
+uuid: 12c6359b-290c-4e18-9774-b7b1f691bc4b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target
+    - node.type.initiative
+    - node.type.vote
+id: node.vote.field_target
+field_name: field_target
+entity_type: node
+bundle: vote
+label: Инициатива
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      initiative: initiative
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

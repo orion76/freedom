@@ -1,0 +1,22 @@
+uuid: 87229bfa-65b7-4bcc-977c-06076372cc65
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.discussion
+id: node.discussion.status
+field_name: status
+entity_type: node
+bundle: discussion
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

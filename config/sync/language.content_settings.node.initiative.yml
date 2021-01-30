@@ -1,0 +1,11 @@
+uuid: b68e2837-6157-4208-bb9d-8ee5ef83a5f3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.initiative
+id: node.initiative
+target_entity_type_id: node
+target_bundle: initiative
+default_langcode: site_default
+language_alterable: false

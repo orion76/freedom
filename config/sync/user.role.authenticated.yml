@@ -5,15 +5,25 @@ dependencies: {  }
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
-label: 'Authenticated user'
-weight: 1
+label: 'Аутентифицированный пользователь'
+weight: -9
 is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access printer-friendly version'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'change own username'
+  - 'create article content'
+  - 'create page content'
+  - 'edit own article content'
+  - 'edit own page content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view book revisions'
+  - 'view media'
+  - 'view own unpublished media'

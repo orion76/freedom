@@ -1,0 +1,14 @@
+uuid: 202eea06-c73b-4742-af07-81f833d389be
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.member_party
+  module:
+    - user
+id: user_remove_role_action.member_party
+label: 'Удалить роль Член партии из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_party
