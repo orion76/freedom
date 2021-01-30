@@ -1,0 +1,22 @@
+uuid: ba398047-5467-4d75-a43e-3b9d8eac7896
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix_sub
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: radix_sub_content
+theme: radix_sub
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  provider: system
+  label_display: '0'
+visibility: {  }

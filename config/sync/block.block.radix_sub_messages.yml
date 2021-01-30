@@ -1,0 +1,22 @@
+uuid: d3cde0e6-4b77-479c-81ef-eb995ac537f9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix_sub
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: radix_sub_messages
+theme: radix_sub
+region: navbar_branding
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Системные сообщения'
+  provider: system
+  label_display: '0'
+visibility: {  }

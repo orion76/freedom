@@ -1,0 +1,19 @@
+.views-exposed-form {
+  .form-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #dedede;
+    
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .button {
+        height: fit-content;
+      }
+    }  
+  }
+}
+.ff{}
