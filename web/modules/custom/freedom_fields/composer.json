@@ -1,0 +1,13 @@
+{
+    "name": "freedom_fields",
+    "type": "drupal-module",
+    "description": "Fields plugins",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/freedom_fields",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/freedom_fields",
+        "source": "http://cgit.drupalcode.org/freedom_fields"
+    }
+}

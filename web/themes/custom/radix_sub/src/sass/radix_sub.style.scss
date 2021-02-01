@@ -45,6 +45,7 @@
 
 // Layout
 // -----------------------------------------------------------------------------
+@import "layout/page";
 @import "layout/page.header";
 @import "layout/page.content";
 @import "layout/page.footer";
@@ -60,6 +61,7 @@
 @import "block/block";
 @import "content/node.page";
 @import "content/node.article";
+@import "comment/comment";
 
 
 .js td .dropbutton-widget {

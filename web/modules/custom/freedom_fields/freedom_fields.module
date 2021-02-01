@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains freedom_fields.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function freedom_fields_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the freedom_fields module.
+    case 'help.page.freedom_fields':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Fields plugins') . '</p>';
+      return $output;
+
+    default:
+  }
+}

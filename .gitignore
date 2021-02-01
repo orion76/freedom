@@ -23,9 +23,12 @@
 # Ignore testing related files
 /web/sites/simpletest
 
+/vendor
+/web/themes/contrib
+/web/modiles/contrib
+/web/themes/custom/*/assets
 # Ignore drupal core (if not versioning drupal sources)
 /web/core
-/web/vendor
 /web/modules/README.txt
 /web/profiles/README.txt
 /web/themes/README.txt

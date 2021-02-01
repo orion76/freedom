@@ -1,0 +1,5 @@
+name: 'freedom_views'
+type: module
+description: 'Views utils'
+core: 8.x
+package: 'Custom'

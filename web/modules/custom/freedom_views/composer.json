@@ -1,0 +1,13 @@
+{
+    "name": "freedom_views",
+    "type": "drupal-module",
+    "description": "Views utils",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/freedom_views",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/freedom_views",
+        "source": "http://cgit.drupalcode.org/freedom_views"
+    }
+}

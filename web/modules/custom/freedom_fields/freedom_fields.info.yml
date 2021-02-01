@@ -1,0 +1,5 @@
+name: 'freedom_fields'
+type: module
+description: 'Fields plugins'
+core: 8.x
+package: 'Custom'
