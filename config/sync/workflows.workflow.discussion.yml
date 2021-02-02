@@ -1,0 +1,53 @@
+uuid: 9f2b82be-8dd0-42e1-a7f3-5c5b553d1417
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.discussion
+  module:
+    - content_moderation
+id: discussion
+label: Обсуждение
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      published: false
+      default_revision: false
+      label: Запланировано
+      weight: 0
+    finished:
+      published: false
+      default_revision: false
+      label: Окончено
+      weight: 2
+    published:
+      published: true
+      default_revision: true
+      label: Начато
+      weight: 1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    finished:
+      label: Окончено
+      from:
+        - published
+      to: finished
+      weight: 2
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - discussion
+  default_moderation_state: draft

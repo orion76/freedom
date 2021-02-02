@@ -14,34 +14,22 @@ use Drupal\views\Plugin\views\filter\FilterPluginBase;
  */
 class DateRangeEvent extends FilterPluginBase {
 
-    public function operators() {
-        return [
-            'is' => [
-                'title' => $this->t('The event is'),
-                'method' => 'opStateIs',
-                'short' => $this->t('Is'),
-                'values' => 1,
-            ],
-        ];
-    }
 
     /**
      * The form that is show (including the exposed form).
      */
     protected function valueForm(&$form, FormStateInterface $form_state) {
         $form['value'] = [
-            '#tree' => TRUE,
-            'state' => [
-                '#type' => 'select',
-                '#title' => $this->t('Event status'),
-                '#options' => [
-                    'all' => $this->t('All'),
-                    'expected' => $this->t('Expected'),
-                    'started' => $this->t('Started'),
-                    'finished' => $this->t('Finished'),
-                ],
-                '#default_value' => !empty($this->value['state']) ? $this->value['state'] : 'all',
+
+            '#type' => 'select',
+            '#title' => $this->t('Event status'),
+            '#options' => [
+                'expected' => $this->t('Expected'),
+                'started' => $this->t('Started'),
+                'finished' => $this->t('Finished'),
             ],
+            '#default_value' => !empty($this->value) ? $this->value : NULL,
+      
         ];
     }
 
@@ -50,9 +38,9 @@ class DateRangeEvent extends FilterPluginBase {
      * these clauses applied. If the filter is optional, and nothing is selected, this
      * code will never be called.
      */
-    public function opStateIs() {
+    public function query() {
         $this->ensureMyTable();
-        $field_alias = substr("{$this->tableAlias}.{$this->realField}",0,-6);
+        $field_alias = substr("{$this->tableAlias}.{$this->realField}", 0, -6);
         $start_field_name = "{$field_alias}_value";
         $end_field_name = "{$field_alias}_end_value";
 
@@ -61,7 +49,7 @@ class DateRangeEvent extends FilterPluginBase {
         $date_end = $this->query->getDateFormat($this->query->getDateField($end_field_name, TRUE), 'Y-m-d H:i:s', FALSE);
         $date_now = $this->query->getDateFormat('FROM_UNIXTIME(***CURRENT_TIME***)', 'Y-m-d H:i:s', FALSE);
 
-        switch ($this->value['state']) {
+        switch ($this->value[0]) {
             case 'expected':
                 $this->query->addWhereExpression($this->options['group'], "$date_now < $date_start");
                 break;

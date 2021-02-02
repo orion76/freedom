@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.discussion.body
     - field.field.node.discussion.field_coments
+    - field.field.node.discussion.field_date_range
     - field.field.node.discussion.field_initiative
     - node.type.discussion
   module:
     - comment
+    - datetime_range
     - field_layout
     - layout_builder
     - layout_discovery
@@ -22,39 +24,36 @@ third_party_settings:
       label: ''
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          c21b7fd1-fef3-4dc6-8cf9-6c66c043d62c:
-            uuid: c21b7fd1-fef3-4dc6-8cf9-6c66c043d62c
+          acfa39dd-4220-4dc0-a20f-5347fa08cced:
+            uuid: acfa39dd-4220-4dc0-a20f-5347fa08cced
             region: content
             configuration:
+              id: 'field_block:node:discussion:field_date_range'
+              label: Время
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: inline
+                type: daterange_custom
+                settings:
+                  timezone_override: ''
+                  date_format: 'Y-m-d H:i:s'
+                  separator: '-'
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:discussion:links'
+                view_mode: view_mode
             additional: {  }
             weight: 0
-          eb6b865b-57dc-4540-988b-e7c512e9bb6b:
-            uuid: eb6b865b-57dc-4540-988b-e7c512e9bb6b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:discussion:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-          e7805eae-742b-4b83-9388-94acf1ea00d8:
-            uuid: e7805eae-742b-4b83-9388-94acf1ea00d8
+          677cec27-1b06-4d52-be9c-3d225f5ad5ac:
+            uuid: 677cec27-1b06-4d52-be9c-3d225f5ad5ac
             region: content
             configuration:
               label_display: '0'
@@ -68,9 +67,34 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_label
             additional: {  }
+            weight: 1
+          e075b795-300d-4887-b219-b6b3d0924da7:
+            uuid: e075b795-300d-4887-b219-b6b3d0924da7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
             weight: 2
-          5493006b-a382-4160-b66c-360677b1a36b:
-            uuid: 5493006b-a382-4160-b66c-360677b1a36b
+          10b68fcd-e272-4487-a3fb-c87226a64300:
+            uuid: 10b68fcd-e272-4487-a3fb-c87226a64300
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:discussion:links'
+            additional: {  }
+            weight: 3
+          eeec6f5b-7287-4d5c-abd4-69ffc18dc321:
+            uuid: eeec6f5b-7287-4d5c-abd4-69ffc18dc321
             region: content
             configuration:
               label_display: '0'
@@ -85,7 +109,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: comment_default
             additional: {  }
-            weight: 3
+            weight: 4
         third_party_settings: {  }
 id: node.discussion.default
 targetEntityType: node
@@ -95,12 +119,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_coments:
-    weight: 103
+    weight: 4
     label: above
     settings:
       view_mode: default
@@ -108,8 +132,18 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_date_range:
+    weight: 0
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
   field_initiative:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link: true
@@ -117,9 +151,9 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

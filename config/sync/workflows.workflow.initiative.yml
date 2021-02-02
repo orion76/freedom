@@ -1,0 +1,96 @@
+uuid: 31d4c3c2-7542-4563-9064-9b86c2966424
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.initiative
+  module:
+    - content_moderation
+id: initiative
+label: Инициатива
+type: content_moderation
+type_settings:
+  states:
+    accepted:
+      published: false
+      default_revision: false
+      label: Принята
+      weight: 4
+    discussion:
+      published: false
+      default_revision: false
+      label: Обсуждение
+      weight: 2
+    draft:
+      published: false
+      default_revision: false
+      label: 'В разработке'
+      weight: 0
+    not_accepted:
+      published: false
+      default_revision: false
+      label: 'Не принята'
+      weight: 5
+    postponed:
+      published: false
+      default_revision: false
+      label: Отложена
+      weight: 6
+    published:
+      published: true
+      default_revision: true
+      label: Опубликована
+      weight: 1
+    vote:
+      published: false
+      default_revision: false
+      label: Голосование
+      weight: 3
+  transitions:
+    accepted:
+      label: Принята
+      from:
+        - vote
+      to: accepted
+      weight: 4
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - accepted
+        - discussion
+        - draft
+        - not_accepted
+        - postponed
+        - published
+        - vote
+    not_accepted:
+      label: 'Не принята'
+      from:
+        - vote
+      to: not_accepted
+      weight: 5
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    to_discussion:
+      label: 'К обсуждению'
+      from:
+        - published
+      to: discussion
+      weight: 2
+    to_vote:
+      label: 'К голосованию'
+      from:
+        - discussion
+      to: vote
+      weight: 3
+  entity_types:
+    node:
+      - initiative
+  default_moderation_state: draft

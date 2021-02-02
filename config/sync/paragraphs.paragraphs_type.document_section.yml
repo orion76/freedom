@@ -1,0 +1,10 @@
+uuid: e09f794d-e46f-43d1-9a9f-e69c878cdd9f
+langcode: ru
+status: true
+dependencies: {  }
+id: document_section
+label: 'Document section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

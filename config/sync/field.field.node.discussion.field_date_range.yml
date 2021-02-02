@@ -1,0 +1,26 @@
+uuid: 6bbf79d4-2b2f-4eed-a07b-df56b774c38a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - node.type.discussion
+  module:
+    - datetime_range
+id: node.discussion.field_date_range
+field_name: field_date_range
+entity_type: node
+bundle: discussion
+label: Время
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: relative
+    default_end_date: '+3 day'
+default_value_callback: ''
+settings: {  }
+field_type: daterange

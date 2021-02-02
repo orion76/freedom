@@ -1,0 +1,18 @@
+uuid: 944688a8-4b62-4b2c-9613-2ca9e9f9c5e6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.vote
+id: node.vote.title
+field_name: title
+entity_type: node
+bundle: vote
+label: Тема
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

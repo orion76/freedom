@@ -1,0 +1,21 @@
+uuid: 92adc0f4-f305-43d1-8a77-22b2cd1a2c9e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_result
+    - node.type.vote
+  module:
+    - options
+id: node.vote.field_result
+field_name: field_result
+entity_type: node
+bundle: vote
+label: Результат
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

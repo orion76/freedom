@@ -1,0 +1,34 @@
+uuid: 6be27ee8-1e9e-4912-af45-d718efb1198e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document_section.field_content
+    - paragraphs.paragraphs_type.document_section
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.document_section.default
+targetEntityType: paragraph
+bundle: document_section
+mode: default
+content:
+  field_content:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+hidden:
+  created: true
+  status: true

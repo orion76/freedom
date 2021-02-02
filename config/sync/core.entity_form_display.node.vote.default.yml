@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.vote.body
+    - field.field.node.vote.field_date_range
     - field.field.node.vote.field_poll
+    - field.field.node.vote.field_result
     - field.field.node.vote.field_target
     - node.type.vote
   module:
+    - content_moderation
+    - datetime_range
     - field_group
     - field_layout
     - inline_entity_form
@@ -19,6 +23,7 @@ third_party_settings:
     group_tabs:
       children:
         - group_main
+        - group_vote
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -32,7 +37,8 @@ third_party_settings:
       children:
         - title
         - field_target
-        - field_poll
+        - field_date_range
+        - field_result
         - body
       parent_name: group_tabs
       weight: 11
@@ -45,6 +51,20 @@ third_party_settings:
         formatter: open
         required_fields: true
       label: Main
+    group_vote:
+      children:
+        - field_poll
+      parent_name: group_tabs
+      weight: 12
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Голосование
   field_layout:
     id: layout_onecol
     settings:
@@ -56,7 +76,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 6
     settings:
       rows: 9
       summary_rows: 3
@@ -70,8 +90,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_poll:
+  field_date_range:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_poll:
+    weight: 4
     settings:
       form_mode: default
       revision: true
@@ -82,6 +108,12 @@ content:
       collapsed: false
     third_party_settings: {  }
     type: inline_entity_form_simple
+    region: content
+  field_result:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_target:
     weight: 2
@@ -99,6 +131,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

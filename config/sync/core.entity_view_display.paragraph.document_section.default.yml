@@ -1,0 +1,22 @@
+uuid: 803ebc80-f4e7-4e04-9133-0b36a9cec875
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document_section.field_content
+    - paragraphs.paragraphs_type.document_section
+  module:
+    - text
+id: paragraph.document_section.default
+targetEntityType: paragraph
+bundle: document_section
+mode: default
+content:
+  field_content:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

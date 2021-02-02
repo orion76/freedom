@@ -1,0 +1,14 @@
+uuid: af4039a5-e412-44e9-86d3-2096c4258996
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - views_bulk_edit
+_core:
+  default_config_hash: 0vLpSGhoYOPeREkfW-7bDeJOwEfW3zeG3nUBwUgsKQI
+id: node_edit_action
+label: 'Редактировать содержимое'
+type: node
+plugin: 'entity:edit_action:node'
+configuration: {  }

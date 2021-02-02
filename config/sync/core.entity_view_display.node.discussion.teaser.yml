@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.discussion.body
     - field.field.node.discussion.field_coments
+    - field.field.node.discussion.field_date_range
     - field.field.node.discussion.field_initiative
     - node.type.discussion
   module:
@@ -74,5 +75,6 @@ content:
     region: content
 hidden:
   field_coments: true
+  field_date_range: true
   field_initiative: true
   langcode: true

@@ -34,33 +34,39 @@ third_party_settings:
             uuid: e53b9458-7484-4fde-bacf-f4da460879fc
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:article:field_image'
+              label: Изображение
+              provider: layout_builder
+              label_display: '0'
               formatter:
+                label: hidden
                 type: image
                 settings:
                   image_style: medium
                   image_link: content
                 third_party_settings: {  }
-                label: hidden
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
           7d18eb3b-4a8c-4c39-952e-6ac62faea97e:
             uuid: 7d18eb3b-4a8c-4c39-952e-6ac62faea97e
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:article:body'
+              label: Содержимое
+              provider: layout_builder
+              label_display: '0'
               formatter:
+                label: hidden
                 type: text_summary_or_trimmed
                 settings:
-                  trim_length: 600
+                  trim_length: 200
                 third_party_settings: {  }
-                label: hidden
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 1
           a3313d3a-da93-40f9-9c2c-a845ee51cda5:

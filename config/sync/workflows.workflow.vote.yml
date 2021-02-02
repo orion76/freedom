@@ -1,0 +1,49 @@
+uuid: 126b9cf3-036e-4fab-8ce3-a5e4af9bd5b2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: vote
+label: Голосование
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      published: false
+      default_revision: false
+      label: Запланировано
+      weight: 0
+    finished:
+      published: false
+      default_revision: false
+      label: Окончено
+      weight: 2
+    published:
+      published: true
+      default_revision: true
+      label: Начато
+      weight: 1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    finished:
+      label: Окончено
+      from:
+        - published
+      to: finished
+      weight: 2
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types: {  }
+  default_moderation_state: draft

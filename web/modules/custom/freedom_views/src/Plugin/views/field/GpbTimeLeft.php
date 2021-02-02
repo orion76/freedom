@@ -28,15 +28,6 @@ class GpbTimeLeft extends FieldPluginBase {
     public function query() {
         $this->ensureMyTable();
         $range_field = $this->options['range_field'];
-        $column = $range_field;
-        switch ($this->options['to_date']) {
-            case 'start':
-                $column .= '_value';
-                break;
-            case 'end':
-                $column .= '_end_value';
-                break;
-        }
         $table = $this->table;
         $field_table = $table . '__' . $range_field;
 
@@ -44,7 +35,7 @@ class GpbTimeLeft extends FieldPluginBase {
         $configuration = [
             'table' => $field_table,
             'field' => 'entity_id',
-            'left_table' => $table,
+            'left_table' => 'node_field_data',
             'left_field' => 'nid',
             'type' => 'INNER',
         ];
@@ -52,10 +43,14 @@ class GpbTimeLeft extends FieldPluginBase {
         $join = Views::pluginManager('join')->createInstance('standard', $configuration);
         $this->query->addRelationship($field_table, $join, $table);
 
-        $alias = $field_table . "." . $column;
+        $field_start_alias = "{$field_table}.{$range_field}_value";
+        $field_end_alias = "{$field_table}.{$range_field}_end_value";
 
-        $expression = "TIMESTAMPDIFF(MINUTE,NOW(),{$alias})";
-        $this->field_alias = $this->query->addField(NULL, $expression, 'time_left_field');
+        $expression_start = "TIMESTAMPDIFF(MINUTE,NOW(),{$field_start_alias})";
+        $expression_end = "TIMESTAMPDIFF(MINUTE,NOW(),{$field_end_alias})";
+
+        $this->aliases['event_start'] = $this->query->addField(NULL, $expression_start, 'event_start');
+        $this->aliases['event_end'] = $this->query->addField(NULL, $expression_end, 'event_end');
     }
 
     /**
@@ -64,8 +59,6 @@ class GpbTimeLeft extends FieldPluginBase {
     protected function defineOptions() {
         $options = parent::defineOptions();
         $options['range_field'] = ['default' => NULL];
-        $options['to_date'] = ['default' => NULL];
-
         return $options;
     }
 
@@ -81,13 +74,6 @@ class GpbTimeLeft extends FieldPluginBase {
             '#options' => $this->getFieldsListOptions(),
             '#default_value' => $this->options['range_field'],
         ];
-        $form['to_date'] = [
-            '#type' => 'select',
-            '#title' => $this->t('To date'),
-            '#required' => TRUE,
-            '#options' => $this->getColumnAliasListOptions(),
-            '#default_value' => $this->options['to_date'],
-        ];
 
         parent::buildOptionsForm($form, $form_state);
     }
@@ -97,15 +83,23 @@ class GpbTimeLeft extends FieldPluginBase {
      */
     public function render(ResultRow $values) {
 
-        $value = $this->getValue($values);
+        $event_start = $this->getValue($values, 'event_start');
+        $event_end = $this->getValue($values, 'event_end');
+        $value = NULL;
 
-
-        if ($value >= 0) {
-            $label = $this->t('Time left');
+        if ($event_start >= 0) {
+            $label = $this->t('Expected');
+            $value = $event_start;
         } else {
-            $label = $this->t('Time passed');
-            $value *= -1;
+            if ($event_end < 0) {
+                $label = $this->t('Finished');
+                $event_end *= -1;
+            } else {
+                $label = $this->t('Started');
+            }
+            $value = $event_end;
         }
+
         $label .= ":";
         $result = [$label];
         $title_map = [
@@ -161,14 +155,4 @@ class GpbTimeLeft extends FieldPluginBase {
         return $options;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getColumnAliasListOptions() {
-        $options = [
-            'start' => $this->t('Start'),
-            'end' => $this->t('End'),
-        ];
-        return $options;
-    }
 }
