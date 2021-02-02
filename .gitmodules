@@ -1,0 +1,3 @@
+[submodule "telegram"]
+	path = web/modules/contrib/telegram
+	url = https://git.drupalcode.org/project/telegram
