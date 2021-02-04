@@ -1,0 +1,13 @@
+{
+    "name": "social_auth_telegram",
+    "type": "drupal-module",
+    "description": "Social auth Telegram",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/social_auth_telegram",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/social_auth_telegram",
+        "source": "http://cgit.drupalcode.org/social_auth_telegram"
+    }
+}

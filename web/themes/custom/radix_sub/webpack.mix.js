@@ -8,6 +8,7 @@
  |
  */
 const proxy = 'http://freedom.ti-work.ru';
+const host = 'freedom.ti-work.ru';
 const mix = require('laravel-mix');
 const { exec } = require("child_process");
 /*
@@ -34,6 +35,7 @@ if (!mix.inProduction()) {
  */
 mix.browserSync({
     proxy: proxy,
+    // host:host,
     files: [ 
         'assets/js/**/*.js',
         'assets/css/**/*.css',

@@ -1,0 +1,5 @@
+social_auth_telegram:
+  version: VERSION
+  js:
+    js/social-auth-telegram.js: {}
+

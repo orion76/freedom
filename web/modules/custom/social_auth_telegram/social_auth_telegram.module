@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains social_auth_telegram.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function social_auth_telegram_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        // Main module help for the social_auth_telegram module.
+        case 'help.page.social_auth_telegram':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Sicial auth Telegram') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function social_auth_telegram_theme() {
+    return [
+        'inline_js' => [
+            'variables' => ['content' => NULL],
+        ],
+    ];
+}
+
+function social_auth_telegram_block_view_alter(array &$build, Drupal\Core\Block\BlockPluginInterface $block) {
+    if ($block->getBaseId() === 'social_auth_login') {
+        $build['#pre_render'][] = '_social_auth_telegram__social_auth_block_pre_render';
+    }
+
+}
+
+function _social_auth_telegram__social_auth_block_pre_render(array $build) {
+    $config = \Drupal::config('social_auth_telegram.settings');
+
+    $build['content'] = [
+        'social_auth_links' => $build['content'],
+        'telegram_button' => [
+            '#theme' => 'inline_js',
+            '#content' => $config->get('widget_code'),
+        ],
+    ];
+//    $build['#attached']['library'][] = 'social_auth_telegram/social_auth_telegram';
+    return $build;
+}

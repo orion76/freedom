@@ -12,9 +12,23 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+      {
+        "type": "package",
+        "package": {
+          "name": "drupal/social_auth_vk",
+          "version": "3.0",
+          "type": "drupal-module",
+          "source": {
+            "url": "https://git.drupalcode.org/project/social_auth_vk.git",
+            "type": "git",
+            "reference": "3.x"
+          }
         }
+      }
     ],
     "require": {
+        "ext-dom": "*",
         "composer/installers": "^1.2",
         "drupal/admin_toolbar": "^2.4",
         "drupal/adminimal_theme": "^1.6",
@@ -24,13 +38,16 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/fancy_login": "^3.0",
         "drupal/field_group": "^3.1",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/paragraphs": "^1.12",
         "drupal/poll": "^1.4",
         "drupal/prepopulate": "^2.3",
         "drupal/radix": "^4.10",
+        "drupal/simple_popup_blocks": "^2.6",
         "drupal/smtp": "^1.0",
+        "drupal/social_auth_vk": "^3.0",
         "drupal/telegram": "1.0.x-dev",
         "drupal/token_filter": "^1.2",
         "drupal/views_add_button": "^1.6",

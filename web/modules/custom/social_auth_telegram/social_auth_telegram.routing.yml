@@ -1,0 +1,18 @@
+
+social_auth_telegram.callback:
+  path: 'user/login/telegram/callback'
+  defaults:
+    _controller: '\Drupal\social_auth_telegram\Controller\TelegramAuthController::callback'
+  requirements:
+    # Anonymous users can log in, but authenticated users can also associate a new provider.
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE
+
+social_auth_telegram.settings_form:
+  path: 'admin/config/social-api/social-auth/telegram'
+  defaults:
+    _title: 'Telegram'
+    _form: '\Drupal\social_auth_telegram\Form\TelegramAuthSettingsForm'
+  requirements:
+    _permission: 'administer social api authentication'

@@ -65,5 +65,42 @@
 
 
 .js td .dropbutton-widget {
-  position: relative; 
+  position: relative;
+}
+
+.page--front {
+  .page__header {
+    .container {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.page__header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .block--radix-sub-breadcrumbs {
+      width: 50%;
+    }
+
+    .navbar-bottom {
+      display: flex;
+
+      overflow: visible;
+
+    }
+
+  }
+}
+
+
+.block--socialauthlogin {
+  display: flex;
+
+  .social-auth {
+    display: block;
+    border-radius: 2rem;
+  }
 }

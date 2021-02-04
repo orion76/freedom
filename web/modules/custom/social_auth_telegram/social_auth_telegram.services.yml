@@ -1,0 +1,15 @@
+services:
+  social_auth_telegram.manager:
+    class: Drupal\social_auth_telegram\TelegramAuthManager
+    arguments:
+      - '@config.factory'
+      - '@logger.factory'
+      - '@request_stack'
+  logger.channel.social_auth_telegram:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: [ 'social_auth_telegram' ]
+  social_auth_telegram.config:
+    class: Drupal\Core\Config\Config
+    factory: config.factory:getEditable
+    arguments: ['social_auth_telegram.settings']

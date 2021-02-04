@@ -4,7 +4,7 @@
  * Template for the main page.
  */
 #}
-<div class="page">
+<div {{ attributes }}>
     {% embed '@radix/navbar/navbar.twig' with {
         placement: 'sticky-top',
         container: 'fixed',
@@ -33,11 +33,20 @@
         {% endblock %}
     {% endembed %}
 
-    <main class="pt-5 pb-5">
+    <main class="pt-3 pb-3">
         {% if page.header %}
             <header class="page__header mb-3">
                 <div class="container">
                     {{ page.header }}
+
+                    {% block navbar_bottom %}
+                        {% if page.navbar_bottom %}
+                            <div class="navbar-bottom">
+                                {{ page.navbar_bottom }}
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+
                 </div>
             </header>
         {% endif %}

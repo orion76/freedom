@@ -1,0 +1,5 @@
+name: 'social_auth_telegram'
+type: module
+description: 'Sicial auth Telegram'
+core: 8.x
+package: 'Social'
