@@ -330,7 +330,7 @@ display:
         type: normal
         title: Голосования
         menu_name: main
-        weight: -47
+        weight: -46
     cache_metadata:
       max-age: -1
       contexts:

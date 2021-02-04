@@ -14,7 +14,6 @@ dependencies:
     - field_layout
     - image
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -23,69 +22,8 @@ third_party_settings:
     settings:
       label: ''
   layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          e53b9458-7484-4fde-bacf-f4da460879fc:
-            uuid: e53b9458-7484-4fde-bacf-f4da460879fc
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_image'
-              label: Изображение
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: medium
-                  image_link: content
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          7d18eb3b-4a8c-4c39-952e-6ac62faea97e:
-            uuid: 7d18eb3b-4a8c-4c39-952e-6ac62faea97e
-            region: content
-            configuration:
-              id: 'field_block:node:article:body'
-              label: Содержимое
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 200
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
-          a3313d3a-da93-40f9-9c2c-a845ee51cda5:
-            uuid: a3313d3a-da93-40f9-9c2c-a845ee51cda5
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:article:field_tags'
-              formatter:
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-                label: above
-            additional: {  }
-            weight: 2
-        third_party_settings: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
 id: node.article.teaser
@@ -98,7 +36,7 @@ content:
     weight: 1
     region: content
     settings:
-      trim_length: 600
+      trim_length: 200
     third_party_settings: {  }
     label: hidden
   field_image:
@@ -118,7 +56,11 @@ content:
       link: true
     third_party_settings: {  }
     label: above
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   comment: true
   langcode: true
-  links: true

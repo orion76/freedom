@@ -1,0 +1,8 @@
+token: '1699695679:AAGT88JSNlX0AL7kDh2BUKtLQZ00rU-g64U'
+dependencies:
+  enforced:
+    module:
+      - telegram
+_core:
+  default_config_hash: rD9i2YaGaEV4v6dJDgcnVLs0xQP8OlUTMN9RFSBuTKU
+langcode: ru

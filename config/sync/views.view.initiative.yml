@@ -665,7 +665,7 @@ display:
         type: normal
         title: Инициативы
         menu_name: main
-        weight: -49
+        weight: -48
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,40 @@
+uuid: ad63d750-651e-410c-9753-4ca04004e523
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.document.body
+    - field.field.node.document.field_doc_content
+    - node.type.document
+  module:
+    - bricks
+    - text
+    - user
+id: node.document.default
+targetEntityType: node
+bundle: document
+mode: default
+content:
+  body:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_doc_content:
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: bricks_nested
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

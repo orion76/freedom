@@ -1,19 +1,18 @@
-uuid: 4cc4ad5a-51b7-4ef3-801f-c0f69184b9db
+uuid: 6bb8cd8a-1a90-4a42-8a06-54f0e4b72814
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_section
-    - node.type.library_item
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_type
+    - node.type.document
     - system.menu.main
-    - taxonomy.vocabulary.library
   module:
     - node
-    - taxonomy
     - user
     - views_add_button
-id: library
-label: Библиотека
+id: documents
+label: Документы
 module: views
 description: ''
 tag: ''
@@ -44,7 +43,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Фильтр
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -70,18 +69,25 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: table
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       fields:
-        field_section:
-          id: field_section
-          table: node__field_section
-          field: field_section
+        field_type:
+          id: field_type
+          table: node__field_type
+          field: field_type
           relationship: none
           group_type: group
           admin_label: ''
-          label: Раздел
+          label: Тип
           exclude: false
           alter:
             alter_text: false
@@ -137,31 +143,42 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        title:
-          id: title
+        uid:
+          id: uid
           table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Автор
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -171,10 +188,14 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -184,62 +205,36 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
           entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
+          entity_field: uid
+          plugin_id: field
+      filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            library_item: library_item
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_section_target_id:
-          id: field_section_target_id
-          table: node__field_section
-          field: field_section_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: in
+          value:
+            document: document
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_section_target_id_op
-            label: 'Раздел '
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_section_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_section_target_id
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              moderator: '0'
-              member_party: '0'
-              member_fraction: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -253,44 +248,34 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: library
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        title:
-          id: title
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        status:
+          id: status
           table: node_field_data
-          field: title
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '='
+          value: '1'
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: title_op
-            label: Заголовок
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: title_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: title
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              moderator: '0'
-              member_party: '0'
-              member_fraction: '0'
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -304,8 +289,8 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           entity_type: node
-          entity_field: title
-          plugin_id: string
+          entity_field: status
+          plugin_id: boolean
       sorts:
         created:
           id: created
@@ -322,7 +307,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Библиотека
+      title: Документы
       header:
         views_add_button:
           id: views_add_button
@@ -333,12 +318,12 @@ display:
           admin_label: ''
           empty: false
           tokenize: 0
-          type: node+library_item
+          type: node+document
           render_plugin: views_add_button_node
           access_plugin: views_add_button_node
           context: ''
-          button_text: 'Добавить статью'
-          button_classes: 'button btn btn-primary'
+          button_text: 'Добавить документ'
+          button_classes: 'btn btn-primary'
           button_attributes: ''
           button_access_denied:
             value: ''
@@ -357,18 +342,20 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_section'
+        - 'config:field.storage.node.field_type'
   page_1:
     display_plugin: page
     id: page_1
@@ -376,21 +363,23 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: library
+      path: document
       menu:
         type: normal
-        title: Библиотека
+        title: Документы
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -45
+        context: '0'
         menu_name: main
-        weight: -44
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_section'
+        - 'config:field.storage.node.field_type'

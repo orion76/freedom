@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.document_section.field_content
+    - field.field.paragraph.document_section.field_sec_number
+    - field.field.paragraph.document_section.field_title
     - paragraphs.paragraphs_type.document_section
   module:
     - field_layout
@@ -20,7 +22,7 @@ bundle: document_section
 mode: default
 content:
   field_content:
-    weight: 0
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -28,6 +30,22 @@ content:
       show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
+  field_sec_number:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

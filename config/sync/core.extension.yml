@@ -9,6 +9,9 @@ module:
   block_content: 0
   book: 0
   breakpoint: 0
+  bricks: 0
+  bricks_inline: 0
+  bricks_revisions: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -22,7 +25,9 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference: 0
   entity_reference_revisions: 0
+  fancy_login: 0
   field: 0
   field_group: 0
   field_layout: 0
@@ -57,9 +62,16 @@ module:
   responsive_image: 0
   search: 0
   shortcut: 0
+  simple_popup_blocks: 0
   smtp: 0
+  social_api: 0
+  social_auth: 0
+  social_auth_github: 0
+  social_auth_telegram: 0
+  social_auth_vk: 0
   system: 0
   taxonomy: 0
+  telegram: 0
   text: 0
   token: 0
   token_filter: 0

@@ -1,0 +1,20 @@
+uuid: e2758601-e6ca-4668-9b9b-9219c4a99439
+langcode: ru
+status: true
+dependencies:
+  module:
+    - social_auth
+  theme:
+    - radix_sub
+id: socialauthlogin
+theme: radix_sub
+region: navbar_bottom
+weight: -5
+provider: null
+plugin: social_auth_login
+settings:
+  id: social_auth_login
+  label: 'Social Auth Login'
+  provider: social_auth
+  label_display: '0'
+visibility: {  }

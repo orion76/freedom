@@ -1,0 +1,21 @@
+uuid: 06718c9a-a579-4bc8-9d96-149cf98c03a0
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_sec_number
+field_name: field_sec_number
+entity_type: paragraph
+type: string
+settings:
+  max_length: 31
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
