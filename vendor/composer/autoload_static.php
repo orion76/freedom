@@ -57,6 +57,10 @@ class ComposerStaticInit5083196d70c71ea59135c924e32e5521
             'Webmozart\\PathUtil\\' => 19,
             'Webmozart\\Assert\\' => 17,
         ),
+        'V' => 
+        array (
+            'VK\\' => 3,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -201,6 +205,10 @@ class ComposerStaticInit5083196d70c71ea59135c924e32e5521
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'VK\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vkcom/vk-php-sdk/src/VK',
         ),
         'Twig\\' => 
         array (
@@ -381,7 +389,8 @@ class ComposerStaticInit5083196d70c71ea59135c924e32e5521
         'League\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-client/src',
-            1 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
+            2 => __DIR__ . '/..' . '/league/oauth2-github/src',
         ),
         'League\\Event\\' => 
         array (

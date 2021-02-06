@@ -55,6 +55,13 @@ class TelegramAuthSettingsForm extends SocialAuthSettingsForm {
           '#default_value' => $config->get('widget_code'),
           '#description' => $this->t('Copy the Telegram widget code here.'),
       ];
+      $form['telegram_settings']['email_domain'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Email domain'),
+          '#default_value' => $config->get('email_domain'),
+          '#description' => $this->t('Email domain for generating bogus email addresses. Email does not provide Telegram.'),
+          '#required' => TRUE,
+      ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -67,6 +74,7 @@ class TelegramAuthSettingsForm extends SocialAuthSettingsForm {
       $this->config('social_auth_telegram.settings')
           ->set('token', $values['token'])
           ->set('widget_code', $values['widget_code'])
+          ->set('email_domain', $values['email_domain'])
           ->save();
     
     parent::submitForm($form, $form_state);

@@ -56,7 +56,7 @@
       var duration = 0;
 
 
-      var move_value = 20;
+      var move_value = 40;
 
       $('.menu-item > ul.toolbar-menu', context).each(function (index) {
 

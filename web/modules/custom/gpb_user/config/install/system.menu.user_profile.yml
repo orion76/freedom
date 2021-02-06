@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: user_profile
+label: 'User profile'
+description: 'User profile sections'
+locked: true

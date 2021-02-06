@@ -1,0 +1,13 @@
+{
+    "name": "gpb_user",
+    "type": "drupal-module",
+    "description": "User custom functions",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/gpb_user",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/gpb_user",
+        "source": "http://cgit.drupalcode.org/gpb_user"
+    }
+}

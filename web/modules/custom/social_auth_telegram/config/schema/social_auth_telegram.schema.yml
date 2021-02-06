@@ -5,3 +5,9 @@ social_auth_telegram.settings:
     widget_code:
       type: string
       label: 'Telegram widget code'
+    token:
+      type: string
+      label: 'App token'
+    email_domain:
+      type: string
+      label: 'Email domain for generating bogus email addresses. Email does not provide Telegram.'

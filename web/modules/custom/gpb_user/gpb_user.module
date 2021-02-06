@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains gpb_user.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function gpb_user_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gpb_user module.
+    case 'help.page.gpb_user':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('User custom functions') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function gpb_user_theme() {
+  return [
+    'gpb_user' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function gpb_user_local_tasks_alter(&$definitions){
+    $key_prefix='profile.user_page';
+    $key="{$key_prefix}:profile_main";
+    if(isset($definitions[$key])){
+        unset($definitions[$key]);
+    }
+    $n=0;
+}

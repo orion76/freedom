@@ -3,6 +3,7 @@
 # earlier versions of Drupal are tracked in `community/PHP/`
 
 /backup
+/temp
 
 # Ignore configuration files that may contain sensitive information
 /web/sites/*/*settings*.php

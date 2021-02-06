@@ -1,120 +1,122 @@
 {
-    "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 8 projects with a relocated document root",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+  "name": "drupal/recommended-project",
+  "description": "Project template for Drupal 8 projects with a relocated document root",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/drupal",
+  "support": {
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-      {
-        "type": "package",
-        "package": {
-          "name": "drupal/social_auth_vk",
-          "version": "3.0",
-          "type": "drupal-module",
-          "source": {
-            "url": "https://git.drupalcode.org/project/social_auth_vk.git",
-            "type": "git",
-            "reference": "3.x"
-          }
+    {
+      "type": "package",
+      "package": {
+        "name": "drupal/social_auth_vk",
+        "version": "3.0",
+        "type": "drupal-module",
+        "source": {
+          "url": "https://git.drupalcode.org/project/social_auth_vk.git",
+          "type": "git",
+          "reference": "3.x"
         }
       }
-    ],
-    "require": {
-        "ext-dom": "*",
-        "composer/installers": "^1.2",
-        "drupal/admin_toolbar": "^2.4",
-        "drupal/adminimal_theme": "^1.6",
-        "drupal/auto_entitylabel": "^3.0@beta",
-        "drupal/components": "^2.2",
-        "drupal/console": "~1.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/fancy_login": "^3.0",
-        "drupal/field_group": "^3.1",
-        "drupal/inline_entity_form": "^1.0@RC",
-        "drupal/paragraphs": "^1.12",
-        "drupal/poll": "^1.4",
-        "drupal/prepopulate": "^2.3",
-        "drupal/radix": "^4.10",
-        "drupal/simple_popup_blocks": "^2.6",
-        "drupal/smtp": "^1.0",
-        "drupal/social_auth_vk": "^3.0",
-        "drupal/telegram": "1.0.x-dev",
-        "drupal/token_filter": "^1.2",
-        "drupal/views_add_button": "^1.6",
-        "drupal/views_bulk_edit": "^2.5",
-        "drupal/views_bulk_operations": "^3.10",
-        "drush/drush": "^10.3"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            }
-        },
-        "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/Commands/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
-            "web/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
-            "web/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
-            ]
-        },
-        "drupal-core-project-message": {
-            "include-keys": [
-                "homepage",
-                "support"
-            ],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-                "<bg=blue;fg=white>                                                         </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Install the site: https://www.drupal.org/docs/8/install",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://www.drupal.org/support",
-                "  * Get involved with the Drupal community:",
-                "      https://www.drupal.org/getting-involved",
-                "  * Remove the plugin that prints this message:",
-                "      composer remove drupal/core-project-message"
-            ]
-        }
     }
+  ],
+  "require": {
+    "ext-dom": "*",
+    "composer/installers": "^1.2",
+    "drupal/admin_toolbar": "^2.4",
+    "drupal/adminimal_theme": "^1.6",
+    "drupal/auto_entitylabel": "^3.0@beta",
+    "drupal/bricks": "^1.6",
+    "drupal/components": "^2.2",
+    "drupal/console": "~1.0",
+    "drupal/core-composer-scaffold": "^8.8",
+    "drupal/core-project-message": "^8.8",
+    "drupal/core-recommended": "^8.8",
+    "drupal/field_group": "^3.1",
+    "drupal/inline_entity_form": "^1.0@RC",
+    "drupal/paragraphs": "^1.12",
+    "drupal/poll": "^1.4",
+    "drupal/prepopulate": "^2.3",
+    "drupal/profile": "^1.2",
+    "drupal/radix": "^4.10",
+    "drupal/smtp": "^1.0",
+    "drupal/social_auth_facebook": "^3.0",
+    "drupal/social_auth_github": "^3.0",
+    "drupal/social_auth_vk": "^3.0",
+    "drupal/telegram": "1.0.x-dev",
+    "drupal/token_filter": "^1.2",
+    "drupal/views_add_button": "^1.6",
+    "drupal/views_bulk_edit": "^2.5",
+    "drupal/views_bulk_operations": "^3.10",
+    "drush/drush": "^10.3"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ]
+    },
+    "drupal-core-project-message": {
+      "include-keys": [
+        "homepage",
+        "support"
+      ],
+      "post-create-project-cmd-message": [
+        "<bg=blue;fg=white>                                                         </>",
+        "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+        "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+        "<bg=blue;fg=white>                                                         </>",
+        "",
+        "<bg=yellow;fg=black>Next steps</>:",
+        "  * Install the site: https://www.drupal.org/docs/8/install",
+        "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+        "  * Get support: https://www.drupal.org/support",
+        "  * Get involved with the Drupal community:",
+        "      https://www.drupal.org/getting-involved",
+        "  * Remove the plugin that prints this message:",
+        "      composer remove drupal/core-project-message"
+      ]
+    }
+  }
 }

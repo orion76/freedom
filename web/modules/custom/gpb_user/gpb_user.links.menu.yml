@@ -1,0 +1,18 @@
+gpb_user.user_profile:
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
+  deriver: Drupal\gpb_user\Plugin\Derivative\ProfileMenuLinkDerivative
+  menu_name: user_profile
+gpb_user.user_profile.account:
+  title: Account
+  description: Account
+  route_name: entity.user.canonical
+  menu_name: user_profile
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
+
+gpb_user.user_profile.applications:
+  title: Applications
+  description: User Applications
+  route_name: view.profile_applications.page_1
+  menu_name: user_profile
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
+
