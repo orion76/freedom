@@ -25,8 +25,9 @@
 
 /vendor
 /web/themes/contrib
-/web/modiles/contrib
+/web/modules/contrib
 /web/themes/custom/*/assets
+
 # Ignore drupal core (if not versioning drupal sources)
 /web/core
 /web/modules/README.txt
