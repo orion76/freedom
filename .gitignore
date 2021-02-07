@@ -4,6 +4,7 @@
 
 /backup
 /temp
+/tmp
 
 # Ignore configuration files that may contain sensitive information
 /web/sites/*/*settings*.php

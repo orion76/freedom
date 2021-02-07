@@ -1,16 +1,2 @@
 
-.block--radix-sub-main-menu {
-  display: none;
-}
-
-@media (min-width: map-get($grid-breakpoints, 'md')) {
-  .container {
-    max-width: map-get($grid-breakpoints, 'lg');
-  }
-  
-  .block--radix-sub-main-menu {
-    display: block;
-  }
-}
-
 
