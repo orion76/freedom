@@ -22,15 +22,24 @@
 {% set color = color ?? 'light' %}
 
 <nav class="navbar navbar-expand-md justify-content-between navbar-{{ color }} {{ placement }} {{ utility_classes|join(' ') }}">
-  {% if container %}
+    {% if container %}
     <div class="{{ container }}">
-  {% endif %}
+        {% endif %}
 
-  {% block branding %}
-    {{ branding }}
-  {% endblock %}
+        {% block branding %}
+            {{ branding }}
+        {% endblock %}
 
-  {% if container %}
+        {% block left %}
+            {{ left }}
+        {% endblock %}
+
+        {% block right %}
+            {{ right }}
+        {% endblock %}
+
+
+        {% if container %}
     </div>
-  {% endif %}
+    {% endif %}
 </nav>

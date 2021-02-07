@@ -38,6 +38,15 @@ body.user-logged-in.toolbar-fixed {
   padding-left: 15rem;
 }
 
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+  .horizontal-menu {
+   & > li & > a {
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+  }
+}
+
 .horizontal-menu {
   position: relative;
   margin-top: 0;
@@ -59,10 +68,11 @@ body.user-logged-in.toolbar-fixed {
 
     & > a {
       display: block;
+      color: $navbar-dark-color;
       padding-top: 0.3em;
-      padding-right: 1em;
+      padding-right: .5em;
       padding-bottom: 0.35em;
-      padding-left: 1em;
+      padding-left: .5em;
       background-color: transparent;
     }
 
