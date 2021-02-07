@@ -26,6 +26,7 @@
 /web/sites/simpletest
 
 /vendor
+vendor
 /web/themes/contrib
 web/modules/contrib
 /web/themes/custom/*/assets
