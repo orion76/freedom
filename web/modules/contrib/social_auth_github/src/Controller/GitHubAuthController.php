@@ -26,7 +26,7 @@ class GitHubAuthController extends OAuth2ControllerBase {
    *   Used to get an instance of social_auth_github network plugin.
    * @param \Drupal\social_auth\User\UserAuthenticator $user_authenticator
    *   Manages user login/registration.
-   * @param \Drupal\social_auth_github\GitHubAuthManager $telegram_manager
+   * @param \Drupal\social_auth_github\GitHubAuthManager $github_manager
    *   Used to manage authentication methods.
    * @param \Symfony\Component\HttpFoundation\RequestStack $request
    *   Used to access GET parameters.
@@ -38,14 +38,14 @@ class GitHubAuthController extends OAuth2ControllerBase {
   public function __construct(MessengerInterface $messenger,
                               NetworkManager $network_manager,
                               UserAuthenticator $user_authenticator,
-                              GitHubAuthManager $telegram_manager,
+                              GitHubAuthManager $github_manager,
                               RequestStack $request,
                               SocialAuthDataHandler $data_handler,
                               RendererInterface $renderer) {
 
     parent::__construct('Social Auth GitHub', 'social_auth_github',
                         $messenger, $network_manager, $user_authenticator,
-                        $telegram_manager, $request, $data_handler, $renderer);
+                        $github_manager, $request, $data_handler, $renderer);
   }
 
   /**

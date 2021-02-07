@@ -7,8 +7,8 @@
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
  */
-const proxy = 'http://freedom.ti-work.ru';
-const host = 'freedom.ti-work.ru';
+const proxy = 'http://loc.freedom.ti-work.ru';
+
 const mix = require('laravel-mix');
 const { exec } = require("child_process");
 /*
@@ -35,11 +35,9 @@ if (!mix.inProduction()) {
  */
 mix.browserSync({
     proxy: proxy,
-    // host:host,
     files: [ 
         'assets/js/**/*.js',
-        'assets/css/**/*.css',
-        // 'templates/**/*.twig'
+        'assets/css/**/*.css'
     ],
     stream: true,
 });
