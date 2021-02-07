@@ -35,6 +35,9 @@ class TelegramAuthController extends ControllerBase {
     /** @var UserAuthenticator */
     protected $user_authenticator;
 
+    /** @var \Drush\Log\Logger */
+    protected $logger;
+
     public function __construct(
         $plugin_id,
         Config $config,
@@ -42,6 +45,8 @@ class TelegramAuthController extends ControllerBase {
         $this->config = $config;
         $this->user_authenticator = $user_authenticator;
         $this->user_authenticator->setPluginId($plugin_id);
+
+        $this->logger = $this->getLogger('social_auth_telegram');
     }
 
     /**
@@ -68,6 +73,11 @@ class TelegramAuthController extends ControllerBase {
         $success = TRUE;
 
         if (strcmp($hash, $data_all['hash']) !== 0) {
+            $this->logger->debug('Hash not equal. @hash1 <> @hash2, data: @data', [
+                '@hash1' => $hash,
+                '@hash2' => $data_all['hash'],
+                '@data' => print_r($data_all, TRUE),
+            ]);
             $success = FALSE;
             $this->messenger()->addError('Data is NOT from Telegram');
         }
@@ -80,7 +90,7 @@ class TelegramAuthController extends ControllerBase {
         if ($success) {
             return $this->user_authenticator->authenticateUser(
                 $data['username'],
-                $this->createUserEmail($data['username'],$config->get('email_domain')),
+                $this->createUserEmail($data['username'], $config->get('email_domain')),
                 $data['id'],
                 $data_all['hash']
             );
