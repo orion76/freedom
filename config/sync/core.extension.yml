@@ -34,6 +34,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fontawesome: 0
   freedom_fields: 0
   freedom_views: 0
   gpb_user: 0

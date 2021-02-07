@@ -8,8 +8,8 @@ dependencies:
     - radix_sub
 id: responsivemenumobileicon
 theme: radix_sub
-region: navbar_branding
-weight: -3
+region: navbar_right
+weight: -5
 provider: null
 plugin: responsive_menu_toggle
 settings:

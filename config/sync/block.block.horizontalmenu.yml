@@ -8,8 +8,8 @@ dependencies:
     - radix_sub
 id: horizontalmenu
 theme: radix_sub
-region: navbar_branding
-weight: -5
+region: navbar_left
+weight: -6
 provider: null
 plugin: responsive_menu_horizontal_menu
 settings:
