@@ -1,0 +1,8 @@
+uuid: 3fffa01a-dd87-4b04-abfc-3b1ddd87ae79
+langcode: ru
+status: true
+dependencies: {  }
+name: Заявления
+vid: application
+description: 'Наименования и тексты заявлений'
+weight: 0

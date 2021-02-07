@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.document.body
     - field.field.node.document.field_doc_content
+    - field.field.node.document.field_link
     - node.type.document
   module:
     - text
@@ -30,4 +31,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_doc_content: true
+  field_link: true
   langcode: true

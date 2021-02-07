@@ -146,7 +146,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Question
+          label: Вопрос
           exclude: false
           alter:
             alter_text: false
@@ -261,7 +261,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Allow anonymous votes'
+          label: 'Позволить голосовать анонимным пользователям'
           exclude: false
           alter:
             alter_text: false
@@ -382,7 +382,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Total votes'
+          label: 'Общее количество голосов'
           exclude: false
           alter:
             alter_text: false
@@ -490,7 +490,7 @@ display:
           exposed: true
           expose:
             operator_id: question_op
-            label: Question
+            label: Вопрос
             description: ''
             use_operator: false
             operator: question_op
@@ -568,7 +568,7 @@ display:
           entity_field: status
           plugin_id: boolean
       sorts: {  }
-      title: Poll
+      title: Опрос
       header: {  }
       footer: {  }
       empty:

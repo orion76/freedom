@@ -1,0 +1,38 @@
+uuid: 4ad4fdb2-d9dd-4202-ad0a-e6948047d61b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.user_profile
+  module:
+    - system
+    - user
+  theme:
+    - radix_sub
+id: userprofile
+theme: radix_sub
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:user_profile'
+settings:
+  id: 'system_menu_block:user_profile'
+  label: 'User profile'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,21 @@
+uuid: ed205ab6-98ba-4a4b-a368-6ae2ea435eca
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.profile.profile_main.field_region
+    - profile.type.profile_main
+id: profile.profile_main.default
+targetEntityType: profile
+bundle: profile_main
+mode: default
+content:
+  field_region:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

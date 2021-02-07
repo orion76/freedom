@@ -1,0 +1,23 @@
+uuid: 202bc94b-02df-44d6-92ce-6743e13d2355
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.document
+  module:
+    - link
+id: node.document.field_link
+field_name: field_link
+entity_type: node
+bundle: document
+label: Источники
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

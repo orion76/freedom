@@ -1,0 +1,32 @@
+uuid: 34edbd62-54d1-431e-afec-a0ebf0adff5e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.profile.profile_main.field_region
+    - profile.type.profile_main
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: profile.profile_main.default
+targetEntityType: profile
+bundle: profile_main
+mode: default
+content:
+  field_region:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  is_default: true

@@ -62,3 +62,4 @@ content:
 hidden:
   langcode: true
   member_for: true
+  profile_profiles: true

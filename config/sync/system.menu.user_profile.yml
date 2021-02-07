@@ -1,0 +1,10 @@
+uuid: 06a60629-bc1b-41ee-bf65-272e403d53d1
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: POJPY3-ExXmQdrzm--YUOGGwBCb-rokGKUFFk1gfARE
+id: user_profile
+label: 'User profile'
+description: 'User profile sections'
+locked: true

@@ -1,0 +1,20 @@
+uuid: 6be60b0b-d782-4a68-a99d-d4409883853c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - radix_sub
+id: responsivemenumobileicon
+theme: radix_sub
+region: navbar_branding
+weight: -3
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

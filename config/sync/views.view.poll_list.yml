@@ -225,7 +225,7 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Polls
+    display_title: Опросы
     position: 1
     display_options:
       display_extenders: {  }
@@ -234,7 +234,7 @@ display:
       rendering_language: '***LANGUAGE_language_interface***'
       menu:
         type: normal
-        title: Polls
+        title: Опросы
         description: ''
         expanded: false
         parent: ''

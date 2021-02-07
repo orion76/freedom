@@ -1,0 +1,20 @@
+uuid: 979f6d21-649e-42a5-9759-b5ddd750b51e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - radix_sub
+id: horizontalmenu
+theme: radix_sub
+region: navbar_branding
+weight: -5
+provider: null
+plugin: responsive_menu_horizontal_menu
+settings:
+  id: responsive_menu_horizontal_menu
+  label: 'Horizontal menu'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

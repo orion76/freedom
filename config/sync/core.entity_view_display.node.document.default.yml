@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.document.body
     - field.field.node.document.field_doc_content
+    - field.field.node.document.field_link
     - node.type.document
   module:
     - bricks
+    - link
     - text
     - user
 id: node.document.default
@@ -16,14 +18,14 @@ bundle: document
 mode: default
 content:
   body:
-    weight: 102
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_doc_content:
-    weight: 101
+    weight: 0
     label: above
     settings:
       view_mode: default
@@ -31,8 +33,20 @@ content:
     third_party_settings: {  }
     type: bricks_nested
     region: content
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

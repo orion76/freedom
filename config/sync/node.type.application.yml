@@ -1,0 +1,18 @@
+uuid: 1c6ba7a3-4966-4812-b944-8d27ad3070b9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Заявление
+type: application
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

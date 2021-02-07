@@ -1,0 +1,29 @@
+uuid: da5141ab-86af-4cf9-ac25-6b5ba0f060b1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_type
+    - node.type.application
+    - taxonomy.vocabulary.application
+id: node.application.field_application_type
+field_name: field_application_type
+entity_type: node
+bundle: application
+label: 'Тип заявления'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      application: application
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

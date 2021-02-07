@@ -1,0 +1,13 @@
+uuid: 254ae5fc-f4e3-434e-9baa-d0fc365ab1dc
+langcode: ru
+status: true
+dependencies: {  }
+id: profile_main
+label: Профиль
+display_label: Профиль
+multiple: false
+registration: true
+roles:
+  authenticated: authenticated
+allow_revisions: true
+new_revision: true

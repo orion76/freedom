@@ -1,0 +1,39 @@
+uuid: c17130b2-df57-48e9-8b53-109be6cf2650
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.application.body
+    - field.field.node.application.field_application_type
+    - node.type.application
+  module:
+    - text
+    - user
+id: node.application.default
+targetEntityType: node
+bundle: application
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_application_type:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

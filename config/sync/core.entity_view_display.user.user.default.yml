@@ -9,7 +9,6 @@ dependencies:
     - field_layout
     - image
     - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
@@ -17,41 +16,8 @@ third_party_settings:
     settings:
       label: ''
   layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          418d2569-6ac9-40cf-bf09-c7f91e54b4e4:
-            uuid: 418d2569-6ac9-40cf-bf09-c7f91e54b4e4
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:user:user:user_picture'
-              formatter:
-                type: image
-                settings:
-                  image_style: thumbnail
-                  image_link: content
-                third_party_settings: {  }
-                label: hidden
-            additional: {  }
-            weight: 0
-          2c190c10-4840-4512-94b9-622f7722adad:
-            uuid: 2c190c10-4840-4512-94b9-622f7722adad
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:user:user:member_for'
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -59,10 +25,27 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  langcode:
+    type: language
+    weight: 3
+    region: content
+    label: above
+    settings:
+      native_language: true
+      link_to_entity: false
+    third_party_settings: {  }
   member_for:
-    weight: 5
+    weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  profile_profiles:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
   user_picture:
     type: image
@@ -73,5 +56,4 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden:
-  langcode: true
+hidden: {  }

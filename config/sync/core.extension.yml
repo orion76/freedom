@@ -25,9 +25,9 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   entity_reference: 0
   entity_reference_revisions: 0
-  fancy_login: 0
   field: 0
   field_group: 0
   field_layout: 0
@@ -36,6 +36,7 @@ module:
   filter: 0
   freedom_fields: 0
   freedom_views: 0
+  gpb_user: 0
   help: 0
   history: 0
   image: 0
@@ -57,12 +58,13 @@ module:
   path_alias: 0
   poll: 0
   prepopulate: 0
+  profile: 0
   quickedit: 0
   rdf: 0
   responsive_image: 0
+  responsive_menu: 0
   search: 0
   shortcut: 0
-  simple_popup_blocks: 0
   smtp: 0
   social_api: 0
   social_auth: 0

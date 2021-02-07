@@ -1,0 +1,8 @@
+uuid: 0baf4c59-ac6d-4fd3-9879-a04d4ff2a1db
+langcode: ru
+status: true
+dependencies: {  }
+name: Регионы
+vid: regions
+description: 'Регионы РФ'
+weight: 0

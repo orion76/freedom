@@ -6,4 +6,8 @@ id: member_party
 label: 'Член партии'
 weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create library_item content'
+  - 'create terms in library'
+  - 'edit own library_item content'
+  - 'view library_item revisions'
