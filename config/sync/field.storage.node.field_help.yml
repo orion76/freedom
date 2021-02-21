@@ -1,0 +1,19 @@
+uuid: 93cf1db9-43cf-43c5-a5a2-001dc6f1f5be
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_help
+field_name: field_help
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

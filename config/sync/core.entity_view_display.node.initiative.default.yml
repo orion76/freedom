@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.initiative.body
+    - field.field.node.initiative.field_help
     - field.field.node.initiative.field_type
     - node.type.initiative
     - views.view.initiative_discussions
@@ -24,13 +25,29 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_section
         layout_settings:
           label: ''
+          column_widths: 67-33
         components:
+          0d3b3889-f8aa-469e-8022-57260c3cb08d:
+            uuid: 0d3b3889-f8aa-469e-8022-57260c3cb08d
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:initiative:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
           c5b77458-e816-48b9-aab6-b88e226b8cd2:
             uuid: c5b77458-e816-48b9-aab6-b88e226b8cd2
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -43,52 +60,50 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_label
             additional: {  }
-            weight: 0
-          0d3b3889-f8aa-469e-8022-57260c3cb08d:
-            uuid: 0d3b3889-f8aa-469e-8022-57260c3cb08d
-            region: content
+            weight: 1
+          3c074436-fe84-4dd6-88b0-09904f5eebe6:
+            uuid: 3c074436-fe84-4dd6-88b0-09904f5eebe6
+            region: first
             configuration:
+              id: 'field_block:node:initiative:moderation_state'
+              label: Статус
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:initiative:body'
               formatter:
-                label: hidden
-                type: text_default
+                label: inline
+                type: content_moderation_state
                 settings: {  }
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 5
           052e94a4-710e-4abe-8780-e852dc3d2e02:
             uuid: 052e94a4-710e-4abe-8780-e852dc3d2e02
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:initiative:links'
             additional: {  }
-            weight: 2
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: ''
-          column_widths: 50-50
-        components:
-          d6dca62d-2db9-4eb6-9654-2a6fe22dd625:
-            uuid: d6dca62d-2db9-4eb6-9654-2a6fe22dd625
+            weight: 3
+          1881b830-592a-4486-9882-3682c4dd8074:
+            uuid: 1881b830-592a-4486-9882-3682c4dd8074
             region: first
             configuration:
-              id: 'views_block:initiative_discussions-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:initiative:field_help'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
             additional: {  }
-            weight: 0
+            weight: 6
           b333e0ab-6d0c-4593-a0a8-769bc3737200:
             uuid: b333e0ab-6d0c-4593-a0a8-769bc3737200
             region: second
@@ -102,6 +117,32 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          d6dca62d-2db9-4eb6-9654-2a6fe22dd625:
+            uuid: d6dca62d-2db9-4eb6-9654-2a6fe22dd625
+            region: second
+            configuration:
+              id: 'views_block:initiative_discussions-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components: {  }
         third_party_settings: {  }
     allow_custom: false
 id: node.initiative.default
@@ -121,6 +162,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_help:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_type:
     weight: 0
     label: above

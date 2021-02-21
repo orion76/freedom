@@ -330,7 +330,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Moderation state'
+          label: Статус
           exclude: false
           alter:
             alter_text: false
@@ -644,7 +644,7 @@ display:
           exposed: true
           expose:
             operator_id: moderation_state_op
-            label: 'Moderation state'
+            label: Статус
             description: ''
             use_operator: false
             operator: moderation_state_op

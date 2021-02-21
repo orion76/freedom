@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.initiative.body
+    - field.field.node.initiative.field_help
     - field.field.node.initiative.field_type
     - node.type.initiative
   module:
@@ -58,6 +59,16 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 1
+          d5e99ecf-9763-4e12-84dc-65254b4d57c1:
+            uuid: d5e99ecf-9763-4e12-84dc-65254b4d57c1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:content_moderation_control'
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
 id: node.initiative.teaser
 targetEntityType: node
@@ -72,6 +83,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_type:
     type: entity_reference_label
     weight: 0
@@ -81,5 +97,6 @@ content:
       link: true
     third_party_settings: {  }
 hidden:
+  field_help: true
   langcode: true
   links: true
