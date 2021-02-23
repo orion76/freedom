@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf990ffc622a9b9890f70f1d36d3c395",
+    "content-hash": "ba859ead6db5705f9d1aa3e5d6748f35",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -69,6 +69,15 @@
                 "zip"
             ],
             "time": "2018-02-22T13:58:36+00:00"
+        },
+        {
+            "name": "antennaio/jquery-bar-rating",
+            "version": "1.2.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "asm89/stack-cors",
@@ -1911,6 +1920,87 @@
             }
         },
         {
+            "name": "drupal/advpoll",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/advpoll.git",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/advpoll-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "14cb8202d08192979c7cd62b582c9c4deeb30b34"
+            },
+            "require": {
+                "drupal/core": "^8",
+                "drupal/votingapi": "~3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1612104343",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ChrisKennedy",
+                    "homepage": "https://www.drupal.org/user/32005"
+                },
+                {
+                    "name": "Michele Wickham",
+                    "homepage": "https://www.drupal.org/user/571758"
+                },
+                {
+                    "name": "Nodin",
+                    "homepage": "https://www.drupal.org/user/519900"
+                },
+                {
+                    "name": "anders.fajerson",
+                    "homepage": "https://www.drupal.org/user/20459"
+                },
+                {
+                    "name": "austinhappel",
+                    "homepage": "https://www.drupal.org/user/1161262"
+                },
+                {
+                    "name": "gobinathm",
+                    "homepage": "https://www.drupal.org/user/21629"
+                },
+                {
+                    "name": "mikhailkrainiuk",
+                    "homepage": "https://www.drupal.org/user/2052384"
+                },
+                {
+                    "name": "tripper54",
+                    "homepage": "https://www.drupal.org/user/452964"
+                },
+                {
+                    "name": "wolf29",
+                    "homepage": "https://www.drupal.org/user/163189"
+                }
+            ],
+            "description": "Advanced Poll",
+            "homepage": "http://drupal.org/project/advpoll",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/advpoll",
+                "issues": "http://drupal.org/project/issues/advpoll"
+            }
+        },
+        {
             "name": "drupal/auto_entitylabel",
             "version": "3.0.0-beta4",
             "source": {
@@ -2080,6 +2170,153 @@
             "homepage": "https://drupal.org/project/components",
             "support": {
                 "source": "https://git.drupalcode.org/project/components"
+            }
+        },
+        {
+            "name": "drupal/config_filter",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_filter.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_filter-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "dc6bc8107255066507cfc1d6766e664c3673cda0"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "conflict": {
+                "drush/drush": "<10"
+            },
+            "suggest": {
+                "drupal/config_split": "Split site configuration for different environments."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1601934694",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Config Filter allows other modules to interact with a ConfigStorage through filter plugins.",
+            "homepage": "https://www.drupal.org/project/config_filter",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_filter",
+                "issues": "https://www.drupal.org/project/issues/config_filter",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
+            "name": "drupal/config_split",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_split.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "ca365f987fa1f7ac6c62a1b13b0e5e43b81e4808"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "conflict": {
+                "drush/drush": "<10"
+            },
+            "require-dev": {
+                "drupal/config_filter": "^1||^2"
+            },
+            "suggest": {
+                "drupal/chosen": "Chosen uses the Chosen jQuery plugin to make the <select> elements more user-friendly.",
+                "drupal/select2_all": "Applies the Select2 library to all select fields on the site similar to the Chosen module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1605524409",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Configuration filter for importing and exporting extra config",
+            "homepage": "https://www.drupal.org/project/config_split",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_split",
+                "issues": "https://www.drupal.org/project/issues/config_split",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
             }
         },
         {
@@ -2928,6 +3165,82 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/flag",
+            "version": "4.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flag.git",
+                "reference": "8.x-4.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flag-8.x-4.0-beta2.zip",
+                "reference": "8.x-4.0-beta2",
+                "shasum": "6f180b6f65e0e778e6fccebd07de9f9c689f6a1f"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.0-beta2",
+                    "datestamp": "1595273815",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "fubhy",
+                    "homepage": "https://www.drupal.org/user/761344"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "mooffie",
+                    "homepage": "https://www.drupal.org/user/78454"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "shabana.navas",
+                    "homepage": "https://www.drupal.org/user/1311398"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                }
+            ],
+            "description": "Create customized flags that users can set on entities.",
+            "homepage": "https://www.drupal.org/project/flag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flag"
             }
         },
         {
@@ -4184,6 +4497,143 @@
                 "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/votingapi",
+            "version": "3.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/votingapi.git",
+                "reference": "8.x-3.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/votingapi-8.x-3.0-beta2.zip",
+                "reference": "8.x-3.0-beta2",
+                "shasum": "1fe15da49cc1f2126f29ae39349a199eb1360a32"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-beta2",
+                    "datestamp": "1591656113",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "pedrorocha",
+                    "homepage": "https://www.drupal.org/user/218937"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
+                },
+                {
+                    "name": "torotil",
+                    "homepage": "https://www.drupal.org/user/865256"
+                }
+            ],
+            "description": "Voting API",
+            "homepage": "http://drupal.org/project/votingapi",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/votingapi",
+                "issues": "http://drupal.org/project/issues/votingapi"
+            }
+        },
+        {
+            "name": "drupal/votingapi_widgets",
+            "version": "1.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/votingapi_widgets.git",
+                "reference": "8.x-1.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/votingapi_widgets-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "b3291ec22feb6c5c9ec15297bd84cd911ef6eef3"
+            },
+            "require": {
+                "antennaio/jquery-bar-rating": "1.2.2",
+                "drupal/core": "^8",
+                "drupal/votingapi": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1540379280",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andre-B",
+                    "homepage": "https://www.drupal.org/user/1772408"
+                },
+                {
+                    "name": "Erik Seifert",
+                    "homepage": "https://www.drupal.org/user/161429"
+                },
+                {
+                    "name": "Merlin Tribukait",
+                    "homepage": "https://www.drupal.org/user/3217075"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "ipwa",
+                    "homepage": "https://www.drupal.org/user/130909"
+                },
+                {
+                    "name": "loze",
+                    "homepage": "https://www.drupal.org/user/116906"
+                }
+            ],
+            "description": "Voting API Widgets",
+            "homepage": "https://www.drupal.org/project/votingapi_widgets",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/votingapi_widgets",
+                "issues": "https://www.drupal.org/project/issues/votingapi_widgets"
             }
         },
         {
@@ -9029,7 +9479,8 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/inline_entity_form": 5,
-        "drupal/telegram": 20
+        "drupal/telegram": 20,
+        "drupal/votingapi_widgets": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
