@@ -1,5 +1,0 @@
-entity.poll_variant_entity_config.add_form:
-  route_name: entity.poll_variant_entity_config.add_form
-  title: 'Add Poll variant entity config'
-  appears_on:
-    - entity.poll_variant_entity_config.collection

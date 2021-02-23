@@ -1,5 +1,0 @@
-name: 'poll_variants'
-type: module
-description: 'Poll variants'
-core: 8.x
-package: 'Custom'

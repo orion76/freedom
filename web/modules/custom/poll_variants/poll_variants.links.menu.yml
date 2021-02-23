@@ -1,8 +1,0 @@
-
-# Poll variant entity config menu items definition
-entity.poll_variant_entity_config.collection:
-  title: 'Poll variant entity config'
-  route_name: entity.poll_variant_entity_config.collection
-  description: 'List Poll variant entity config (bundles)'
-  parent: system.admin_structure
-  weight: 99

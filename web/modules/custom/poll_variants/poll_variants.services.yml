@@ -1,4 +1,0 @@
-services:
-  plugin.manager.poll_variants:
-    class: Drupal\poll_variants\Plugin\PollVariantsPluginManager
-    parent: default_plugin_manager
