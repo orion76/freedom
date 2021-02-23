@@ -1,0 +1,21 @@
+uuid: 92914390-37a1-4849-8564-54f235a93577
+langcode: ru
+status: true
+dependencies: {  }
+id: local
+label: local
+description: ''
+folder: ../config/local
+module: {  }
+theme: {  }
+blacklist:
+  - smtp.settings
+  - social_auth.settings
+  - social_auth_github.settings
+  - social_auth_telegram.settings
+  - social_auth_vk.settings
+  - telegram.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
