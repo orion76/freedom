@@ -27,13 +27,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_section
         layout_settings:
           label: ''
+          column_widths: 67-33
         components:
           acfa39dd-4220-4dc0-a20f-5347fa08cced:
             uuid: acfa39dd-4220-4dc0-a20f-5347fa08cced
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:discussion:field_date_range'
               label: Время
@@ -51,26 +52,10 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
-          677cec27-1b06-4d52-be9c-3d225f5ad5ac:
-            uuid: 677cec27-1b06-4d52-be9c-3d225f5ad5ac
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:discussion:field_initiative'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 1
+            weight: 2
           e075b795-300d-4887-b219-b6b3d0924da7:
             uuid: e075b795-300d-4887-b219-b6b3d0924da7
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -82,20 +67,20 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 2
-          10b68fcd-e272-4487-a3fb-c87226a64300:
-            uuid: 10b68fcd-e272-4487-a3fb-c87226a64300
-            region: content
+            weight: 4
+          57d1d85a-d379-44ee-a5c5-cc8267237f63:
+            uuid: 57d1d85a-d379-44ee-a5c5-cc8267237f63
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:discussion:links'
+              id: 'extra_field_block:node:discussion:content_moderation_control'
             additional: {  }
-            weight: 3
+            weight: 7
           eeec6f5b-7287-4d5c-abd4-69ffc18dc321:
             uuid: eeec6f5b-7287-4d5c-abd4-69ffc18dc321
-            region: content
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -109,7 +94,39 @@ third_party_settings:
                 third_party_settings: {  }
                 type: comment_default
             additional: {  }
-            weight: 4
+            weight: 6
+          10b68fcd-e272-4487-a3fb-c87226a64300:
+            uuid: 10b68fcd-e272-4487-a3fb-c87226a64300
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:discussion:links'
+            additional: {  }
+            weight: 5
+          677cec27-1b06-4d52-be9c-3d225f5ad5ac:
+            uuid: 677cec27-1b06-4d52-be9c-3d225f5ad5ac
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:discussion:field_initiative'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
         third_party_settings: {  }
 id: node.discussion.default
 targetEntityType: node
@@ -120,6 +137,11 @@ content:
     label: hidden
     type: text_default
     weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
