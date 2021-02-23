@@ -1,0 +1,4 @@
+.form-select option[value^="field_ui:bricks"]{
+    color: #911;
+    font-weight: bold;
+}

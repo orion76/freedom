@@ -1,0 +1,13 @@
+{
+    "name": "poll_variants",
+    "type": "drupal-module",
+    "description": "Poll variants",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/poll_variants",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/poll_variants",
+        "source": "http://cgit.drupalcode.org/poll_variants",
+    },
+}

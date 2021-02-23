@@ -22,3 +22,13 @@ function freedom_fields_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * @see template_preprocess_maintenance_page()
+ * @see \Drupal\Core\EventSubscriber\ActiveLinkResponseFilter
+ */
+function freedom_fields_page_attachments(array &$page) {
+    $page['#attached']['library'][] = 'freedom_fields/freedom_fields';
+}

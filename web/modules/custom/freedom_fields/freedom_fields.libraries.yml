@@ -1,0 +1,5 @@
+freedom_fields:
+  version: VERSION
+  css:
+    theme:
+      css/freedom_fields.css: {}

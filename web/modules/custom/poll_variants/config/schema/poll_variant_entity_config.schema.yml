@@ -1,0 +1,33 @@
+poll_variants.poll_variant_entity_config.*:
+  type: config_entity
+  label: 'Poll variant entity config config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    type:
+      type: string
+      label: 'Variant generation type'
+    callback:
+      type: mapping
+      mapping:
+        class:
+          type: string
+          label: 'Class'
+    variants:
+      type: sequence
+      label: 'Selected actions data array'
+      sequence:
+        type: mapping
+        mapping:
+          id:
+            type: string
+            label: 'ID'
+          label:
+            label: 'Label'
+            type: string

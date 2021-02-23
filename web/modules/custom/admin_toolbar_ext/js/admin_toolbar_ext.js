@@ -2,11 +2,11 @@
 
   function moveTop(ul, value, duration) {
     ul.animate({top: '+=' + value}, {duration: duration});
-  };
+  }
 
   function moveBottom(ul, value, duration) {
     ul.animate({top: '-=' + value}, {duration: duration});
-  };
+  }
 
 
   function onMouseWheel(ul, move_value, duration) {
@@ -24,14 +24,18 @@
       }
 
       if (event.originalEvent.wheelDelta > 0) {
+         
         if (bounding.top <= (placeStart - move_value)) {
+            // console.log('[moveTop]',bounding.top,placeStart);
           moveTop(ul, move_value, duration);
         }
 
       } else {
         const hiddenBottom = windowHeight - bounding.bottom;
-        if (hiddenBottom <= 0 - move_value) {
-          moveBottom(ul, move_value, duration);
+          
+        if (hiddenBottom <= 0 ) {
+            // console.log('[moveBottom]',hiddenBottom,placeStart);
+            moveBottom(ul, move_value, duration);
         }
       }
       event.stopPropagation();
