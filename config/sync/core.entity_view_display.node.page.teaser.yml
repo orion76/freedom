@@ -41,16 +41,6 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
-          b786c998-69b7-4d6b-b583-b30fc85c4e32:
-            uuid: b786c998-69b7-4d6b-b583-b30fc85c4e32
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:page:links'
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
 _core:
   default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY

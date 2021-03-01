@@ -56,11 +56,7 @@ content:
       link: true
     third_party_settings: {  }
     label: above
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   comment: true
   langcode: true
+  links: true
