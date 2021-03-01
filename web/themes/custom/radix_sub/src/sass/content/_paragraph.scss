@@ -1,0 +1,13 @@
+.paragraph--type--document-section {
+  display: flex;
+
+  .document-section__field-title {
+    margin-bottom: .5rem;
+    font-weight: bold;
+  }
+
+  .document-section__field-sec-number {
+    font-weight: bold;
+    padding-right: 1rem;
+  }
+}
