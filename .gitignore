@@ -2,6 +2,7 @@
 #
 # earlier versions of Drupal are tracked in `community/PHP/`
 
+/config/local
 /backup
 /temp
 /tmp
