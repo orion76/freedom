@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_fio_name
+    - field.field.user.user.field_fio_patronymic
+    - field.field.user.user.field_fio_surname
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -59,4 +62,7 @@ content:
     weight: -1
     region: content
 hidden:
+  field_fio_name: true
+  field_fio_patronymic: true
+  field_fio_surname: true
   langcode: true

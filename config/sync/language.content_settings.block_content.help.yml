@@ -1,0 +1,11 @@
+uuid: 99bc250c-4876-4cea-b88e-648dd48b52a6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.help
+id: block_content.help
+target_entity_type_id: block_content
+target_bundle: help
+default_langcode: site_default
+language_alterable: false

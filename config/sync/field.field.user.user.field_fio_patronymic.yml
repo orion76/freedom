@@ -1,0 +1,20 @@
+uuid: db8681e1-fbcf-4db9-817a-514695c12743
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_fio_patronymic
+  module:
+    - user
+id: user.user.field_fio_patronymic
+field_name: field_fio_patronymic
+entity_type: user
+bundle: user
+label: Отчество
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

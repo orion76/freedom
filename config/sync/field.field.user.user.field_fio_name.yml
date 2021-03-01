@@ -1,0 +1,20 @@
+uuid: c8a850ab-b457-4d5d-bcb2-b8b2ad9d4a45
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_fio_name
+  module:
+    - user
+id: user.user.field_fio_name
+field_name: field_fio_name
+entity_type: user
+bundle: user
+label: Имя
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

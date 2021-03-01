@@ -1,0 +1,39 @@
+uuid: c6c18f0a-d4fb-4af7-b8ed-cab077a4c083
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.help
+    - field.field.block_content.help.body
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_details:
+      children:
+        - body
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        id: ''
+        classes: ''
+        open: false
+      label: Помощь
+id: block_content.help.default
+targetEntityType: block_content
+bundle: help
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

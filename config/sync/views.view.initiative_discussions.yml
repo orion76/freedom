@@ -69,7 +69,14 @@ display:
             last: 'Last »'
           quantity: 9
       style:
-        type: default
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
         options:
@@ -77,7 +84,7 @@ display:
           inline:
             created: created
             uid: uid
-          separator: ''
+          separator: '|'
           hide_empty: false
       fields:
         title:
@@ -276,19 +283,6 @@ display:
           entity_field: uid
           plugin_id: field
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data

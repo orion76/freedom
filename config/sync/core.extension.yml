@@ -18,8 +18,6 @@ module:
   comment: 0
   components: 0
   config: 0
-  config_filter: 0
-  config_split: 0
   contact: 0
   content_moderation: 0
   contextual: 0
@@ -75,6 +73,7 @@ module:
   social_auth_github: 0
   social_auth_telegram: 0
   social_auth_vk: 0
+  syslog: 0
   system: 0
   taxonomy: 0
   telegram: 0
@@ -83,6 +82,7 @@ module:
   token_filter: 0
   toolbar: 0
   tour: 0
+  tracker: 0
   update: 0
   user: 0
   views_add_button: 0

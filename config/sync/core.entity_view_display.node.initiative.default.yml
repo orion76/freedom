@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.initiative.body
-    - field.field.node.initiative.field_help
     - field.field.node.initiative.field_type
     - node.type.initiative
     - views.view.initiative_discussions
     - views.view.initiative_pools
+  content:
+    - 'block_content:help:46ecc652-be47-4efb-8db6-3e8a2a3ce20c'
   module:
+    - block_content
     - field_layout
     - layout_builder
     - layout_discovery
@@ -44,7 +46,7 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
-            weight: 2
+            weight: 3
           c5b77458-e816-48b9-aab6-b88e226b8cd2:
             uuid: c5b77458-e816-48b9-aab6-b88e226b8cd2
             region: first
@@ -60,7 +62,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: entity_reference_label
             additional: {  }
-            weight: 1
+            weight: 2
           3c074436-fe84-4dd6-88b0-09904f5eebe6:
             uuid: 3c074436-fe84-4dd6-88b0-09904f5eebe6
             region: first
@@ -71,8 +73,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: inline
-                type: content_moderation_state
-                settings: {  }
+                type: string
+                settings:
+                  link_to_entity: false
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -88,22 +91,7 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:initiative:links'
             additional: {  }
-            weight: 3
-          1881b830-592a-4486-9882-3682c4dd8074:
-            uuid: 1881b830-592a-4486-9882-3682c4dd8074
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:initiative:field_help'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 6
+            weight: 4
           b333e0ab-6d0c-4593-a0a8-769bc3737200:
             uuid: b333e0ab-6d0c-4593-a0a8-769bc3737200
             region: second
@@ -116,7 +104,7 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: -7
           d6dca62d-2db9-4eb6-9654-2a6fe22dd625:
             uuid: d6dca62d-2db9-4eb6-9654-2a6fe22dd625
             region: second
@@ -129,7 +117,21 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: -8
+          e8d443b5-54e9-4274-8f95-c7fa02c76926:
+            uuid: e8d443b5-54e9-4274-8f95-c7fa02c76926
+            region: second
+            configuration:
+              id: 'block_content:46ecc652-be47-4efb-8db6-3e8a2a3ce20c'
+              label: Помощь(инициатива)
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: -9
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -162,13 +164,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_help:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_type:
     weight: 0
     label: above
