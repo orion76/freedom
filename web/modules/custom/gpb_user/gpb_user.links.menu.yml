@@ -16,3 +16,16 @@ gpb_user.user_profile.applications:
   menu_name: user_profile
   class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
 
+gpb_user.user_profile.my_materials:
+  title: My materials
+  description: User publisched materials
+  route_name: view.my_materials.page_1
+  menu_name: user_profile
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
+
+gpb_user.user_profile.my_not_publish:
+  title: My planed
+  description: User planed materials
+  route_name: view.my_not_publish.page_1
+  menu_name: user_profile
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
