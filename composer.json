@@ -64,8 +64,6 @@
     "drupal/rate": "^2.0@alpha",
     "drupal/responsive_menu": "^4.4",
     "drupal/smtp": "^1.0",
-    "drupal/social_auth_facebook": "^3.0",
-    "drupal/social_auth_github": "^3.0",
     "drupal/social_auth_vk": "^3.0",
     "drupal/telegram": "1.0.x-dev",
     "drupal/token_filter": "^1.2",
