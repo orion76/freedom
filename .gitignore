@@ -47,6 +47,7 @@ web/modules/contrib
 /.gitattributes
 /.ht.router.php
 /.htaccess
+/composer.lock
 /web/autoload.php
 /web/example.gitignore
 /web/index.php
