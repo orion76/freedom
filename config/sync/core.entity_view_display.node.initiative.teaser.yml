@@ -46,26 +46,31 @@ third_party_settings:
             uuid: c58feb19-3419-451f-965d-8a88084ed221
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:initiative:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
                 type: text_summary_or_trimmed
                 settings:
-                  trim_length: 600
+                  trim_length: 150
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 1
-          d5e99ecf-9763-4e12-84dc-65254b4d57c1:
-            uuid: d5e99ecf-9763-4e12-84dc-65254b4d57c1
+          4e1414c0-8d0e-4c9b-be67-554b0df4b2bc:
+            uuid: 4e1414c0-8d0e-4c9b-be67-554b0df4b2bc
             region: content
             configuration:
+              id: 'extra_field_block:node:initiative:links'
+              label: Ссылки
+              provider: layout_builder
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:initiative:content_moderation_control'
             additional: {  }
             weight: 2
         third_party_settings: {  }
@@ -95,6 +100,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  flag_initiative_like:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   langcode: true
   links: true

@@ -1,0 +1,42 @@
+uuid: 315f1acb-364f-4f36-8988-5d9d50da0e6b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: materials
+label: materials
+type: 'canonical_entities:node'
+pattern: '[node:content-type:machine-name]/[node:title]'
+selection_criteria:
+  f16db90c-d9f5-4b4e-a5ee-ab1d79656d9e:
+    id: node_type
+    bundles:
+      application: application
+      article: article
+      discussion: discussion
+      document: document
+      initiative: initiative
+      library_item: library_item
+      page: page
+      video: video
+      vote: vote
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f16db90c-d9f5-4b4e-a5ee-ab1d79656d9e
+  cf2e7fdd-db96-4293-bd0f-d14ddaa89c00:
+    id: language
+    langcodes:
+      en: en
+      ru: ru
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: cf2e7fdd-db96-4293-bd0f-d14ddaa89c00
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -26,6 +26,7 @@ permissions:
   - 'edit own library_item content'
   - 'edit own polls'
   - 'edit own vote content'
+  - 'revert initiative revisions'
   - 'update paragraph content document_section'
   - 'use discussion transition create_new_draft'
   - 'use discussion transition finished'

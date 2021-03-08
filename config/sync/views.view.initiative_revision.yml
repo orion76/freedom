@@ -1,22 +1,23 @@
-uuid: 85451194-3544-43de-9b1d-44a0c4e7f028
+uuid: 1e81b083-f634-4852-8120-c6f72dcb4166
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_target
+    - field.storage.node.field_type
     - field.storage.user.field_fio_name
     - field.storage.user.field_fio_surname
-    - node.type.vote
+    - node.type.initiative
   module:
+    - content_moderation
     - node
     - user
-id: front_pools
-label: Голосования(главная)
+id: initiative_revision
+label: initiative_revision
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: node_field_revision
+base_field: vid
 display:
   default:
     display_plugin: default
@@ -27,7 +28,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'view all revisions'
       cache:
         type: tag
         options: {  }
@@ -50,17 +51,12 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
-          items_per_page: 6
+          items_per_page: 25
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -69,20 +65,22 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
       row:
         type: fields
       fields:
-        revision_timestamp:
-          id: revision_timestamp
-          table: node_revision
-          field: revision_timestamp
-          relationship: none
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: nid
           group_type: group
           admin_label: ''
-          label: Обновлено
+          label: Дата
           exclude: false
           alter:
             alter_text: false
@@ -126,8 +124,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: Y-m-d
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -140,16 +138,79 @@ display:
           separator: ', '
           field_api_classes: false
           entity_type: node
-          entity_field: revision_timestamp
+          entity_field: created
           plugin_id: field
+        moderation_state:
+          id: moderation_state
+          table: node_field_revision
+          field: moderation_state
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          label: Статус
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: content_moderation_state
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          plugin_id: moderation_state_field
         title:
           id: title
-          table: node_field_data
+          table: node_field_revision
           field: title
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Тема голосования'
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -207,11 +268,74 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_type-revision_id:
+          id: field_type-revision_id
+          table: node_revision__field_type
+          field: field_type-revision_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Тип
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         uid:
           id: uid
-          table: node_field_data
+          table: node_field_revision
           field: uid
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
           label: Автор
@@ -409,7 +533,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_fio_name }}  {{ field_fio_surname }} ({{uid}})'
+            text: '{{ field_fio_name }} {{ field_fio_surname }} ({{ uid }})'
             make_link: false
             path: ''
             absolute: false
@@ -447,73 +571,10 @@ display:
           empty_zero: false
           hide_alter_empty: false
           plugin_id: custom
-        field_target:
-          id: field_target
-          table: node__field_target
-          field: field_target
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Инициатива
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       filters:
         status:
           value: '1'
-          table: node_field_data
+          table: node_field_revision
           field: status
           plugin_id: boolean
           entity_type: node
@@ -528,79 +589,60 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
+          relationship: nid
           value:
-            vote: vote
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            initiative: initiative
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
+          relationship: nid
           group_type: group
           admin_label: ''
+          order: DESC
           exposed: false
           expose:
             label: ''
-          granularity: second
-      title: Голосования
-      header: {  }
-      footer: {  }
-      empty: {  }
+          granularity: minute
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       relationships:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        nid:
+          id: nid
+          table: node_field_revision
+          field: nid
           relationship: none
           group_type: group
-          admin_label: автор
+          admin_label: 'Get the actual content from a content revision.'
+          required: true
+          entity_type: node
+          entity_field: nid
+          plugin_id: standard
+        uid:
+          id: uid
+          table: node_field_revision
+          field: uid
+          relationship: nid
+          group_type: group
+          admin_label: User
           required: true
           entity_type: node
           entity_field: uid
           plugin_id: standard
+      title: initiative_revision
+      header: {  }
+      footer: {  }
+      empty: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -610,16 +652,17 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_target'
+        - 'config:field.storage.node.field_type'
         - 'config:field.storage.user.field_fio_name'
         - 'config:field.storage.user.field_fio_surname'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
+      path: initiative-revision
     cache_metadata:
       max-age: -1
       contexts:
@@ -629,6 +672,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_target'
+        - 'config:field.storage.node.field_type'
         - 'config:field.storage.user.field_fio_name'
         - 'config:field.storage.user.field_fio_surname'

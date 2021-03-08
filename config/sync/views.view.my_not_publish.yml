@@ -524,7 +524,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Мои не опубликованные'
+      title: 'Не опубликованные материалы'
       header: {  }
       footer: {  }
       empty: {  }
