@@ -57,6 +57,11 @@ body.user-logged-in.toolbar-fixed {
   list-style: none;
   width: 100%;
 
+  .sub-nav{
+    background: rgb(52, 58, 64);
+    border: 1px solid rgb(153, 153, 153);
+  }
+  
   & > li {
     display: inline-block;
     position: relative;
@@ -98,11 +103,15 @@ body.user-logged-in.toolbar-fixed {
     li > a {
       display: block;
       position: relative;
-      padding-top: 0.25em;
+      padding-top: 0.5em;
       padding-right: 1em;
-      padding-bottom: 0.25em;
+      padding-bottom: 0.5em;
       padding-left: 1em;
       text-transform: none;
+      &:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(73, 78, 83);
+      }
     }
 
     & > li:hover > ul,
