@@ -1,0 +1,14 @@
+uuid: 7a2665ef-935d-45f6-9336-34cfb8f7bb33
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.comrade
+  module:
+    - user
+id: user_add_role_action.comrade
+label: 'Добавьте роль Соратник выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: comrade

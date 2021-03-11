@@ -1,10 +1,10 @@
-uuid: 14ca074d-043c-4bc5-bdef-e12fa4164ab2
+uuid: dd643870-6b78-4b79-876e-965246216ed6
 langcode: ru
 status: true
 dependencies: {  }
-id: member_fraction
-label: 'Член фракции'
-weight: -5
+id: comrade
+label: Соратник
+weight: -4
 is_admin: null
 permissions:
   - 'access polls'
@@ -12,7 +12,6 @@ permissions:
   - 'create book content'
   - 'create discussion content'
   - 'create document content'
-  - 'create initiative content'
   - 'create library_item content'
   - 'create paragraph content document_section'
   - 'create polls'

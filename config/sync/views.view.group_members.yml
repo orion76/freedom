@@ -1,26 +1,19 @@
-uuid: bb0988ba-de8c-4ee8-bbf4-50aa0318945e
+uuid: 43a3833b-75e2-4d5d-9254-87c522cc2a61
 langcode: ru
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_type
-    - node.type.initiative
-    - system.menu.main
-    - taxonomy.vocabulary.initiative_type
-    - workflows.workflow.initiative
   module:
-    - content_moderation
-    - node
-    - taxonomy
+    - group
     - user
-    - views_add_button
-id: initiative
-label: Инициативы
-module: views
+_core:
+  default_config_hash: zIcnLmbW8inPRIQdPSVbKPuG2o5G5wHGJED4Jlgb2SY
+id: group_members
+label: 'Участники группы'
+module: group
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: group_content_field_data
+base_field: id
 display:
   default:
     display_plugin: default
@@ -29,9 +22,9 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: group_permission
         options:
-          perm: 'access content'
+          group_permission: 'administer members'
       cache:
         type: tag
         options: {  }
@@ -46,7 +39,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Фильтр
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -54,12 +47,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
-          items_per_page: 25
+          items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -68,9 +66,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: table
         options:
@@ -78,30 +74,68 @@ display:
           row_class: ''
           default_row_class: true
           override: true
-          sticky: false
+          sticky: true
           caption: ''
           summary: ''
           description: ''
           columns:
-            field_type: field_type
-            uid: uid
-            title: title
+            name: name
+            group_roles: group_roles
+            changed: changed
+            created: created
+            view_group_content: view_group_content
+            edit_group_content: edit_group_content
+            delete_group_content: delete_group_content
+            dropbutton: dropbutton
           info:
-            field_type:
+            name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            group_roles:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            changed:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view_group_content:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            uid:
+            edit_group_content:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            title:
+            delete_group_content:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            dropbutton:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -109,23 +143,23 @@ display:
               empty_column: false
               responsive: ''
           default: '-1'
-          empty_table: false
+          empty_table: true
       row:
         type: fields
         options:
-          default_field_elements: true
           inline: {  }
           separator: ''
           hide_empty: false
+          default_field_elements: true
       fields:
-        moderation_state:
-          id: moderation_state
-          table: node_field_data
-          field: moderation_state
-          relationship: none
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: gc__user
           group_type: group
           admin_label: ''
-          label: Статус
+          label: User
           exclude: false
           alter:
             alter_text: false
@@ -167,8 +201,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: content_moderation_state
-          settings: {  }
+          type: user_name
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -179,16 +214,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          plugin_id: moderation_state_field
-        field_type:
-          id: field_type
-          table: node__field_type
-          field: field_type
+          entity_type: user
+          entity_field: name
+          plugin_id: field
+        group_roles:
+          id: group_roles
+          table: group_content__group_roles
+          field: group_roles
           relationship: none
           group_type: group
           admin_label: ''
-          label: Тип
+          label: Roles
           exclude: false
           alter:
             alter_text: false
@@ -225,7 +261,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '<div class="item-list"><ul><li>&lt;none&gt;</li></ul></div>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -240,18 +276,18 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        changed:
+          id: changed
+          table: group_content_field_data
+          field: changed
           relationship: none
           group_type: group
           admin_label: ''
-          label: Автор
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -292,11 +328,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: timestamp
           settings:
-            link: true
-          group_column: target_id
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -306,17 +344,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
+          entity_type: group_content
+          entity_field: changed
           plugin_id: field
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        created:
+          id: created
+          table: group_content_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          label: Наименование
+          label: Регистрация
           exclude: false
           alter:
             alter_text: false
@@ -336,8 +374,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -358,9 +396,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: timestamp
           settings:
-            link_to_entity: true
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -371,18 +411,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
+          entity_type: group_content
+          entity_field: created
           plugin_id: field
-        operations:
-          id: operations
-          table: node
-          field: operations
+        view_group_content:
+          id: view_group_content
+          table: group_content
+          field: view_group_content
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'View member link'
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -422,237 +462,251 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: false
-          entity_type: node
-          plugin_id: entity_operations
-      filters:
-        moderation_state:
-          id: moderation_state
-          table: node_field_data
-          field: moderation_state
+          text: 'View member'
+          entity_type: group_content
+          plugin_id: entity_link
+          output_url_as_text: false
+          absolute: false
+        edit_group_content:
+          id: edit_group_content
+          table: group_content
+          field: edit_group_content
           relationship: none
           group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            initiative-draft: initiative-draft
-            initiative-published: initiative-published
-            initiative-discussion: initiative-discussion
-            initiative-vote: initiative-vote
-            initiative-accepted: initiative-accepted
-            initiative-not_accepted: initiative-not_accepted
-            initiative-postponed: initiative-postponed
-          group: 1
-          exposed: true
-          expose:
-            operator_id: moderation_state_op
-            label: Статус
-            description: ''
-            use_operator: false
-            operator: moderation_state_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: moderation_state
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              moderator: '0'
-              member_party: '0'
-              member_fraction: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          plugin_id: moderation_state_filter
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            initiative: initiative
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+          admin_label: 'Edit member link'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Edit member'
+          entity_type: group_content
+          plugin_id: entity_link_edit
+        delete_group_content:
+          id: delete_group_content
+          table: group_content
+          field: delete_group_content
           relationship: none
           group_type: group
-          admin_label: ''
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: uid_op
-            label: Автор
-            description: ''
-            use_operator: false
-            operator: uid_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: uid
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              member_party: '0'
-              member_fraction: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: uid
-          plugin_id: user_name
-        field_type_target_id:
-          id: field_type_target_id
-          table: node__field_type
-          field: field_type_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_type_target_id_op
-            label: 'Тип '
-            description: ''
-            use_operator: false
-            operator: field_type_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_type_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              member_party: '0'
-              member_fraction: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: initiative_type
-          hierarchy: true
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: Инициативы
-      header:
-        views_add_button:
-          id: views_add_button
+          admin_label: 'Remove member link'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Удалить участника'
+          entity_type: group_content
+          plugin_id: entity_link_delete
+        dropbutton:
+          id: dropbutton
           table: views
-          field: views_add_button
+          field: dropbutton
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: 0
-          type: node+initiative
-          render_plugin: views_add_button_node
-          access_plugin: views_add_button_node
-          context: ''
-          button_text: 'Добавить инициативу'
-          button_classes: 'btn btn-primary'
-          button_attributes: ''
-          button_access_denied:
-            value: ''
-            format: basic_html
-          button_prefix:
-            value: ''
-            format: basic_html
-          button_suffix:
-            value: ''
-            format: basic_html
-          query_string: ''
-          destination: 1
-          plugin_id: views_add_button_area
+          label: Operations
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            view_group_content: view_group_content
+            edit_group_content: edit_group_content
+            delete_group_content: delete_group_content
+            name: '0'
+            group_roles: '0'
+            changed: '0'
+            created: '0'
+          destination: true
+          plugin_id: dropbutton
+      filters: {  }
+      sorts: {  }
+      header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No members available.'
+          plugin_id: text_custom
+      relationships:
+        gc__user:
+          id: gc__user
+          table: group_content_field_data
+          field: gc__user
+          relationship: none
+          group_type: group
+          admin_label: 'Member account'
+          required: true
+          group_content_plugins:
+            group_membership: group_membership
+          entity_type: group_content
+          plugin_id: group_content_to_entity
+      arguments:
+        gid:
+          id: gid
+          table: group_content_field_data
+          field: gid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: 'access denied'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: '{{ arguments.gid|placeholder }} members'
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: group_content
+          entity_field: gid
+          plugin_id: numeric
       display_extenders: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      title: Участники
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - route.group
         - url
         - url.query_args
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
+        - user.group_permissions
       tags:
-        - 'config:field.storage.node.field_type'
-        - 'config:workflow_list'
+        - 'config:field.storage.group_content.group_roles'
   page_1:
     display_plugin: page
     id: page_1
@@ -660,26 +714,25 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: initiative
+      path: group/%group/members
       menu:
-        type: normal
-        title: Инициативы
-        menu_name: main
-        weight: -50
-        parent: 'menu_link_content:57fd4d29-8802-429e-b55b-a732d03fa1f5'
+        type: tab
+        title: Участники
         description: ''
-        expanded: true
+        expanded: false
+        parent: ''
+        weight: 20
+        context: '0'
+        menu_name: main
         enabled: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - route.group
         - url
         - url.query_args
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
+        - user.group_permissions
       tags:
-        - 'config:field.storage.node.field_type'
-        - 'config:workflow_list'
+        - 'config:field.storage.group_content.group_roles'

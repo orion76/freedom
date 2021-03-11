@@ -1,0 +1,14 @@
+uuid: 285e2f6d-a46e-4656-a79f-740357b20339
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.comrade
+  module:
+    - user
+id: user_remove_role_action.comrade
+label: 'Удалить роль Соратник из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: comrade

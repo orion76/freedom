@@ -1,0 +1,18 @@
+uuid: ed0b85f0-9d0d-49b7-8737-d0d74dd6fcf8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.title
+field_name: title
+entity_type: node
+bundle: project
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

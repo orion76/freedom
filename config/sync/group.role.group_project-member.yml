@@ -1,0 +1,14 @@
+uuid: 528cb5e3-e98c-49b4-a981-763bc85cfd7e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - group.type.group_project
+id: group_project-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: group_project
+permissions_ui: true
+permissions: {  }

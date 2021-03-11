@@ -3,6 +3,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_ext: 0
   admin_toolbar_tools: 0
+  advpoll: 0
   auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
@@ -40,7 +41,9 @@ module:
   fontawesome: 0
   freedom_fields: 0
   freedom_views: 0
+  gnode: 0
   gpb_user: 0
+  group: 0
   help: 0
   history: 0
   image: 0
@@ -74,7 +77,6 @@ module:
   social_auth: 0
   social_auth_github: 0
   social_auth_telegram: 0
-  social_auth_vk: 0
   syslog: 0
   system: 0
   taxonomy: 0
@@ -87,6 +89,7 @@ module:
   tracker: 0
   update: 0
   user: 0
+  variationcache: 0
   views_add_button: 0
   views_bulk_edit: 0
   views_bulk_operations: 0

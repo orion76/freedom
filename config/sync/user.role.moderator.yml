@@ -13,6 +13,7 @@ permissions:
   - 'access poll overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access user profiles'
   - 'add content to books'
   - 'administer book outlines'
   - 'administer taxonomy'

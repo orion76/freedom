@@ -1,0 +1,17 @@
+uuid: d0c1544b-ce12-4bb6-a563-137c82273453
+langcode: ru
+status: true
+dependencies:
+  config:
+    - group.type.group_project
+  enforced:
+    config:
+      - user.role.member_fraction
+id: group_project-6586fbe25
+label: 'Член фракции'
+weight: -5
+internal: true
+audience: outsider
+group_type: group_project
+permissions_ui: false
+permissions: {  }
