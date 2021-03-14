@@ -1,0 +1,13 @@
+{
+    "name": "entity_event",
+    "type": "drupal-module",
+    "description": "Entity event handler",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/entity_event",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/entity_event",
+        "source": "http://cgit.drupalcode.org/entity_event"
+    }
+}

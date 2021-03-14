@@ -1,0 +1,10 @@
+entity.event_config.add_form:
+  route_name: entity.event_config.add_form
+  title: 'Add Event config'
+  appears_on:
+    - entity.event_config.collection
+entity.config_group.add_form:
+  route_name: entity.config_group.add_form
+  title: 'Add Config group'
+  appears_on:
+    - entity.config_group.collection

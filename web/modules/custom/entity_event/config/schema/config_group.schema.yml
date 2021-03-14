@@ -1,0 +1,12 @@
+entity_event.config_group.*:
+  type: config_entity
+  label: 'Config group config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

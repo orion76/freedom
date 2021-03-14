@@ -1,0 +1,18 @@
+entity_event.event_config.*:
+  type: config_entity
+  label: 'Event config config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    group:
+      type: string
+    plugin_event:
+      type: string
+    plugin_action:
+      type: string

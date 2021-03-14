@@ -1,0 +1,5 @@
+live:
+  host: tiwork
+  user: pasha
+  root: /var/www/freedom
+  uri: https://freedom.ti-work.ru
