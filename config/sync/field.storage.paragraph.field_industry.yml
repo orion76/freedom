@@ -1,0 +1,20 @@
+uuid: 0fac9902-e2d6-44ad-95cc-1055730b57f1
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_industry
+field_name: field_industry
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

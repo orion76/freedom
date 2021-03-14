@@ -1,0 +1,29 @@
+uuid: ff7ceee8-eb31-48f2-bd64-9a8adeb13080
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_profession
+    - paragraphs.paragraphs_type.profession
+    - taxonomy.vocabulary.professions
+id: paragraph.profession.field_profession
+field_name: field_profession
+entity_type: paragraph
+bundle: profession
+label: Профессия
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      professions: professions
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

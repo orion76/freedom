@@ -1,0 +1,10 @@
+uuid: deb66613-e25a-4036-93a6-0f5be3864abf
+langcode: ru
+status: true
+dependencies: {  }
+id: profession
+label: Профессия
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

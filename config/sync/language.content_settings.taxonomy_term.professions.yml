@@ -1,0 +1,11 @@
+uuid: 6071449b-6cbe-4cfe-872f-6109568a4e4b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.professions
+id: taxonomy_term.professions
+target_entity_type_id: taxonomy_term
+target_bundle: professions
+default_langcode: site_default
+language_alterable: false

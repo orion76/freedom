@@ -1,0 +1,5 @@
+database_path: ../private/IP2LOCATION-LITE-DB3.BIN
+cache_mode: no_cache
+_core:
+  default_config_hash: BeG0CZU1tATcAlJc2qnvfUNDw4SmTyEuHu1btu270z0
+langcode: ru

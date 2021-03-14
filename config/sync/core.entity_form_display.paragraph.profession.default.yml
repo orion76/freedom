@@ -1,0 +1,44 @@
+uuid: 5c88749d-46d3-47f4-8763-c79014f97ee4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profession.field_industry
+    - field.field.paragraph.profession.field_profession
+    - paragraphs.paragraphs_type.profession
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.profession.default
+targetEntityType: paragraph
+bundle: profession
+mode: default
+content:
+  field_industry:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_profession:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

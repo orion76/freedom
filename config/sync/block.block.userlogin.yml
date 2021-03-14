@@ -1,0 +1,33 @@
+uuid: d793ddea-47d8-4872-b92f-7be26d82b68b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - radix_sub
+id: userlogin
+theme: radix_sub
+region: sidebar_right
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Войти
+  provider: user
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

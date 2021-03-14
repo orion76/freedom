@@ -1,0 +1,8 @@
+uuid: 980d607b-ab81-4e80-8442-ab858478f79c
+langcode: ru
+status: true
+dependencies: {  }
+name: Профессии
+vid: professions
+description: ''
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 8fc1f2f0-646d-4d87-8154-b28f47d65f14
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_industry
+    - paragraphs.paragraphs_type.profession
+    - taxonomy.vocabulary.industry
+id: paragraph.profession.field_industry
+field_name: field_industry
+entity_type: paragraph
+bundle: profession
+label: Отрасль
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      industry: industry
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

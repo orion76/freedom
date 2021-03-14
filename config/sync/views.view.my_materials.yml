@@ -524,7 +524,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-      title: 'Мои не опубликованные'
+      title: 'Мои материалы'
       header: {  }
       footer: {  }
       empty: {  }

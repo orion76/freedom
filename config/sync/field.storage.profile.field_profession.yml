@@ -1,0 +1,20 @@
+uuid: eb03194b-5b52-47f5-b1a6-16dc0306255c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - profile
+id: profile.field_profession
+field_name: field_profession
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: paragraph
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

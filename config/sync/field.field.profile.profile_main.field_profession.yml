@@ -1,0 +1,32 @@
+uuid: becbae38-dd99-43c5-9db7-0dae2c2135e8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profession
+    - paragraphs.paragraphs_type.profession
+    - profile.type.profile_main
+id: profile.profile_main.field_profession
+field_name: field_profession
+entity_type: profile
+bundle: profile_main
+label: Профессия
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      profession: profession
+    target_bundles_drag_drop:
+      document_section:
+        weight: 3
+        enabled: false
+      profession:
+        enabled: true
+        weight: 4
+field_type: entity_reference

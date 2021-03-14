@@ -9,6 +9,7 @@ is_admin: null
 permissions:
   - 'access polls'
   - 'access user profiles'
+  - 'cancel own vote'
   - 'create book content'
   - 'create discussion content'
   - 'create document content'

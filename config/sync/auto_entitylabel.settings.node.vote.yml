@@ -1,5 +1,5 @@
 status: 1
-pattern: '[node:field_target:entity:title]'
+pattern: '[node:field_poll:entity:question]'
 escape: false
 preserve_titles: false
 save: 0

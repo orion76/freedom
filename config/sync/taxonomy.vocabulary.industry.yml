@@ -1,0 +1,8 @@
+uuid: 208cb2da-1b54-46ee-b90a-8513998c98b4
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Сфера дейтельности'
+vid: industry
+description: ''
+weight: 0

@@ -1,0 +1,30 @@
+uuid: 3fac6db2-8362-4185-b916-9375dac4253e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profession.field_industry
+    - field.field.paragraph.profession.field_profession
+    - paragraphs.paragraphs_type.profession
+id: paragraph.profession.default
+targetEntityType: paragraph
+bundle: profession
+mode: default
+content:
+  field_industry:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profession:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
