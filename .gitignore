@@ -11,11 +11,13 @@
 /web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
+/web/libraries
 /web/sites/*/files
 /web/sites/*/public
 /web/sites/*/private
 /web/sites/*/files-public
 /web/sites/*/files-private
+/web/*/node_modules
 
 # Ignore paths that may contain temporary files
 /web/sites/*/translations
@@ -26,9 +28,8 @@
 /web/sites/simpletest
 
 /vendor
-vendor
 /web/themes/contrib
-web/modules/contrib
+/web/modules/contrib
 /web/themes/custom/*/assets
 
 # Ignore drupal core (if not versioning drupal sources)
