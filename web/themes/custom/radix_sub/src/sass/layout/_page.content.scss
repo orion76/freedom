@@ -1,5 +1,67 @@
 // Page: Content
 // -----------------------------------------------------------------------------
+
 .page__content {
   display: flex;
+  .content{
+    padding: 0 2rem;
+  }
 }
+
+.page--form .page__content {
+  margin: auto;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//@media (min-width: map-get($grid-breakpoints, 'md')) {
+//  .page--form .page__content {
+//    width: 100%;
+//  }
+//}
+
+@media (min-width: map-get($grid-breakpoints, 'xs')) {
+  .page--form .page__content {
+    width: 80%;
+  }
+  .content-wrapper {
+
+    .content{
+      flex: 50%;
+      &.content-main{
+        flex: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'ms')) {
+  .page--form .page__content {
+    width: 50%;
+  }
+  .page__content {
+
+    margin: 0 2rem;
+
+    .content {
+      flex: 4;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+    .sidebar-left {
+      padding-right: 1rem;
+    }
+
+    .sidebar-right {
+      padding-left: 1rem;
+    }
+  }
+
+}
+

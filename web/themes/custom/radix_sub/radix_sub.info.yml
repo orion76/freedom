@@ -14,6 +14,8 @@ regions:
   navbar_bottom: Navbar bottom
   header: Header
   content: Content
+  content_1: Content 1
+  content_2: Content 2
   sidebar_left: Sidebar left
   sidebar_right: Sidebar right
   page_bottom: Page bottom
