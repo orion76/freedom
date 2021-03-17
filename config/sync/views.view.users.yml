@@ -757,7 +757,17 @@ display:
             label: ''
           granularity: second
       title: Участники
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          content: 'Отображается с @start по @end из @total'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships:
