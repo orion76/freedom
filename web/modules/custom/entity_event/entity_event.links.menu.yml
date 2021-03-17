@@ -1,0 +1,16 @@
+
+# Event config menu items definition
+#entity.event_config.collection:
+#  title: 'Event config'
+#  route_name: entity.event_config.collection
+#  description: 'List Event config (bundles)'
+#  parent: system.admin_structure
+#  weight: 99
+
+# Config group menu items definition
+entity.config_group.collection:
+  title: 'Entity events'
+  route_name: entity.config_group.collection
+  description: 'List Config group (bundles)'
+  parent: system.admin_config
+  weight: 99

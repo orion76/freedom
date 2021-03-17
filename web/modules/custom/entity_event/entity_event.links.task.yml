@@ -1,0 +1,9 @@
+entity_event.config_group.view:
+  route_name: entity.config_group.canonical
+  title: 'View'
+  base_route: entity.config_group.canonical
+
+entity_event.config_group.edit:
+  route_name: entity.config_group.edit_form
+  title: 'Edit'
+  base_route: entity.config_group.canonical
