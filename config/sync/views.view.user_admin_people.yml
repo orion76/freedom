@@ -53,9 +53,9 @@ display:
           total_pages: 0
           tags:
             previous: '‹ Previous'
-            next: 'Next ›'
+            next: 'Дальше ›'
             first: '« First'
-            last: 'Last »'
+            last: 'Последний ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'

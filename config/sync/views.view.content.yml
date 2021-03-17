@@ -41,9 +41,9 @@ display:
           items_per_page: 50
           tags:
             previous: '‹ Previous'
-            next: 'Next ›'
+            next: 'Дальше ›'
             first: '« First'
-            last: 'Last »'
+            last: 'Последний ›'
       style:
         type: table
         options:

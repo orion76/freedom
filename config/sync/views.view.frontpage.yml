@@ -185,9 +185,9 @@ display:
             offset_label: Offset
           tags:
             previous: '‹ Previous'
-            next: 'Next ›'
+            next: 'Дальше ›'
             first: '« First'
-            last: 'Last »'
+            last: 'Последний ›'
           quantity: 9
       query:
         type: views_query
