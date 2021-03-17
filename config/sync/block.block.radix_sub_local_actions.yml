@@ -9,7 +9,7 @@ _core:
 id: radix_sub_local_actions
 theme: radix_sub
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

@@ -9,7 +9,7 @@ _core:
 id: radix_sub_local_tasks
 theme: radix_sub
 region: content
-weight: -5
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

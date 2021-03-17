@@ -11,7 +11,7 @@ _core:
 id: radix_sub_messages
 theme: radix_sub
 region: content
-weight: -7
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:

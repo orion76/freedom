@@ -1,0 +1,41 @@
+uuid: 9974c230-85bf-4c72-b868-b31bee77b36b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - poll
+id: poll_choice--poll_choice
+disabled: true
+path: poll_choice/poll_choice
+resourceType: poll_choice--poll_choice
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  choice:
+    fieldName: choice
+    publicName: choice
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  default_langcode:
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+    disabled: false

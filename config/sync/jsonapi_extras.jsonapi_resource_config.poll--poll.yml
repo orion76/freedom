@@ -1,0 +1,113 @@
+uuid: c8992e7a-7cdd-4926-aa9a-b147a8b74b44
+langcode: ru
+status: true
+dependencies:
+  module:
+    - poll
+id: poll--poll
+disabled: true
+path: poll/poll
+resourceType: poll--poll
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: uid
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  question:
+    fieldName: question
+    publicName: question
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  choice:
+    fieldName: choice
+    publicName: choice
+    enhancer:
+      id: ''
+    disabled: false
+  runtime:
+    fieldName: runtime
+    publicName: runtime
+    enhancer:
+      id: ''
+    disabled: false
+  anonymous_vote_allow:
+    fieldName: anonymous_vote_allow
+    publicName: anonymous_vote_allow
+    enhancer:
+      id: ''
+    disabled: false
+  cancel_vote_allow:
+    fieldName: cancel_vote_allow
+    publicName: cancel_vote_allow
+    enhancer:
+      id: ''
+    disabled: false
+  result_vote_allow:
+    fieldName: result_vote_allow
+    publicName: result_vote_allow
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+    disabled: false
+  default_langcode:
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+    disabled: false
+  field_number_of_votes:
+    fieldName: field_number_of_votes
+    publicName: field_number_of_votes
+    enhancer:
+      id: ''
+    disabled: false
+  field_poll_type:
+    fieldName: field_poll_type
+    publicName: field_poll_type
+    enhancer:
+      id: ''
+    disabled: false
+  field_start_date:
+    fieldName: field_start_date
+    publicName: field_start_date
+    enhancer:
+      id: ''
+    disabled: false
+  field_writein:
+    fieldName: field_writein
+    publicName: field_writein
+    enhancer:
+      id: ''
+    disabled: false
