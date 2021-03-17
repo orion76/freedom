@@ -4,18 +4,8 @@ namespace Drupal\social_auth_telegram\Controller;
 
 use Drupal\Core\Config\Config;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Logger\LoggerChannelInterface;
-use Drupal\Core\Messenger\MessengerInterface;
-use Drupal\Core\Render\RendererInterface;
-use Drupal\social_api\Plugin\NetworkManager;
-use Drupal\social_auth\Controller\OAuth2ControllerBase;
-use Drupal\social_auth\SocialAuthDataHandler;
 use Drupal\social_auth\User\UserAuthenticator;
-use Drupal\social_auth_telegram\TelegramAuthManager;
-use Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
-use function func_get_args;
 use function hash;
 use function hash_hmac;
 use function implode;

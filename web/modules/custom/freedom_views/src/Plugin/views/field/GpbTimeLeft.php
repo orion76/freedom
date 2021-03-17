@@ -40,6 +40,7 @@ class GpbTimeLeft extends FieldPluginBase {
             'type' => 'INNER',
         ];
 
+        /** @var $join \Drupal\views\Plugin\views\join\JoinPluginBase   */ 
         $join = Views::pluginManager('join')->createInstance('standard', $configuration);
         $this->query->addRelationship($field_table, $join, $table);
 

@@ -11,9 +11,17 @@
  * Alter DB tables defined via hook_views_data().
  */
 function freedom_views_views_data_alter(array &$data) {
-
-
-    $n = 0;
+$n=0;
+    $data['users']['fio'] = [
+        'title' => t('User FIO'),
+        'field' => [
+            'title' => t('User FIO'),
+            'help' => t('User full name.'),
+            'id' => 'user_fio',
+            'click sortable' => FALSE,
+        ],
+    ];
+    
     $data['node']['gpb_time_left'] = [
         'title' => t('Time left'),
         'field' => [

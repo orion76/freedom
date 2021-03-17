@@ -30,7 +30,7 @@
 
       } else {
         const hiddenBottom = windowHeight - bounding.bottom;
-        if (hiddenBottom <= 0 - move_value) {
+        if (hiddenBottom <= 0 - move_value +60) {
           moveBottom(ul, move_value, duration);
         }
       }
