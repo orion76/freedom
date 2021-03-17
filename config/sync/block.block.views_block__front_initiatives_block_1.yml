@@ -1,0 +1,30 @@
+uuid: 7ae8639b-8e06-4029-acff-d558dec8537f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.front_initiatives
+  module:
+    - system
+    - views
+  theme:
+    - radix_sub
+id: views_block__front_initiatives_block_1
+theme: radix_sub
+region: content_2
+weight: 0
+provider: null
+plugin: 'views_block:front_initiatives-block_1'
+settings:
+  id: 'views_block:front_initiatives-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
