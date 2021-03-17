@@ -1,0 +1,95 @@
+uuid: ae523f9d-bd1b-4898-8a1d-c3b32522d21b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - profile
+id: profile_type--profile_type
+disabled: true
+path: profile_type/profile_type
+resourceType: profile_type--profile_type
+resourceFields:
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  dependencies:
+    fieldName: dependencies
+    publicName: dependencies
+    enhancer:
+      id: ''
+    disabled: false
+  third_party_settings:
+    fieldName: third_party_settings
+    publicName: third_party_settings
+    enhancer:
+      id: ''
+    disabled: false
+  _core:
+    fieldName: _core
+    publicName: _core
+    enhancer:
+      id: ''
+    disabled: false
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  label:
+    fieldName: label
+    publicName: label
+    enhancer:
+      id: ''
+    disabled: false
+  display_label:
+    fieldName: display_label
+    publicName: display_label
+    enhancer:
+      id: ''
+    disabled: false
+  multiple:
+    fieldName: multiple
+    publicName: multiple
+    enhancer:
+      id: ''
+    disabled: false
+  registration:
+    fieldName: registration
+    publicName: registration
+    enhancer:
+      id: ''
+    disabled: false
+  roles:
+    fieldName: roles
+    publicName: roles
+    enhancer:
+      id: ''
+    disabled: false
+  allow_revisions:
+    fieldName: allow_revisions
+    publicName: allow_revisions
+    enhancer:
+      id: ''
+    disabled: false
+  new_revision:
+    fieldName: new_revision
+    publicName: new_revision
+    enhancer:
+      id: ''
+    disabled: false

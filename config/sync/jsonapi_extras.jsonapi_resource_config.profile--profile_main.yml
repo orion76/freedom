@@ -1,0 +1,107 @@
+uuid: e92ca2db-7754-4549-8df0-28939d33fb38
+langcode: ru
+status: true
+dependencies:
+  config:
+    - profile.type.profile_main
+id: profile--profile_main
+disabled: true
+path: profile/profile_main
+resourceType: profile--profile_main
+resourceFields:
+  profile_id:
+    fieldName: profile_id
+    publicName: profile_id
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  revision_id:
+    fieldName: revision_id
+    publicName: revision_id
+    enhancer:
+      id: ''
+    disabled: false
+  type:
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+    disabled: false
+  revision_created:
+    fieldName: revision_created
+    publicName: revision_created
+    enhancer:
+      id: ''
+    disabled: false
+  revision_user:
+    fieldName: revision_user
+    publicName: revision_user
+    enhancer:
+      id: ''
+    disabled: false
+  revision_log_message:
+    fieldName: revision_log_message
+    publicName: revision_log_message
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: uid
+    enhancer:
+      id: ''
+    disabled: false
+  is_default:
+    fieldName: is_default
+    publicName: is_default
+    enhancer:
+      id: ''
+    disabled: false
+  data:
+    fieldName: data
+    publicName: data
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changed
+    enhancer:
+      id: ''
+    disabled: false
+  revision_default:
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+    disabled: false
+  field_profession:
+    fieldName: field_profession
+    publicName: field_profession
+    enhancer:
+      id: ''
+    disabled: false
+  field_region:
+    fieldName: field_region
+    publicName: field_region
+    enhancer:
+      id: ''
+    disabled: false

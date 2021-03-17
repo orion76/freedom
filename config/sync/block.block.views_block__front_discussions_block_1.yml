@@ -1,6 +1,6 @@
 uuid: 3639b124-2ea0-40bd-9a7c-e4f3366824ea
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - views.view.front_discussions
@@ -11,8 +11,8 @@ dependencies:
     - radix_sub
 id: views_block__front_discussions_block_1
 theme: radix_sub
-region: content
-weight: -1
+region: navbar_branding
+weight: -8
 provider: null
 plugin: 'views_block:front_discussions-block_1'
 settings:

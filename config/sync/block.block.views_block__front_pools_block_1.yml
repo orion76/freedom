@@ -1,6 +1,6 @@
 uuid: 057666b7-dc55-4926-a81b-be9b883d9e57
 langcode: ru
-status: true
+status: false
 dependencies:
   config:
     - views.view.front_pools
@@ -11,8 +11,8 @@ dependencies:
     - radix_sub
 id: views_block__front_pools_block_1
 theme: radix_sub
-region: content
-weight: 0
+region: navbar_branding
+weight: -9
 provider: null
 plugin: 'views_block:front_pools-block_1'
 settings:
