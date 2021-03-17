@@ -1,19 +1,24 @@
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    height: fit-content;
+  }
+}
+
+
 .views-exposed-form {
-  .form-content{
+  .form-content {
     display: flex;
     justify-content: space-between;
     padding: 1em;
     background: #dedede;
-    
-    .form-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      .button {
-        height: fit-content;
-      }
-    }  
+    .form-actions {
+      align-items: center;
+    }
   }
 }
-.ff{}
+

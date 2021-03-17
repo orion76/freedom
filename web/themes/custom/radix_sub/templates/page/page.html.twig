@@ -36,34 +36,51 @@
     <main class="pt-3 pb-3">
         {% if page.header %}
             <header class="page__header mb-3">
-                <div class="container">
-                    {{ page.header }}
 
-                    {% block navbar_bottom %}
-                        {% if page.navbar_bottom %}
-                            <div class="navbar-bottom">
-                                {{ page.navbar_bottom }}
-                            </div>
-                        {% endif %}
-                    {% endblock %}
+                {{ page.header }}
 
-                </div>
+                {% block navbar_bottom %}
+                    {% if page.navbar_bottom %}
+                        <div class="navbar-bottom">
+                            {{ page.navbar_bottom }}
+                        </div>
+                    {% endif %}
+                {% endblock %}
+
             </header>
         {% endif %}
 
-        {% if page.content %}
-            <div class="page__content">
+
+        <div class="page__content">
+            {% if page.sidebar_left %}
                 <div class="sidebar sidebar-left">
                     {{ page.sidebar_left }}
                 </div>
-                <div class="container">
-                    {{ page.content }}
-                </div>
+            {% endif %}
+            <div class="content-wrapper">
+                {% if page.content %}
+                    <div class="content content-main">
+                        {{ page.content }}
+                    </div>
+                {% endif %}
+                {% if page.content_1 %}
+                    <div class="content content-1">
+                        {{ page.content_1 }}
+                    </div>
+                {% endif %}
+                {% if page.content_2 %}
+                    <div class="content content-2">
+                        {{ page.content_2 }}
+                    </div>
+                {% endif %}
+            </div>
+            {% if page.sidebar_right %}
                 <div class="sidebar sidebar-right">
                     {{ page.sidebar_right }}
                 </div>
-            </div>
-        {% endif %}
+            {% endif %}
+        </div>
+
     </main>
 
     {% if page.footer %}
