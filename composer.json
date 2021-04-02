@@ -62,6 +62,7 @@
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/ip2location": "^1.2",
     "drupal/jsonapi_extras": "^3.17",
+    "drupal/menu_token": "^1.0@alpha",
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
     "drupal/poll": "^1.4",
