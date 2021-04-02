@@ -1,0 +1,25 @@
+site_events.site_event_subscriber.*:
+  type: config_entity
+  label: 'Event subscriber config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    group_id:
+      type: string
+    source:
+      type: mapping
+      mapping:
+        type:
+          type: string
+        bundle:
+          type: string
+    event_id:
+      type: string
+    subscriber_id:
+      type: string

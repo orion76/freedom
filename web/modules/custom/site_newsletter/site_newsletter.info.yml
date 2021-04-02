@@ -1,0 +1,5 @@
+name: 'site_newsletter'
+type: module
+description: 'Site events newsletter'
+core: 8.x
+package: 'Events'

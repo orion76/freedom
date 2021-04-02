@@ -1,0 +1,28 @@
+services:
+  plugin.manager.site_event:
+    class: Drupal\site_events\Plugin\SiteEventPluginManager
+    parent: default_plugin_manager
+  
+  plugin.manager.site_subscriber:
+    class: Drupal\site_events\Plugin\SiteSubscriberPluginManager
+    parent: default_plugin_manager
+  
+  site_events.entity_events:
+    class: Drupal\site_events\Services\EntityEventService
+    arguments: [ '@plugin.manager.site_event','@site_events.events_handler' ]
+
+  site_events.events_handler:
+    class: \Drupal\site_events\Services\SiteEventHandler
+    arguments: [ '@plugin.manager.site_subscriber','@entity_type.manager' ]
+  
+  logger.channel.site_events:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: [ 'site_events' ]
+
+  site_events.site_event_subscriber:
+    class: '\Drupal\site_events\Subscribers\SiteEventSubscriber'
+    arguments: [ '@plugin.manager.site_subscriber' ]
+    tags:
+      - { name: 'event_subscriber' }
+  

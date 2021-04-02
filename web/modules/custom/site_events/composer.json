@@ -1,0 +1,13 @@
+{
+    "name": "site_events",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/site_events",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/site_events",
+        "source": "http://cgit.drupalcode.org/site_events"
+    }
+}

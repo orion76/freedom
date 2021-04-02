@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains site_events.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\site_events\Services\EntityEventServiceInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function site_events_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        // Main module help for the site_events module.
+        case 'help.page.site_events':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('My Awesome Module') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function site_events_theme() {
+    return [
+        'site_events' => [
+            'render element' => 'children',
+        ],
+    ];
+}
+
+function site_events_entity_create($entity) {
+    /** @var $entity_events EntityEventServiceInterface */
+    $entity_events = \Drupal::service('site_events.entity_events');
+    $entity_events->dispatch(EntityEventServiceInterface::ACTION_CREATE, $entity);
+}
+
+function site_events_entity_delete($entity) {
+
+    /** @var $entity_events EntityEventServiceInterface */
+    $entity_events = \Drupal::service('site_events.entity_events');
+    $entity_events->dispatch(EntityEventServiceInterface::ACTION_DELETE, $entity);
+}
+
+function site_events_entity_update($entity) {
+    /** @var $event_dispatcher EntityEventServiceInterface */
+    $entity_events = \Drupal::service('site_events.entity_events');
+    $entity_events->dispatch(EntityEventServiceInterface::ACTION_UPDATE, $entity);
+}

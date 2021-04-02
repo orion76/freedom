@@ -1,0 +1,16 @@
+
+# Event subscriber menu items definition
+entity.site_event_subscriber.collection:
+  title: 'Event subscriber'
+  route_name: entity.site_event_subscriber.collection
+  description: 'List Event subscriber (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Event subscriber group menu items definition
+entity.site_event_subscriber_group.collection:
+  title: 'Event subscriber group'
+  route_name: entity.site_event_subscriber_group.collection
+  description: 'List Event subscriber group (bundles)'
+  parent: system.admin_structure
+  weight: 99

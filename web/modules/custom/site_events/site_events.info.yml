@@ -1,0 +1,5 @@
+name: 'site_events'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Events'

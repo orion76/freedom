@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains site_newsletter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function site_newsletter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the site_newsletter module.
+    case 'help.page.site_newsletter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Site events newsletter') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function site_newsletter_theme() {
+  return [
+    'site_newsletter' => [
+      'render element' => 'children',
+    ],
+  ];
+}

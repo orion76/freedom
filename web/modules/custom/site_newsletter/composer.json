@@ -1,0 +1,13 @@
+{
+    "name": "site_newsletter",
+    "type": "drupal-module",
+    "description": "Site events newsletter",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/site_newsletter",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/site_newsletter",
+        "source": "http://cgit.drupalcode.org/site_newsletter",
+    },
+}
