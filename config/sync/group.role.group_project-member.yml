@@ -11,4 +11,8 @@ internal: true
 audience: member
 group_type: group_project
 permissions_ui: true
-permissions: {  }
+permissions:
+  - 'access group_node overview'
+  - 'leave group'
+  - 'update own group_membership content'
+  - 'view group_membership content'
