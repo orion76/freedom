@@ -1,0 +1,9 @@
+[submodule "web/modules/custom/evsy_event"]
+	path = web/modules/custom/evsy_event
+	url = git@github.com:orion76/evsy_event.git
+[submodule "web/modules/custom/evsy_newsletter"]
+	path = web/modules/custom/evsy_newsletter
+	url = git@github.com:orion76/evsy_newsletter.git
+[submodule "web/modules/custom/evsy_newsletter_transport"]
+	path = web/modules/custom/evsy_newsletter_transport
+	url = git@github.com:orion76/evsy_newsletter_transport.git
