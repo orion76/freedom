@@ -1,7 +1,0 @@
-services:
-  plugin.manager.entity_event:
-    class: Drupal\entity_event\Plugin\EntityEventManager
-    parent: default_plugin_manager
-  plugin.manager.entity_action:
-    class: Drupal\entity_event\Plugin\EntityActionManager
-    parent: default_plugin_manager
