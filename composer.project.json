@@ -1,0 +1,59 @@
+{
+  "name": "orion76/freedom",
+  "description": "metapackage",
+  "type": "metapackage",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "orion76",
+      "email": "gpb@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "orion76/evsy_event": "dev",
+    "orion76/evsy_newsletter": "dev",
+    "orion76/evsy_newsletter_transport": "dev"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "orion76/evsy_event",
+        "version": "3.0.1",
+        "type": "drupal-custom-module",
+        "source": {
+          "url": "https://github.com/orion76/evsy_event",
+          "type": "git",
+          "reference": "dev"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "orion76/evsy_newsletter",
+        "version": "3.0.1",
+        "type": "drupal-custom-module",
+        "source": {
+          "url": "https://github.com/orion76/evsy_newsletter",
+          "type": "git",
+          "reference": "dev"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "orion76/evsy_newsletter_transport",
+        "version": "3.0.1",
+        "type": "drupal-custom-module",
+        "source": {
+          "url": "https://github.com/orion76/evsy_newsletter_transport",
+          "type": "git",
+          "reference": "dev"
+        }
+      }
+    }
+  ]
+}
