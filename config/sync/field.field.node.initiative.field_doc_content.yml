@@ -1,0 +1,37 @@
+uuid: 222a33bd-b141-4de7-ab90-2ffc8e43fcf0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_content
+    - node.type.initiative
+    - paragraphs.paragraphs_type.document_section
+  module:
+    - bricks
+id: node.initiative.field_doc_content
+field_name: field_doc_content
+entity_type: node
+bundle: initiative
+label: Содержание
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: '0'
+    target_bundles:
+      document_section: document_section
+    target_bundles_drag_drop:
+      document_section:
+        enabled: '1'
+        weight: '4'
+      page_section:
+        weight: '5'
+        enabled: 0
+      profession:
+        weight: '6'
+        enabled: 0
+field_type: bricks

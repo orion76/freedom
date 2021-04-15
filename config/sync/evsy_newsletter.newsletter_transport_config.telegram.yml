@@ -1,0 +1,8 @@
+uuid: c5e507a9-f8eb-4876-9457-a3faedb9abd2
+langcode: ru
+status: true
+dependencies: {  }
+id: telegram
+label: Telegram
+config:
+  bot_key: '1699695679:AAGr3rUoA6ZudTGY10G0_YqDsJMnR4Eg2LA'

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.initiative.body
+    - field.field.node.initiative.field_doc_content
     - field.field.node.initiative.field_type
     - node.type.initiative
   module:
@@ -73,6 +74,26 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
+          a6e1010a-595c-4973-9a77-a51cbf98ed55:
+            uuid: a6e1010a-595c-4973-9a77-a51cbf98ed55
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:flag_okey'
+            additional: {  }
+            weight: 3
+          76aa6847-0174-4b60-87de-b27e56b1c272:
+            uuid: 76aa6847-0174-4b60-87de-b27e56b1c272
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:rate_like_up_down'
+            additional: {  }
+            weight: 4
         third_party_settings: {  }
 id: node.initiative.teaser
 targetEntityType: node
@@ -105,6 +126,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  flag_okey:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  rate_like_up_down:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
+  field_doc_content: true
   langcode: true
   links: true

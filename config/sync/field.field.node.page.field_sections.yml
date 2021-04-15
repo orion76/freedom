@@ -1,0 +1,35 @@
+uuid: 1431b098-fb20-44a5-a435-5fb5abe605b4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sections
+    - node.type.page
+    - paragraphs.paragraphs_type.page_section
+id: node.page.field_sections
+field_name: field_sections
+entity_type: node
+bundle: page
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      page_section: page_section
+    target_bundles_drag_drop:
+      document_section:
+        weight: 4
+        enabled: false
+      page_section:
+        enabled: true
+        weight: 5
+      profession:
+        weight: 6
+        enabled: false
+field_type: entity_reference

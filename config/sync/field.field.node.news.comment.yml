@@ -1,23 +1,23 @@
-uuid: 48f55338-f10a-457b-835b-2f5506d6962e
+uuid: f764f57e-9905-4e2b-ac5e-7f2fad719aa2
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_comments
-    - node.type.book
+    - field.storage.node.comment
+    - node.type.news
   module:
     - comment
-id: node.book.field_comments
-field_name: field_comments
+id: node.news.comment
+field_name: comment
 entity_type: node
-bundle: book
+bundle: news
 label: Комментарии
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
-    status: 0
+    status: 2
     cid: 0
     last_comment_timestamp: 0
     last_comment_name: null

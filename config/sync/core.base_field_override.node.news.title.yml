@@ -1,14 +1,14 @@
-uuid: 3c3db06a-f353-4abe-965e-260edb523d92
+uuid: 0d3bbe58-0f52-4500-9abd-9e0acfb18b80
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.book
-id: node.book.title
+    - node.type.news
+id: node.news.title
 field_name: title
 entity_type: node
-bundle: book
-label: Наименование
+bundle: news
+label: Заголовок
 description: ''
 required: true
 translatable: true

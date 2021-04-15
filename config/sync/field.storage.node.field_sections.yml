@@ -1,0 +1,20 @@
+uuid: 8091b3f5-9d48-4be5-a5fd-38265f6755ef
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: node.field_sections
+field_name: field_sections
+entity_type: node
+type: entity_reference
+settings:
+  target_type: paragraph
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

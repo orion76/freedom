@@ -1,15 +1,13 @@
-uuid: cb82eac3-c68a-482c-bd34-e4bca7ebc3ef
+uuid: 4ef7b186-6ef3-46f7-aa7b-feff4e30ea94
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.book
-_core:
-  default_config_hash: rYbAZX1eKDo7CVRnBnpYgdmk8HQo5IcKhzePCx9LCZY
-id: node.book.promote
+    - node.type.news
+id: node.news.promote
 field_name: promote
 entity_type: node
-bundle: book
+bundle: news
 label: 'Promoted to front page'
 description: ''
 required: false

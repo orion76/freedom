@@ -1,0 +1,21 @@
+uuid: 6dc25f05-f556-46b7-bea2-6d2f8f7b9dab
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.layout_builder__layout
+    - paragraphs.paragraphs_type.page_section
+  module:
+    - layout_builder
+id: paragraph.page_section.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: paragraph
+bundle: page_section
+label: Макет
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

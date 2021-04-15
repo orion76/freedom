@@ -1,0 +1,14 @@
+uuid: f12abfe5-5734-4364-96d9-617d0b531bd0
+langcode: ru
+status: true
+dependencies: {  }
+id: initiative_create_telegram_
+label: 'Initiative create (telegram)'
+event: entity_insert
+transport: telegram
+config:
+  entity_type: node
+  bundle: initiative
+transport_config:
+  chat_id: '-1001382176588'
+template: "#Инициатива   \r\n[[node:title]]([node:url])   \r\nАвтор: *[current-user:display-name]*    \r\n   \r\n[node:source:summary]  \r\n    \r\n[Подробнее]([node:url])  "
