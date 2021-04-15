@@ -1,18 +1,16 @@
-uuid: a6ef137e-d1b8-4680-b1e4-ec791068ea27
+uuid: 5d23c09f-3bbc-4067-b518-46cd89ac7f01
 langcode: ru
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.book
+    - node.type.news
   module:
     - text
-_core:
-  default_config_hash: 718sPNbCWIXxNeDj1kRMyvll4TdMM9sxlzPrShb1dKU
-id: node.book.body
+id: node.news.body
 field_name: body
 entity_type: node
-bundle: book
+bundle: news
 label: Body
 description: ''
 required: false

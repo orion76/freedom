@@ -1,0 +1,37 @@
+uuid: b5dc9843-7267-4ccd-a082-35e6e1037adc
+langcode: ru
+status: true
+dependencies: {  }
+id: like_up_down
+label: 'Like up down'
+template: numberupdown
+value_type: points
+entity_types:
+  - node.initiative
+  - node.news
+comment_types:
+  - node.discussion
+options:
+  -
+    class: ''
+    value: '1'
+    label: up
+  -
+    class: ''
+    value: '-1'
+    label: down
+voting:
+  use_deadline: 0
+  anonymous_window: -2
+  user_window: -2
+display:
+  display_label: ''
+  label_class: ''
+  label_position: above
+  description: ''
+  description_class: ''
+  description_position: below
+  readonly: 0
+results:
+  result_position: right
+  result_type: user_vote_empty

@@ -1,0 +1,7 @@
+uuid: 975ccb70-0f6b-45ea-b800-8641269a4653
+langcode: ru
+status: true
+dependencies: {  }
+id: drupal_log
+label: 'Drupal Log'
+config: null

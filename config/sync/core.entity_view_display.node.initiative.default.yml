@@ -4,17 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.initiative.body
+    - field.field.node.initiative.field_doc_content
     - field.field.node.initiative.field_type
     - node.type.initiative
-    - views.view.initiative_discussions
-    - views.view.initiative_pools
   module:
     - field_layout
     - layout_builder
     - layout_discovery
     - text
     - user
-    - views
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -25,14 +23,13 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
           label: ''
-          column_widths: 67-33
         components:
-          858cc835-0a22-4650-9bd9-4ca307545863:
-            uuid: 858cc835-0a22-4650-9bd9-4ca307545863
-            region: first
+          bbe8c1e7-fd96-4d17-bcfb-dec0a0f37993:
+            uuid: bbe8c1e7-fd96-4d17-bcfb-dec0a0f37993
+            region: content
             configuration:
               label_display: '0'
               context_mapping:
@@ -46,78 +43,51 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 0
-          41c8e992-d857-4154-9288-60855f4ab19b:
-            uuid: 41c8e992-d857-4154-9288-60855f4ab19b
-            region: first
+          c7d7b7ce-56c3-48ba-aca3-0e1182dcba25:
+            uuid: c7d7b7ce-56c3-48ba-aca3-0e1182dcba25
+            region: content
             configuration:
-              id: 'field_block:node:initiative:body'
-              label: Body
-              provider: layout_builder
               label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:initiative:body'
               formatter:
                 label: hidden
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
             additional: {  }
-            weight: 2
-          19b582b5-8e6a-4fe5-adfd-133aea8e9ced:
-            uuid: 19b582b5-8e6a-4fe5-adfd-133aea8e9ced
-            region: first
+            weight: 1
+          d57feea9-2699-4d64-9828-c5f1278a07c6:
+            uuid: d57feea9-2699-4d64-9828-c5f1278a07c6
+            region: content
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:initiative:links'
             additional: {  }
-            weight: 3
-          8afb50ed-db44-4f78-878b-17a4c8055f7e:
-            uuid: 8afb50ed-db44-4f78-878b-17a4c8055f7e
-            region: second
+            weight: 2
+          4081bb7e-04cd-4e50-b278-cf3bc5920829:
+            uuid: 4081bb7e-04cd-4e50-b278-cf3bc5920829
+            region: content
             configuration:
-              id: 'views_block:initiative_pools-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          bdd1b9ad-9af9-480e-8565-3665dd0e685d:
-            uuid: bdd1b9ad-9af9-480e-8565-3665dd0e685d
-            region: second
-            configuration:
-              id: 'views_block:initiative_discussions-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 1
-          96450f47-1975-4326-a965-218704ff02b8:
-            uuid: 96450f47-1975-4326-a965-218704ff02b8
-            region: first
-            configuration:
-              id: 'extra_field_block:node:initiative:links'
-              label: Ссылки
-              provider: layout_builder
-              label_display: visible
+              label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:content_moderation_control'
             additional: {  }
-            weight: 4
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components: {  }
+            weight: 3
+          9aa9db33-cfb1-4627-af63-ea47e91b818c:
+            uuid: 9aa9db33-cfb1-4627-af63-ea47e91b818c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:initiative:rate_like_up_down'
+            additional: {  }
+            weight: 5
         third_party_settings: {  }
 id: node.initiative.default
 targetEntityType: node
@@ -137,7 +107,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_type:
-    weight: 0
+    weight: 1
     label: above
     settings:
       link: true
@@ -149,10 +119,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  flag_okey:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
+  rate_like_up_down:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
+  field_doc_content: true
   langcode: true

@@ -1,12 +1,13 @@
-uuid: 3e069bb1-52d7-4073-916d-4471f4a793b5
+uuid: b5cd608b-a39f-4acd-a97f-351e86f3c6f4
 langcode: ru
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.field.node.book.body
-    - field.field.node.book.field_comments
-    - node.type.book
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - field.field.node.page.field_sections
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
   module:
     - field_layout
     - layout_builder
@@ -20,53 +21,52 @@ third_party_settings:
       label: ''
   layout_builder:
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
         components:
-          b5b27de9-09ad-4d45-a66b-77b74c9467a1:
-            uuid: b5b27de9-09ad-4d45-a66b-77b74c9467a1
+          da5e4aa3-eacd-4d49-86b3-88300b608491:
+            uuid: da5e4aa3-eacd-4d49-86b3-88300b608491
             region: content
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:book:body'
+              id: 'field_block:node:page:body'
               formatter:
                 label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
+                type: text_default
+                settings: {  }
                 third_party_settings: {  }
             additional: {  }
             weight: 0
-          d63e5224-2894-4e5d-959b-20b3afc42740:
-            uuid: d63e5224-2894-4e5d-959b-20b3afc42740
+          31f45d2f-e49c-4863-95b4-a4be61191076:
+            uuid: 31f45d2f-e49c-4863-95b4-a4be61191076
             region: content
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:book:links'
+              id: 'extra_field_block:node:page:links'
             additional: {  }
             weight: 1
         third_party_settings: {  }
 _core:
-  default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
-id: node.book.teaser
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.full
 targetEntityType: node
-bundle: book
-mode: teaser
+bundle: page
+mode: full
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_default
     weight: 100
     region: content
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
   links:
     weight: 101
@@ -74,5 +74,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_comments: true
+  field_sections: true
   langcode: true
+  layout_builder__layout: true

@@ -1,11 +1,11 @@
-uuid: 0908e54c-715e-4e94-b737-b4d389fea7b3
+uuid: 59283606-261b-4e82-8e91-9d49d66b8f9b
 langcode: ru
 status: true
 dependencies:
   config:
-    - node.type.book
-id: node.book
+    - node.type.news
+id: node.news
 target_entity_type_id: node
-target_bundle: book
+target_bundle: news
 default_langcode: site_default
 language_alterable: false

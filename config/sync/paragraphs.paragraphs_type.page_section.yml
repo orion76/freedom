@@ -1,0 +1,10 @@
+uuid: cba66a2f-14a6-4a77-bc29-d535376640e1
+langcode: ru
+status: true
+dependencies: {  }
+id: page_section
+label: 'Page section'
+icon_uuid: null
+icon_default: null
+description: 'Блок контента материалов типа "Страница"(page)'
+behavior_plugins: {  }

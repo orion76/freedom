@@ -1,0 +1,23 @@
+uuid: 30108c9c-c10f-48f2-9e1e-8e31362e129c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.page_section
+  module:
+    - text
+id: paragraph.page_section.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: page_section
+label: Содержание
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

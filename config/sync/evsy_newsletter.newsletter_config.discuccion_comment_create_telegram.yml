@@ -1,0 +1,14 @@
+uuid: 079c4c53-1c45-44e7-9d5d-731e2e81398b
+langcode: ru
+status: true
+dependencies: {  }
+id: discuccion_comment_create_telegram
+label: 'Discuccion comment create (telegram)'
+event: entity_insert
+transport: telegram
+config:
+  entity_type: comment
+  bundle: comment
+transport_config:
+  chat_id: '-1001382176588'
+template: "#Комментарий   \r\n[[comment:author:display-name]]([comment:author:url]) прокомментировал  [\t[comment:comment_node:title]]([comment:comment_node:url])   \r\n\r\n[comment:body]\r\n\r\n[Обсуждение]([comment:comment_node:url])"

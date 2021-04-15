@@ -1,0 +1,15 @@
+uuid: c029fb45-5f83-4a02-b411-d1af89d36837
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.okey
+  module:
+    - flag
+id: flag_action.okey_unflag
+label: 'Не поддерживаю'
+type: node
+plugin: 'flag_action:okey_unflag'
+configuration:
+  flag_id: okey
+  flag_action: unflag

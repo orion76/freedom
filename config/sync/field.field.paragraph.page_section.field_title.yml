@@ -1,0 +1,19 @@
+uuid: 624cc1a1-7b7c-444d-a1f9-09f1ba895760
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.page_section
+id: paragraph.page_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: page_section
+label: Заголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
