@@ -1,0 +1,13 @@
+{
+    "name": "freedom_main",
+    "type": "drupal-module",
+    "description": "Freedom main module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/freedom_main",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/freedom_main",
+        "source": "http://cgit.drupalcode.org/freedom_main",
+    },
+}
