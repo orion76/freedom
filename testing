@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export XDEBUG_CONFIG="idekey=PHPSTORM";
+./vendor/bin/phpunit ./web/modules/custom/dentry/tests/src/Kernel
