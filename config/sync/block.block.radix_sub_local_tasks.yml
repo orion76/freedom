@@ -2,6 +2,8 @@ uuid: a893059f-6403-488a-9e9b-bee579bac8dc
 langcode: ru
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - radix_sub
 _core:
@@ -9,7 +11,7 @@ _core:
 id: radix_sub_local_tasks
 theme: radix_sub
 region: content
-weight: -7
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:
@@ -19,4 +21,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

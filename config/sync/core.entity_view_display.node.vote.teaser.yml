@@ -12,7 +12,7 @@ dependencies:
   module:
     - field_layout
     - layout_builder
-    - layout_discovery
+    - options
     - text
     - user
 third_party_settings:
@@ -21,40 +21,8 @@ third_party_settings:
     settings:
       label: ''
   layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          066e9a8c-cee6-40a5-854b-9379090606b2:
-            uuid: 066e9a8c-cee6-40a5-854b-9379090606b2
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:vote:links'
-            additional: {  }
-            weight: 0
-          dde92e26-f003-4508-901c-ce6e473593e8:
-            uuid: dde92e26-f003-4508-901c-ce6e473593e8
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:vote:body'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
+    enabled: false
+    allow_custom: false
 id: node.vote.teaser
 targetEntityType: node
 bundle: vote
@@ -63,18 +31,34 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_poll:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_result:
+    type: list_default
+    weight: 3
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  field_target:
+    type: entity_reference_label
+    weight: 0
     region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
-  field_poll: true
-  field_result: true
-  field_target: true
   langcode: true
+  links: true

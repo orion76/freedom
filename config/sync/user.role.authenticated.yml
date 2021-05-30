@@ -19,8 +19,6 @@ permissions:
   - 'access user profiles'
   - 'change own username'
   - 'create application content'
-  - 'create article content'
-  - 'create page content'
   - 'create profile_main profile'
   - 'create terms in professions'
   - 'edit own article content'

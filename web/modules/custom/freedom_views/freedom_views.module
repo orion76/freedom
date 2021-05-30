@@ -5,7 +5,10 @@
  * Contains freedom_views.module.
  */
 
+use Drupal\Component\Utility\NestedArray;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\Entity\View;
 
 /**
  * Implements hook_help().
@@ -21,4 +24,77 @@ function freedom_views_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+function freedom_views_form_view_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $n = 0;
+}
+
+function freedom_views_view_load(&$entities) {
+  $settings = _freedom_views_with_entity_add_button_list();
+  foreach (array_keys($entities) as $id) {
+    /** @var $entity View */
+    $entity = $entities[$id];
+    if (isset($settings[$id])) {
+      $buttons = _freedom_views_create_views_add_buttons($id, $settings[$id]);
+      $display = &$entity->getDisplay('default');
+      $display['display_options']['header'] = array_merge($display['display_options']['header'], $buttons);
+    }
+  }
+}
+
+function _freedom_views_create_views_add_buttons($id, $settings) {
+  $settings += ['admin_theme' => FALSE];
+  $buttons = [];
+  $entity_type = $settings['entity_type'];
+
+  foreach ($settings['bundles'] as $bundle) {
+    $name = "entity_add_button_{$bundle}";
+    $buttons[$name] = _freedom_views_create_views_add_button($entity_type, $bundle, $settings['admin_theme']);
+
+  }
+  return $buttons;
+}
+
+function _freedom_views_create_views_add_button($entity_type, $bundle, $admin_space) {
+  $classes = [
+    'site' => 'btn btn-primary',
+    'admin' => 'button button-action button--primary button--small',
+  ];
+
+  $class = $admin_space ? $classes['admin'] : $classes['site'];
+  $label = Drupal::translation()->translate('Add @bundle', ['@bundle' => $bundle]);
+  $type = "{$entity_type}+{$bundle}";
+  return [
+    'id' => 'views_add_button',
+    'table' => 'views',
+    'field' => 'views_add_button',
+    'relationship' => 'none',
+    'group_type' => 'group',
+    'admin_label' => '',
+    'empty' => TRUE,
+    'tokenize' => TRUE,
+    'type' => $type,
+    'context' => '',
+    'button_text' => $label,
+    'button_classes' => $class,
+    'button_attributes' => '',
+    'button_prefix' => [
+      'value' => '',
+      'format' => 'basic_html',
+    ],
+    'button_suffix' => [
+      'value' => '',
+      'format' => 'basic_html',
+    ],
+    'query_string' => '',
+    'destination' => TRUE,
+    'plugin_id' => 'views_add_button_area',
+  ];
+}
+
+function _freedom_views_with_entity_add_button_list() {
+  return [
+    'admin_info_blocks' => ['entity_type' => 'node', 'bundles' => ['info_block'], 'admin_theme' => TRUE],
+  ];
 }

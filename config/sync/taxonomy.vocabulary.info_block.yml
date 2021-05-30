@@ -1,0 +1,8 @@
+uuid: 436db62b-ba7d-45c1-bcfb-c1c0ba83f6d3
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Info block'
+vid: info_block
+description: ''
+weight: 0

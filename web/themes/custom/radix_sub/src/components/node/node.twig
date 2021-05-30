@@ -15,8 +15,9 @@
 ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
+    <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
 
   {% block content %}
     {{ content }}

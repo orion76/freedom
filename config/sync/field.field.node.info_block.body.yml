@@ -1,0 +1,23 @@
+uuid: 68bcac43-02b1-4e21-94a3-34f467493601
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.info_block
+  module:
+    - text
+id: node.info_block.body
+field_name: body
+entity_type: node
+bundle: info_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

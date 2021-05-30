@@ -17,6 +17,7 @@ permissions:
   - 'create library_item content'
   - 'create paragraph content document_section'
   - 'create polls'
+  - 'create project content'
   - 'create terms in initiative_type'
   - 'create terms in library'
   - 'create vote content'

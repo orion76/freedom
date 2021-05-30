@@ -9,8 +9,8 @@ dependencies:
     - radix_sub
 id: userlogin
 theme: radix_sub
-region: sidebar_right
-weight: 0
+region: content_1
+weight: -8
 provider: null
 plugin: user_login_block
 settings:

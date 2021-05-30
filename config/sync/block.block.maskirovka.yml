@@ -1,0 +1,20 @@
+uuid: ff8b268c-4039-4ab6-ae61-d19531dcb42f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - masquerade
+  theme:
+    - radix_sub
+id: maskirovka
+theme: radix_sub
+region: footer
+weight: 0
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Маскировка
+  provider: masquerade
+  label_display: '0'
+visibility: {  }

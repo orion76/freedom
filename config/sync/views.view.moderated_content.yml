@@ -21,7 +21,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Основной
     position: 0
     display_options:
       access:
@@ -44,11 +44,11 @@ display:
         options:
           submit_button: Filter
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
       pager:
         type: full
         options:
@@ -58,17 +58,17 @@ display:
           total_pages: null
           tags:
             previous: '‹ Previous'
-            next: 'Дальше ›'
+            next: 'Next ›'
             first: '« First'
-            last: 'Последний ›'
+            last: 'Last »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Элементов на страницу'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Все -'
             offset: false
-            offset_label: Offset
+            offset_label: Пропустить
           quantity: 9
       style:
         type: table
@@ -135,7 +135,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Заголовок
           exclude: false
           alter:
             alter_text: false
@@ -265,7 +265,7 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
-          label: Author
+          label: Автор
           exclude: false
           alter:
             alter_text: false
@@ -557,7 +557,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op

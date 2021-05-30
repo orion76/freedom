@@ -5,6 +5,8 @@
  * Contains freedom_main.module.
  */
 
+use Drupal\Component\Utility\NestedArray;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -21,4 +23,23 @@ function freedom_main_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+function freedom_main_form_field_ui_field_storage_add_form_alter(&$form, FormStateInterface $form_state) {
+  /**
+   * Добавить суффиксы для полей bricks
+   */
+  $path = ['add', 'new_storage_type', '#options', 'Связь'];
+  $path_bricks = ['add', 'new_storage_type', '#options', 'Bricks'];
+  $options = NestedArray::getValue($form, $path);
+
+  $options_bricks = array_filter($options, function ($key) {
+    return strpos($key, 'field_ui:bricks:') === 0;
+  }, ARRAY_FILTER_USE_KEY);
+
+  $options = array_diff_key($options, $options_bricks);
+  NestedArray::setValue($form, $path, $options);
+
+  NestedArray::setValue($form, $path_bricks, $options_bricks);
+
 }

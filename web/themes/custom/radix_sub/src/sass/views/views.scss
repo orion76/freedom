@@ -1,0 +1,17 @@
+.views--info-block-work {
+  .views-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .views-row {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    .views-row {
+      width: 33%;
+    }
+  }
+
+}

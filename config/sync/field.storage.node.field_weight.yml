@@ -1,14 +1,12 @@
-uuid: 022150b5-f820-4407-9f3b-23f0041963ae
+uuid: 403cb166-a038-4830-8a4d-50d20212db56
 langcode: ru
 status: true
 dependencies:
   module:
-    - poll
-_core:
-  default_config_hash: YIpLVY6AJc-XPWLHCE-t5Vq-6ign3ce4Y2lsRuvKwdA
-id: poll.field_number_of_votes
-field_name: field_number_of_votes
-entity_type: poll
+    - node
+id: node.field_weight
+field_name: field_weight
+entity_type: node
 type: integer
 settings:
   unsigned: false

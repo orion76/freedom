@@ -2,13 +2,7 @@ uuid: 5b618ea2-4523-4fb3-9e14-e2e1c8b3c6d0
 langcode: ru
 status: true
 dependencies:
-  config:
-    - field.field.poll.poll.field_number_of_votes
-    - field.field.poll.poll.field_poll_type
-    - field.field.poll.poll.field_start_date
-    - field.field.poll.poll.field_writein
   module:
-    - datetime
     - field_layout
     - layout_discovery
     - poll
@@ -40,32 +34,6 @@ content:
     type: poll_choice_default
     settings: {  }
     weight: 11
-    region: content
-    third_party_settings: {  }
-  field_number_of_votes:
-    type: number
-    weight: 3
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_poll_type:
-    type: options_select
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_start_date:
-    type: datetime_default
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_writein:
-    type: boolean_checkbox
-    weight: 2
-    settings:
-      display_label: true
     region: content
     third_party_settings: {  }
   question:

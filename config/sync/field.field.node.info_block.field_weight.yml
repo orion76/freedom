@@ -1,0 +1,23 @@
+uuid: 7aeed293-d164-473c-9a83-384f8702ad63
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.info_block
+id: node.info_block.field_weight
+field_name: field_weight
+entity_type: node
+bundle: info_block
+label: Вес
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

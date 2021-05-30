@@ -11,7 +11,6 @@ dependencies:
     - node
     - taxonomy
     - user
-    - views_add_button
 id: pools
 label: Голосования
 module: views
@@ -346,35 +345,7 @@ display:
             label: ''
           granularity: second
       title: Голосования
-      header:
-        views_add_button:
-          id: views_add_button
-          table: views
-          field: views_add_button
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: 0
-          type: node+vote
-          render_plugin: views_add_button_node
-          access_plugin: views_add_button_node
-          context: ''
-          button_text: 'Добавить голосование'
-          button_classes: 'button btn btn-primary'
-          button_attributes: ''
-          button_access_denied:
-            value: ''
-            format: basic_html
-          button_prefix:
-            value: ''
-            format: basic_html
-          button_suffix:
-            value: ''
-            format: basic_html
-          query_string: ''
-          destination: 1
-          plugin_id: views_add_button_area
+      header: {  }
       footer: {  }
       empty: {  }
       relationships:

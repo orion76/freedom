@@ -1,0 +1,31 @@
+uuid: a8198d0d-8602-4ae2-bb0d-9e4ba64b9470
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.initiative_discussions
+  module:
+    - system
+    - views
+  theme:
+    - radix_sub
+id: views_block__initiative_discussions_block_1
+theme: radix_sub
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'views_block:initiative_discussions-block_1'
+settings:
+  id: 'views_block:initiative_discussions-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/initiative/*'
+    negate: false
+    context_mapping: {  }
