@@ -1,0 +1,63 @@
+# Entry routing definition
+edms_dentry.settings_tab:
+  route_name: edms_dentry.settings
+  title: 'Settings'
+  base_route: edms_dentry.settings
+
+entity.edms_dentry.canonical:
+  route_name: entity.edms_dentry.canonical
+  base_route: entity.edms_dentry.canonical
+  title: 'View'
+
+entity.edms_dentry.edit_form:
+  route_name: entity.edms_dentry.edit_form
+  base_route: entity.edms_dentry.canonical
+  title: 'Edit'
+
+entity.edms_dentry.delete_form:
+  route_name:  entity.edms_dentry.delete_form
+  base_route:  entity.edms_dentry.canonical
+  title: Delete
+  weight: 10
+# Operation routing definition
+edms_dentry_operation.settings_tab:
+  route_name: edms_dentry_operation.settings
+  title: 'Settings'
+  base_route: edms_dentry_operation.settings
+
+entity.edms_dentry_operation.canonical:
+  route_name: entity.edms_dentry_operation.canonical
+  base_route: entity.edms_dentry_operation.canonical
+  title: 'View'
+
+entity.edms_dentry_operation.edit_form:
+  route_name: entity.edms_dentry_operation.edit_form
+  base_route: entity.edms_dentry_operation.canonical
+  title: 'Edit'
+
+entity.edms_dentry_operation.delete_form:
+  route_name:  entity.edms_dentry_operation.delete_form
+  base_route:  entity.edms_dentry_operation.canonical
+  title: Delete
+  weight: 10
+# Saldo routing definition
+edms_dentry_saldo.settings_tab:
+  route_name: edms_dentry_saldo.settings
+  title: 'Settings'
+  base_route: edms_dentry_saldo.settings
+
+entity.edms_dentry_saldo.canonical:
+  route_name: entity.edms_dentry_saldo.canonical
+  base_route: entity.edms_dentry_saldo.canonical
+  title: 'View'
+
+entity.edms_dentry_saldo.edit_form:
+  route_name: entity.edms_dentry_saldo.edit_form
+  base_route: entity.edms_dentry_saldo.canonical
+  title: 'Edit'
+
+entity.edms_dentry_saldo.delete_form:
+  route_name:  entity.edms_dentry_saldo.delete_form
+  base_route:  entity.edms_dentry_saldo.canonical
+  title: Delete
+  weight: 10

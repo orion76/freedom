@@ -1,0 +1,12 @@
+
+rate_widget_like_dislike:
+  version: 1.0
+  js:
+    js/rate-widget-like-dislike.js : {}
+  css:
+    theme:
+      css/rate-widget-like-dislike.css: {}
+  dependencies:
+    - core/drupal.ajax
+    - core/jquery
+    - core/drupal

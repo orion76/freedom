@@ -1,0 +1,8 @@
+
+# Point test menu items definition
+entity.point_test.collection:
+  title: 'Point test'
+  route_name: entity.point_test.collection
+  description: 'List Point test (bundles)'
+  parent: system.admin_structure
+  weight: 99

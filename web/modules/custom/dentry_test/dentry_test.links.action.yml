@@ -1,0 +1,5 @@
+entity.point_test.add_form:
+  route_name: entity.point_test.add_form
+  title: 'Add Point test'
+  appears_on:
+    - entity.point_test.collection

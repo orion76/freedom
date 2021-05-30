@@ -1,0 +1,4 @@
+services:
+  rate_alt.vote_service:
+    class: Drupal\rate_alt\Services\VoteService
+    arguments: [ '@entity_type.manager' ]

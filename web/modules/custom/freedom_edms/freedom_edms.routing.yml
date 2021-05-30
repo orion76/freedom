@@ -1,0 +1,8 @@
+
+freedom_edms.admin_edms_controller_overview:
+  path: '/admin/structure/edms'
+  defaults:
+    _controller: '\Drupal\freedom_edms\Controller\AdminEdmsController::overview'
+    _title: 'EDMS'
+  requirements:
+    _permission: 'access content'

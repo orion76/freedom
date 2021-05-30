@@ -1,0 +1,3 @@
+dentry_test.point_test.*:
+  type: dentry.point
+  label: 'Point test config'

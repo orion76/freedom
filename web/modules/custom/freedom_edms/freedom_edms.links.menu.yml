@@ -1,0 +1,50 @@
+
+# Edms point menu items definition
+entity.edms_point.collection:
+  title: 'Edms point'
+  route_name: entity.edms_point.collection
+  description: 'List Edms point (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Entry menu items definition
+entity.edms_dentry.collection:
+  title: 'Entry list'
+  route_name: entity.edms_dentry.collection
+  description: 'List Entry entities'
+  parent: system.admin_structure
+  weight: 100
+
+edms_dentry.admin.structure.settings:
+  title: 'Entry settings'
+  description: 'Configure Entry entities'
+  route_name: edms_dentry.settings
+  parent: system.admin_structure
+
+# Operation menu items definition
+entity.edms_dentry_operation.collection:
+  title: 'Operation list'
+  route_name: entity.edms_dentry_operation.collection
+  description: 'List Operation entities'
+  parent: system.admin_structure
+  weight: 100
+
+edms_dentry_operation.admin.structure.settings:
+  title: 'Operation settings'
+  description: 'Configure Operation entities'
+  route_name: edms_dentry_operation.settings
+  parent: system.admin_structure
+
+# Saldo menu items definition
+entity.edms_dentry_saldo.collection:
+  title: 'Saldo list'
+  route_name: entity.edms_dentry_saldo.collection
+  description: 'List Saldo entities'
+  parent: system.admin_structure
+  weight: 100
+
+edms_dentry_saldo.admin.structure.settings:
+  title: 'Saldo settings'
+  description: 'Configure Saldo entities'
+  route_name: edms_dentry_saldo.settings
+  parent: system.admin_structure

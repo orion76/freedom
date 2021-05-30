@@ -1,0 +1,5 @@
+name: 'developer'
+type: module
+description: 'Developer module'
+core: 8.x
+package: 'developer'

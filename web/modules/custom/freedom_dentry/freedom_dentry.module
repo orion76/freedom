@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains freedom_dentry.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function freedom_dentry_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the freedom_dentry module.
+    case 'help.page.freedom_dentry':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Freedom double entry') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function freedom_dentry_theme() {
+  return [
+    'freedom_dentry' => [
+      'render element' => 'children',
+    ],
+  ];
+}

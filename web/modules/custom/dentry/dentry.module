@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dentry.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dentry_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dentry module.
+    case 'help.page.dentry':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Double entry') . '</p>';
+      return $output;
+
+    default:
+  }
+}

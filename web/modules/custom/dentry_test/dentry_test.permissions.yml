@@ -1,0 +1,40 @@
+add entry test entities:
+  title: 'Create new Entry test entities'
+
+administer entry test entities:
+  title: 'Administer Entry test entities'
+  description: 'Allow to access the administration form to configure Entry test entities.'
+  restrict access: true
+
+delete entry test entities:
+  title: 'Delete Entry test entities'
+
+edit entry test entities:
+  title: 'Edit Entry test entities'
+
+view published entry test entities:
+  title: 'View published Entry test entities'
+
+view unpublished entry test entities:
+  title: 'View unpublished Entry test entities'
+
+add operation test entities:
+  title: 'Create new Operation test entities'
+
+administer operation test entities:
+  title: 'Administer Operation test entities'
+  description: 'Allow to access the administration form to configure Operation test entities.'
+  restrict access: true
+
+delete operation test entities:
+  title: 'Delete Operation test entities'
+
+edit operation test entities:
+  title: 'Edit Operation test entities'
+
+view published operation test entities:
+  title: 'View published Operation test entities'
+
+view unpublished operation test entities:
+  title: 'View unpublished Operation test entities'
+

@@ -1,0 +1,20 @@
+entity.edms_point.add_form:
+  route_name: entity.edms_point.add_form
+  title: 'Add Edms point'
+  appears_on:
+    - entity.edms_point.collection
+entity.edms_dentry.add_form:
+  route_name: entity.edms_dentry.add_form
+  title: 'Add Entry'
+  appears_on:
+    - entity.edms_dentry.collection
+entity.edms_dentry_operation.add_form:
+  route_name: entity.edms_dentry_operation.add_form
+  title: 'Add Operation'
+  appears_on:
+    - entity.edms_dentry_operation.collection
+entity.edms_dentry_saldo.add_form:
+  route_name: entity.edms_dentry_saldo.add_form
+  title: 'Add Saldo'
+  appears_on:
+    - entity.edms_dentry_saldo.collection

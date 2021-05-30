@@ -1,0 +1,13 @@
+{
+    "name": "developer",
+    "type": "drupal-module",
+    "description": "Developer module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/developer",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/developer",
+        "source": "http://cgit.drupalcode.org/developer",
+    },
+}

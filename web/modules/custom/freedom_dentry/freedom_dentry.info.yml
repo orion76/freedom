@@ -1,0 +1,5 @@
+name: 'freedom_dentry'
+type: module
+description: 'Freedom double entry'
+core: 8.x
+package: 'freedom'

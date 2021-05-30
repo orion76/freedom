@@ -1,0 +1,13 @@
+{
+    "name": "freedom_edms",
+    "type": "drupal-module",
+    "description": "Freedom Electronic document management system",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/freedom_edms",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/freedom_edms",
+        "source": "http://cgit.drupalcode.org/freedom_edms",
+    },
+}

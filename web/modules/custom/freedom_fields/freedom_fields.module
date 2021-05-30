@@ -5,20 +5,82 @@
  * Contains freedom_fields.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
  */
 function freedom_fields_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the freedom_fields module.
-    case 'help.page.freedom_fields':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Fields plugins') . '</p>';
-      return $output;
+    switch ($route_name) {
+        // Main module help for the freedom_fields module.
+        case 'help.page.freedom_fields':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Fields plugins') . '</p>';
+            return $output;
 
-    default:
-  }
+        default:
+    }
+}
+
+
+function freedom_fields_form_vote_form_alter(&$form, FormStateInterface $form_state) {
+    $n = 0;
+    $settings = $form_state->get('settings');
+    $voting = $settings->get('voting');
+    $display = $settings->get('display');
+    $results = $settings->get('results');
+    $template = $settings->get('template');
+    if ($template === 'like_dislike') {
+        
+        unset($form['#rate_widget']);
+        unset($form['#theme']);
+        
+        $value_input = &$form['value'];
+        $value_input['#type'] = 'number';
+        foreach (array_keys($value_input['#options']) as $option) {
+            if (isset($value_input[$option])) {
+                unset($value_input[$option]);
+            }
+        }
+        unset($value_input['#options'] );
+
+        $value_input['#attributes']['min']='-1';
+        $value_input['#attributes']['max']='1';
+        
+        $value_input['#prefix'] = '<div class="like-dislike--rating-wrapper rate-enabled" can-edit="true">';
+        $value_input['#theme_wrappers'][] = 'form_element__counter';
+
+        $value_input['#attached']['library'] = [
+            'freedom_fields/rate_widget_like_dislike',
+        ];
+    }
+
+    $n = 0;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function freedom_fields_theme($existing, $type, $theme, $path) {
+    return [
+        'form_element__counter' => [
+            'base hook' => 'form_element',
+        ],
+    ];
+}
+
+function freedom_fields_rate_templates() {
+    $templates['like_dislike'] = (object) [
+        'value_type' => 'points',
+        'options' => [
+            ['value' => 1, 'label' => 'up'],
+            ['value' => -1, 'label' => 'down'],
+        ],
+        'customizable' => FALSE,
+        'translate' => TRUE,
+        'template_title' => t('Like / Dislike'),
+    ];
+    return $templates;
 }

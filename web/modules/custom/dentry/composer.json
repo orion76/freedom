@@ -1,0 +1,13 @@
+{
+    "name": "dentry",
+    "type": "drupal-module",
+    "description": "Double entry",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/dentry",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/dentry",
+        "source": "http://cgit.drupalcode.org/dentry",
+    },
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dentry_test.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dentry_test_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dentry_test module.
+    case 'help.page.dentry_test':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Dentry test') . '</p>';
+      return $output;
+
+    default:
+  }
+}

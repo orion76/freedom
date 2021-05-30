@@ -1,0 +1,5 @@
+name: 'freedom_edms'
+type: module
+description: 'Freedom Electronic document management system'
+core: 8.x
+package: 'freedom'

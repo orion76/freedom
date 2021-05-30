@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains developer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function developer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the developer module.
+    case 'help.page.developer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Developer module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

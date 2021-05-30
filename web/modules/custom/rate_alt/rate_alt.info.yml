@@ -1,0 +1,5 @@
+name: 'rate_alt'
+type: module
+description: 'Rate alternative module'
+core: 8.x
+package: 'rate'

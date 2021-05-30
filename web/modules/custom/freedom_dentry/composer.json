@@ -1,0 +1,13 @@
+{
+    "name": "freedom_dentry",
+    "type": "drupal-module",
+    "description": "Freedom double entry",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/freedom_dentry",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/freedom_dentry",
+        "source": "http://cgit.drupalcode.org/freedom_dentry",
+    },
+}

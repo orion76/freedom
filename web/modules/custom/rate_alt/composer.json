@@ -1,0 +1,13 @@
+{
+    "name": "rate_alt",
+    "type": "drupal-module",
+    "description": "Rate alternative module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/rate_alt",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/rate_alt",
+        "source": "http://cgit.drupalcode.org/rate_alt"
+    }
+}

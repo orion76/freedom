@@ -1,0 +1,3 @@
+freedom_edms.edms_point.*:
+  type: dentry.point
+  label: 'Edms point config'

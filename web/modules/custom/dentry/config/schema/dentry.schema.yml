@@ -1,0 +1,58 @@
+dentry.subconto_item:
+  type: mapping
+  mapping:
+    entity_type:
+      type: string
+      label: 'Entity type'
+    bundle:
+      type: string
+      label: 'Bundle'
+
+
+dentry.subconto_list:
+  type: mapping
+  mapping:
+    subconto_1:
+      type: dentry.subconto_item
+      label: 'Subconto 1'
+    subconto_2:
+      type: dentry.subconto_item
+      label: 'Subconto 2'
+    subconto_3:
+      type: dentry.subconto_item
+      label: 'Subconto 3'
+    subconto_4:
+      type: dentry.subconto_item
+      label: 'Subconto 4'
+    subconto_5:
+      type: dentry.subconto_item
+      label: 'Subconto 5'
+
+dentry.point:
+  type: config_entity
+  label: 'Point config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    code:
+      type: string
+      label: 'Code'
+    parent_id:
+      type: string
+      label: 'Parent ID'
+    account_type:
+      type: string
+      label: 'Account type'
+    account_item:
+      type: string
+      label: 'Account type(active,passive)'
+    subconto:
+      type: dentry.subconto_list
+      label: 'Subconto'
+    

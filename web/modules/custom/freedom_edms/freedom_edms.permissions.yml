@@ -1,0 +1,60 @@
+add entry entities:
+  title: 'Create new Entry entities'
+
+administer entry entities:
+  title: 'Administer Entry entities'
+  description: 'Allow to access the administration form to configure Entry entities.'
+  restrict access: true
+
+delete entry entities:
+  title: 'Delete Entry entities'
+
+edit entry entities:
+  title: 'Edit Entry entities'
+
+view published entry entities:
+  title: 'View published Entry entities'
+
+view unpublished entry entities:
+  title: 'View unpublished Entry entities'
+
+add operation entities:
+  title: 'Create new Operation entities'
+
+administer operation entities:
+  title: 'Administer Operation entities'
+  description: 'Allow to access the administration form to configure Operation entities.'
+  restrict access: true
+
+delete operation entities:
+  title: 'Delete Operation entities'
+
+edit operation entities:
+  title: 'Edit Operation entities'
+
+view published operation entities:
+  title: 'View published Operation entities'
+
+view unpublished operation entities:
+  title: 'View unpublished Operation entities'
+
+add saldo entities:
+  title: 'Create new Saldo entities'
+
+administer saldo entities:
+  title: 'Administer Saldo entities'
+  description: 'Allow to access the administration form to configure Saldo entities.'
+  restrict access: true
+
+delete saldo entities:
+  title: 'Delete Saldo entities'
+
+edit saldo entities:
+  title: 'Edit Saldo entities'
+
+view published saldo entities:
+  title: 'View published Saldo entities'
+
+view unpublished saldo entities:
+  title: 'View unpublished Saldo entities'
+

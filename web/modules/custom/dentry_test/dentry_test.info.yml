@@ -1,0 +1,5 @@
+name: 'dentry_test'
+type: module
+description: 'Dentry test'
+core: 8.x
+package: 'test'

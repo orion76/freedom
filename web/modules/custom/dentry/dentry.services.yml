@@ -1,0 +1,11 @@
+services:
+  plugin.manager.document_entry:
+    class: Drupal\dentry\Plugin\DocumentEntryManager
+    parent: default_plugin_manager
+  dentry.entry_service_factory:
+    class: Drupal\dentry\Services\EntryServiceFactory
+    arguments: ['@entity_type.manager','@plugin.manager.document_entry']
+  dentry.entry_service:
+    class: Drupal\dentry\Services\EntryServiceInterface
+    factory: dentry.entry_service_factory:create
+    arguments: [entry,operation]

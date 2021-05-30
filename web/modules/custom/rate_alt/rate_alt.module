@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains rate_alt.module.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Implements hook_help().
+ */
+function rate_alt_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rate_alt module.
+    case 'help.page.rate_alt':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Rate alternative module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rate_alt_theme() {
+  return [
+    'rate_formatter_form' => [
+      'render element' => 'form',
+      'file'=>'theme/rate_formatter_form.inc'
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function rate_alt_entity_type_build(array &$entity_types) {
+    $entity_types['vote']->setFormClass('rate_vote', 'Drupal\rate_alt\Form\RateFormatterForm');
+}
