@@ -5,8 +5,6 @@
  * Contains freedom_views.module.
  */
 
-use Drupal\Component\Utility\NestedArray;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\views\Entity\View;
 
@@ -24,10 +22,6 @@ function freedom_views_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
-}
-
-function freedom_views_form_view_edit_form_alter(&$form, FormStateInterface $form_state) {
-  $n = 0;
 }
 
 function freedom_views_view_load(&$entities) {
