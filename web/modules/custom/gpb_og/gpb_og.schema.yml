@@ -1,0 +1,10 @@
+field.widget.settings.gpb_og_reference:
+  type: mapping
+  label: 'Gpb og reference widget widget settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size'
+    placeholder:
+      type: textfield
+      label: 'Placeholder'

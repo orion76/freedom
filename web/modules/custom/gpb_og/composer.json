@@ -1,0 +1,13 @@
+{
+    "name": "drupal/gpb_og",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/gpb_og",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/gpb_og",
+        "source": "http://cgit.drupalcode.org/gpb_og"
+    }
+}

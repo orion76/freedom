@@ -1,0 +1,31 @@
+services:
+#  freedom_group.path_processor.group_destination:
+#    class: Drupal\freedom_group\PathProcessor\GroupDestination
+#    arguments: []
+#    tags:
+#      - { name: path_processor_inbound, priority: 300 }
+#      - { name: path_processor_outbound, priority: 300 }
+  freedom_group.group_breadcrumb:
+    class: Drupal\freedom_group\Service\GroupBreadcrumb
+    arguments:
+      - '@freedom_group.group_pages'
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+
+  freedom_group.group_pages:
+    class: Drupal\freedom_group\Service\GroupPages
+    arguments: 
+      - '@current_route_match'
+      - '@entity_type.bundle.info'
+  freedom_group.entity_group_context:
+    class: 'Drupal\freedom_group\Context\EntityGroupContext'
+    arguments: ['@current_route_match', '@entity_type.manager']
+    tags:
+      - { name: 'context_provider' }
+
+#  freedom_group.kernel_subscriber:
+#    class: Drupal\freedom_group\EventSubscriber\KernelSubscriber
+#    arguments:
+#      - '@entity_type.manager'
+#    tags:
+#      - { name: event_subscriber }

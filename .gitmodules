@@ -7,3 +7,9 @@
 [submodule "web/modules/custom/evsy_newsletter_transport"]
 	path = web/modules/custom/evsy_newsletter_transport
 	url = git@github.com:orion76/evsy_newsletter_transport.git
+[submodule "web/modules/custom/gpb_commands"]
+	path = web/modules/custom/gpb_commands
+	url = git@github.com:orion76/gpb_commands.git
+[submodule "web/modules/fork/og"]
+	path = web/modules/fork/og
+	url = git@github.com:Gizra/og.git

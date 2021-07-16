@@ -20,3 +20,7 @@ function radix_sub_preprocess_menu(&$variables, $hook) {
 
     }
 }
+function radix_sub_preprocess_menu_local_action(&$variables) {
+  // Add button classes.
+  $variables['link']['#attributes']['class'][] = 'local-action-item';
+}

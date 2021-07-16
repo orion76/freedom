@@ -1,0 +1,9 @@
+gpb_og.add_content.project:
+  route_name: 'node.add'
+  route_parameters:
+    node_type: 'project'
+  class: Drupal\gpb_og\Plugin\LocalAction\WithDestination
+  title: 'Добавить проект'
+  appears_on:
+    - 'view.admin__og_projects.page_1'
+

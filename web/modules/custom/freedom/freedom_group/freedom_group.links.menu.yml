@@ -1,0 +1,31 @@
+freedom_group.group_node.group_task:
+  route_name: 'view.group_project_tasks.page_1'
+  title: 'Tasks'
+  menu_name: freedom_group
+  class: Drupal\freedom_group\Plugin\Menu\GroupLink
+      
+freedom_group.group_node.group_material:
+  route_name: 'view.group_project_materials.page_1'
+  title: 'Материалы'
+  menu_name: freedom_group
+  class: Drupal\freedom_group\Plugin\Menu\GroupLink
+      
+      
+freedom_group.group_user.group_member:
+  route_name: 'view.group_members.page_1'
+  title: 'Участники'
+  menu_name: freedom_group
+  class: Drupal\freedom_group\Plugin\Menu\GroupLink
+      
+      
+freedom_group.group_term.task_status:
+  route_name: 'view.group__task_status.page_1'
+  title: 'Статусы'
+  menu_name: freedom_group_settings
+  class: Drupal\freedom_group\Plugin\Menu\GroupLink
+      
+freedom_group.group_term.section:
+  route_name: 'view.group__section.page_1'
+  title: 'Разделы'
+  menu_name: freedom_group_settings
+  class: Drupal\freedom_group\Plugin\Menu\GroupLink

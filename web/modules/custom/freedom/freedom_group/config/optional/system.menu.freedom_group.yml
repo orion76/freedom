@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: freedom_group
+label: 'Group'
+description: 'User profile sections'
+locked: true

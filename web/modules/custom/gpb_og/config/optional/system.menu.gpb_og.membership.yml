@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: gpb-og-membership
+label: 'Membership'
+description: 'Membership'
+locked: true

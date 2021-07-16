@@ -6,4 +6,8 @@
 #}
 {% extends '@radix/content/node.html.twig' %}
 
-
+{% block content %}
+    <div{{ content_attributes }}>
+        {{ content }}
+    </div>
+{% endblock %}

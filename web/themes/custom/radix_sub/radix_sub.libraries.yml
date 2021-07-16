@@ -8,3 +8,9 @@ style:
   dependencies:
     - core/jquery
     - core/drupal
+fontawesome:
+  version: VERSION
+  css:
+    theme:
+      /libraries/fontawesome/css/all.css: {}
+      /libraries/fontawesome/css/v4-shims.css: {}

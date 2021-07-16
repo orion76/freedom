@@ -1,4 +1,7 @@
-
+.page__content {
+  display: flex;
+  padding: 0 1rem;
+}
 
 .js td .dropbutton-widget {
   position: relative;
@@ -41,12 +44,75 @@
   }
 }
 
-.sidebar{
-  .nav{
-    display:block;
+.sidebar {
+  .nav {
+    display: block;
   }
 }
 
 a.is-active {
   color: $link-active-color;
+}
+
+.sidebar.sidebar-left {
+  width: 25%;
+}
+
+.entity-browser-form {
+  .views-row {
+    display: flex;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+}
+
+.block--radix-sub-local-actions {
+  display: flex;
+
+  .menu-item {
+    margin-right: 1rem;
+  }
+}
+.collapsiblock{
+  a{
+    display:flex;
+    color: #99F;
+  }
+}
+.group-page {
+  .sidebar {
+    width: 15rem;
+
+    .block {
+      .icon{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        margin-right: .4rem;
+        line-height: 1.6rem;
+      }
+      .icon:before {
+        content: "\f146";
+      }
+
+      .collapsiblock,.collapsiblockCollapsed{
+        background: none;
+      }
+
+      .collapsiblockCollapsed{
+        .icon:before {
+          content: "\f0fe";
+        } 
+      }
+
+
+      h2 {
+
+        font-size: 1.2rem;
+        color: #999;
+      }
+    }
+  }
+
 }

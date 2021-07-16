@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Contains freedom_group.module.
+ */
+
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\group\Plugin\GroupContentEnablerManagerInterface;
+
+/**
+ * Implements hook_help().
+ */
+function freedom_group_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the freedom_group module.
+    case 'help.page.freedom_group':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function freedom_group_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+  $routes = [
+    'view.group_project_tasks.page_1' => TRUE,
+  ];
+
+  if (!isset($routes[$route_name])) {
+    return NULL;
+  }
+  $tasks = [
+    'views_view:view.group_nodes.page_1',
+    'group.content',
+  ];
+  foreach ($tasks as $task) {
+    if (isset($data['tabs'][0][$task])) {
+      unset($data['tabs'][0][$task]);
+    }
+  }
+}
+
+function freedom_group_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $n = 0;
+}
+
+function freedom_group_preprocess_page_title(&$variables) {
+
+  /** @var $group_pages \Drupal\freedom_group\Service\GroupPagesInterface */
+  $group_pages = Drupal::getContainer()->get('freedom_group.group_pages');
+
+  if (!$group_pages->isGroupPage()) {
+    return NULL;
+  }
+
+  if ($group_pages->isGroupCanonical()) {
+    $variables['title'] = $group_pages->getGroup()->label();
+    return NULL;
+  }
+
+  $page_info = $group_pages->getPageInfo();
+  if(!empty($page_info)){
+    $variables['title'] = $page_info['title'];  
+  }
+  
+
+}
+function freedom_group_preprocess_page(&$variables) {
+
+  /** @var $group_pages \Drupal\freedom_group\Service\GroupPagesInterface */
+  $group_pages = Drupal::getContainer()->get('freedom_group.group_pages');
+
+  if ($group_pages->isGroupPage()) {
+    $variables['attributes']['class'][] = 'group-page';
+  }
+}

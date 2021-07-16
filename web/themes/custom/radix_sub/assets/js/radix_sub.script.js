@@ -18121,8 +18121,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/my/freedom/web/themes/custom/radix_sub/src/js/radix_sub.script.js */"./src/js/radix_sub.script.js");
-module.exports = __webpack_require__(/*! /var/www/my/freedom/web/themes/custom/radix_sub/src/sass/radix_sub.style.scss */"./src/sass/radix_sub.style.scss");
+__webpack_require__(/*! /home/www/my/freedom/web/themes/custom/radix_sub/src/js/radix_sub.script.js */"./src/js/radix_sub.script.js");
+module.exports = __webpack_require__(/*! /home/www/my/freedom/web/themes/custom/radix_sub/src/sass/radix_sub.style.scss */"./src/sass/radix_sub.style.scss");
 
 
 /***/ })

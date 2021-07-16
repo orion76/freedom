@@ -1,0 +1,36 @@
+gpb_og.add_content.group_material:
+  route_name: 'node.add'
+  title: 'Materials'
+  route_parameters:
+    node_type: 'group_material'
+  menu_name: gpb_og.add_content
+  class: Drupal\gpb_og\Plugin\Menu\OgActionLink
+      
+gpb_og.add_content.group_task:
+  route_name: 'node.add'
+  title: 'Task'
+  route_parameters:
+    node_type: 'group_task'
+  menu_name: gpb_og.add_content
+  class: Drupal\gpb_og\Plugin\Menu\OgActionLink
+
+gpb_og.add_membership:
+  route_name: 'og.subscribe'
+  title: 'Membership'
+  menu_name: gpb-og-membership
+  route_parameters:
+    entity_type_id: 'node'
+    membership_type: 'default'
+  class: Drupal\gpb_og\Plugin\Menu\OgActionLink
+
+gpb_og.content.materials:
+  route_name: 'view.og_content__materials.page_1'
+  title: 'Materials'
+  menu_name: og-content
+  class: Drupal\gpb_og\Plugin\Menu\OgContentLink
+
+gpb_og.content.tasks:
+  route_name: 'view.og_content__materials.page_1'
+  title: 'Tasks'
+  menu_name: og-content
+  class: Drupal\gpb_og\Plugin\Menu\OgContentLink

@@ -1,0 +1,54 @@
+#route_callbacks:
+#  - '\Drupal\freedom_group\Routing\GroupRouteProvider::getRoutes'
+
+
+entity.group_content.create_form:
+  path: '/group/{group}/content/create/group_term:group__task_status'
+  defaults:
+    _controller: '\Drupal\group\Entity\Controller\GroupContentController::createForm'
+    plugin_id: group_term:group__task_status
+  requirements:
+    _group_content_create_entity_access: 'TRUE'
+  options:
+    _group_operation_route: TRUE
+
+entity.group_term.task_status.create_form:
+  path: '/group/{group}/content/create/group_term:group__task_status'
+  defaults:
+    _controller: '\Drupal\group\Entity\Controller\GroupContentController::createForm'
+    plugin_id: group_term:group__task_status
+  requirements:
+    _group_content_create_entity_access: 'TRUE'
+  options:
+    _group_operation_route: TRUE
+
+entity.group_term.task_status.add_form:
+  path: '/group/{group}/content/add/group_term:group__task_status'
+  defaults:
+    _controller: '\Drupal\group\Entity\Controller\GroupContentController::addForm'
+    plugin_id: group_term:group__task_status
+  requirements:
+    _group_content_create_entity_access: 'TRUE'
+  options:
+    _group_operation_route: TRUE
+
+
+entity.group_term.task.create_form:
+  path: '/group/{group}/content/create/group_term:group__task'
+  defaults:
+    _controller: '\Drupal\group\Entity\Controller\GroupContentController::createForm'
+    plugin_id: group_term:group__task
+  requirements:
+    _group_content_create_entity_access: 'TRUE'
+  options:
+    _group_operation_route: TRUE
+
+entity.group_term.task.add_form:
+  path: '/group/{group}/content/add/group_term:group__task'
+  defaults:
+    _controller: '\Drupal\group\Entity\Controller\GroupContentController::addForm'
+    plugin_id: group_term:group__task
+  requirements:
+    _group_content_create_entity_access: 'TRUE'
+  options:
+    _group_operation_route: TRUE

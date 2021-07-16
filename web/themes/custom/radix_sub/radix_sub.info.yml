@@ -7,6 +7,7 @@ engine: twig
 type: theme
 base theme: radix
 
+
 regions:
   navbar_branding: Navbar branding
   navbar_left:  Navbar left
@@ -24,6 +25,7 @@ regions:
 libraries:
   - radix/style
   - radix_sub/style
+  - radix_sub/fontawesome
 
 libraries-override:
   radix/bootstrap: false

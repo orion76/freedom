@@ -1,0 +1,5 @@
+name: 'gpb_og'
+type: module
+description: 'Organic group extension'
+core_version_requirement: ^8.9 || ^9
+package: 'og'
