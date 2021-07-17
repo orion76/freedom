@@ -1,0 +1,16 @@
+uuid: 5a6d08da-78f6-469e-b591-827fe6b8b4c3
+langcode: ru
+status: true
+dependencies: {  }
+id: newsletter_transport
+label: 'Newsletter transport'
+description: ''
+folder: ../config/split/newsletter_transport
+module:
+  evsy_newsletter_transport: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0

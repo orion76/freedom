@@ -1,41 +1,40 @@
-uuid: 409c7202-6afa-4b6f-83f3-648e3ebfa23e
+uuid: c42ad99a-bc3b-4b3b-819c-95527e328693
 langcode: ru
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.project.body
-    - field.field.node.project.field_access
-    - node.type.project
+    - field.field.node.user__notes.body
+    - field.field.node.user__notes.field_tags
+    - node.type.user__notes
   module:
-    - og
     - text
     - user
-id: node.project.teaser
+id: node.user__notes.teaser
 targetEntityType: node
-bundle: project
+bundle: user__notes
 mode: teaser
 content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 1
+    weight: 0
     settings:
-      trim_length: 600
+      trim_length: 200
     third_party_settings: {  }
     region: content
-  links:
+  field_tags:
+    type: entity_reference_label
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  og_group:
-    weight: 0
-    type: og_group_subscribe
-    region: content
     label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_access: true
   langcode: true

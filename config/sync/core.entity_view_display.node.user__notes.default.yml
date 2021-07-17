@@ -1,0 +1,38 @@
+uuid: eafd1421-81ce-4ce5-b14a-39cb2fc1e60f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.user__notes.body
+    - field.field.node.user__notes.field_tags
+    - node.type.user__notes
+  module:
+    - text
+    - user
+id: node.user__notes.default
+targetEntityType: node
+bundle: user__notes
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
