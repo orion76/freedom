@@ -29,3 +29,10 @@ gpb_user.user_profile.my_not_publish:
   route_name: view.my_not_publish.page_1
   menu_name: user_profile
   class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink
+
+gpb_user.user_profile.my_projects:
+  title: My projects
+  description: User projects
+  route_name: view.user__my_projects.page_1
+  menu_name: user_profile
+  class: \Drupal\gpb_user\Plugin\Menu\ProfileMenuLink

@@ -28,5 +28,44 @@ function gpb_og_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (!isset($form['og_audience'])) {
     return;
   }
-//  $form['og_audience']['#access'] = FALSE;
+  //  $form['og_audience']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_views_data().
+ */
+function gpb_og_views_data_alter(array &$data) {
+
+  $test = $data['node_field_data'];
+  $n = 0;
+  $data['node_field_data']['og_membership']['title'] = t('Og Node membership');
+  $data['node_field_data']['og_membership']['relationship'] = [
+    'base' => 'og_membership',
+    'base field' => 'entity_id',
+    'field' => 'nid',
+    'group' => t('Organic group'),
+    'id' => 'standard',
+    'label' => t('Og Node membership'),
+    'extra' => [
+      [
+        'field' => 'entity_type',
+        'value' => 'node',
+      ],
+      [
+        'field' => 'entity_bundle',
+        'left_field' => 'type',
+      ],
+    ],
+
+  ];
+  //  $data['og_membership'] = [
+  //    'table' => [
+  //      'group' => t('Og'),
+  //      'base' => [
+  //        'field' => 'id',
+  //        'title' => t('Member'),
+  //        'help' => t('Contains a list of Did this help? entries.'),
+  //      ],
+  //    ],
+  //  ];
 }

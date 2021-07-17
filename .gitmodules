@@ -12,4 +12,4 @@
 	url = git@github.com:orion76/gpb_commands.git
 [submodule "web/modules/fork/og"]
 	path = web/modules/fork/og
-	url = git@github.com:Gizra/og.git
+	url = git@github.com:zerolab/og.git

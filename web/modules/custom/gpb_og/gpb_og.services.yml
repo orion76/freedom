@@ -1,0 +1,11 @@
+services:
+  gpb_og.event_subscriber:
+    class: Drupal\gpb_og\EventSubscriber\OgEventSubscriber
+    arguments: [ '@og.permission_manager', '@entity_type.manager', '@entity_type.bundle.info', '@og.access' ]
+    tags:
+      - { name: 'event_subscriber' }
+  gpb_og.context:
+    class: Drupal\gpb_og\Service\GpbOgContext
+    arguments:
+      - '@og.context'
+      - '@current_route_match'
