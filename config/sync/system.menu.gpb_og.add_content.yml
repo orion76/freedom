@@ -5,6 +5,6 @@ dependencies: {  }
 _core:
   default_config_hash: ek7jDCI__pRgobGLs9lKMMrfgGli5fHaT-wUNFs2REg
 id: gpb_og.add_content
-label: 'Add content'
-description: 'Add content'
+label: Добавить
+description: Добавить
 locked: true

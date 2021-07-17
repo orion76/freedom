@@ -5,7 +5,9 @@
  * Contains gpb_og.module.
  */
 
+use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -68,4 +70,39 @@ function gpb_og_views_data_alter(array &$data) {
   //      ],
   //    ],
   //  ];
+}
+
+function gpb_og_preprocess_field_multiple_value_form(&$variables) {
+  $element = $variables['element'];
+
+  if ($field = NestedArray::getValue($variables, ['element', 0, '#field_mode'])) {
+    unset($variables['table']);
+
+    $element = $variables['element'];
+    $variables['label'] = $element['#title'];
+    $variables['items'] = [];
+    foreach (Element::children($element) as $key) {
+      if ($key === 'add_more') {
+        continue;
+      }
+      $variables['items'][] = $element[$key]['target_id'];
+    }
+
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function gpb_og_theme_suggestions_field_multiple_value_form(array $variables) {
+  $suggestions = [];
+  $element = $variables['element'];
+  if (isset($element[0]) && isset($element[0]['#field_mode'])) {
+    $field = $element[0];
+    $field_mode = $field['#field_mode'];
+    $suggestions[] = 'field_multiple_value_form__' . $field_mode;
+
+  }
+
+  return $suggestions;
 }

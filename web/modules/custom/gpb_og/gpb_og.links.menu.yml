@@ -18,7 +18,7 @@ gpb_og.add_content.group_task:
 
 gpb_og.add_membership:
   route_name: 'og.subscribe'
-  title: 'Membership'
+  title: 'To join'
   menu_name: gpb-og-membership
   route_parameters:
     entity_type_id: 'node'
@@ -32,7 +32,7 @@ gpb_og.content.materials:
   class: Drupal\gpb_og\Plugin\Menu\OgContentLink
 
 gpb_og.content.tasks:
-  route_name: 'view.og_content__materials.page_1'
+  route_name: 'view.og_content__tasks.page_1'
   title: 'Tasks'
   menu_name: og-content
   class: Drupal\gpb_og\Plugin\Menu\OgContentLink

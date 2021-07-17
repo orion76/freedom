@@ -1,7 +1,7 @@
 gpb_user.add_content.user_note:
   route_name: 'node.add'
   route_parameters:
-    node_type: 'user__note'
+    node_type: 'user__notes'
   class: Drupal\gpb_og\Plugin\LocalAction\WithDestination
   title: 'Добавить заметку'
   appears_on:

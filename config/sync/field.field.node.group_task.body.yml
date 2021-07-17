@@ -11,7 +11,7 @@ id: node.group_task.body
 field_name: body
 entity_type: node
 bundle: group_task
-label: Body
+label: Содержимое
 description: ''
 required: false
 translatable: true

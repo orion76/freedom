@@ -22,7 +22,7 @@ type_settings:
       default_revision: false
       weight: -5
     published:
-      label: Published
+      label: Опубликовано
       published: true
       default_revision: true
       weight: 0

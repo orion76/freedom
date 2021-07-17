@@ -73,8 +73,22 @@
 // -----------------------------------------------------------------------------
 @import "components/responsive_menu";
 @import "components/navbar";
+@import "components/menu";
 
 
+.button{
+  @extend .btn;
+  &--primary{
+    @extend .btn-primary;
+  }
+  &--secondary{
+    @extend .btn-secondary;
+  }
+  &--danger{
+    @extend .btn-danger;
+  }
+
+}
 
 @import "temp";
 

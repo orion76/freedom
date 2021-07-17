@@ -6,4 +6,5 @@ gpb_og.add_content.project:
   title: 'Добавить проект'
   appears_on:
     - 'view.admin__og_projects.page_1'
+    - 'view.projects.page_1'
 

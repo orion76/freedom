@@ -1,3 +1,7 @@
+label{
+  font-weight: 400;
+}
+
 
 .form-actions {
   display: flex;
@@ -5,9 +9,13 @@
 
   .button {
     height: fit-content;
+    margin-right: 1rem;
   }
 }
 
+.button-default, .btn-default {
+  border: 1px solid #ddd;
+}
 
 .views-exposed-form {
   .form-content {
@@ -22,3 +30,8 @@
   }
 }
 
+.form-required:after {
+  content: '*';
+  color: #f00;
+  padding: .2rem;
+}

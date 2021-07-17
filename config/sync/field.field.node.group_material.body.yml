@@ -11,7 +11,7 @@ id: node.group_material.body
 field_name: body
 entity_type: node
 bundle: group_material
-label: Body
+label: Содержимое
 description: ''
 required: false
 translatable: true

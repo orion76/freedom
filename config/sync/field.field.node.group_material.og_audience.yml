@@ -12,15 +12,19 @@ id: node.group_material.og_audience
 field_name: og_audience
 entity_type: node
 bundle: group_material
-label: 'Groups audience'
+label: Группа
 description: 'OG group audience reference field.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'og:default'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
       project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
 field_type: og_standard_reference

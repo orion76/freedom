@@ -6,11 +6,11 @@ id: newsletter_transport
 label: 'Newsletter transport'
 description: ''
 folder: ../config/split/newsletter_transport
-module:
-  evsy_newsletter_transport: 0
+module: {  }
 theme: {  }
-blacklist: {  }
+blacklist:
+  - evsy_newsletter.newsletter_transport_config.telegram
 graylist: {  }
-graylist_dependents: true
+graylist_dependents: false
 graylist_skip_equal: false
 weight: 0
