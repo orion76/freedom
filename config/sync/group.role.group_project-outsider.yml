@@ -1,0 +1,15 @@
+uuid: e70d6c01-c6c3-4d4d-9974-11697ffa35a2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - group.type.group_project
+id: group_project-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: group_project
+permissions_ui: true
+permissions:
+  - 'join group'

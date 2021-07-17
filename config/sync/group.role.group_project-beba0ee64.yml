@@ -1,0 +1,17 @@
+uuid: 3a79e4d8-6d8f-47ce-afdc-be3e668fe5c5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - group.type.group_project
+  enforced:
+    config:
+      - user.role.comrade
+id: group_project-beba0ee64
+label: Соратник
+weight: -4
+internal: true
+audience: outsider
+group_type: group_project
+permissions_ui: false
+permissions: {  }
