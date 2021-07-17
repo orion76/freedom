@@ -11,7 +11,7 @@ id: node.user__notes.body
 field_name: body
 entity_type: node
 bundle: user__notes
-label: Body
+label: Содержимое
 description: ''
 required: false
 translatable: true
