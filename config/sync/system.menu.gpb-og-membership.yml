@@ -1,0 +1,8 @@
+uuid: 7bea82b1-a863-47f9-bd7d-897e0c8377a5
+langcode: ru
+status: true
+dependencies: {  }
+id: gpb-og-membership
+label: 'Og Membership'
+description: ''
+locked: false

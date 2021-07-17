@@ -1,0 +1,59 @@
+uuid: fd7fb346-691f-44a7-aef2-fafaac021fba
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.group_task.body
+    - field.field.node.group_task.comment
+    - field.field.node.group_task.field_status
+    - field.field.node.group_task.og_audience
+    - node.type.group_task
+  module:
+    - comment
+    - text
+    - user
+id: node.group_task.default
+targetEntityType: node
+bundle: group_task
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_status:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  og_audience:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

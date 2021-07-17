@@ -1,0 +1,23 @@
+uuid: bd46321e-4c6a-4595-aef2-834c44a09331
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.group_material
+  module:
+    - text
+id: node.group_material.body
+field_name: body
+entity_type: node
+bundle: group_material
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

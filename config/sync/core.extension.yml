@@ -13,6 +13,7 @@ module:
   bricks_inline: 0
   bricks_revisions: 0
   ckeditor: 0
+  collapsiblock: 0
   color: 0
   comment: 0
   components: 0
@@ -27,6 +28,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity: 0
+  entity_browser: 0
   entity_reference: 0
   entity_reference_revisions: 0
   evsy_event: 0
@@ -43,9 +45,9 @@ module:
   freedom_fields: 0
   freedom_main: 0
   freedom_views: 0
-  gnode: 0
+  gpb_commands: 0
+  gpb_og: 0
   gpb_user: 0
-  group: 0
   help: 0
   history: 0
   image: 0
@@ -67,6 +69,8 @@ module:
   menu_token: 0
   menu_ui: 0
   node: 0
+  og: 0
+  og_ui: 0
   options: 0
   page_cache: 0
   paragraphs_type_permissions: 0

@@ -1,8 +1,0 @@
-uuid: 85d17f48-39a1-421e-b56c-23c356b790b6
-langcode: ru
-status: true
-dependencies: {  }
-id: group-menu
-label: 'Group menu'
-description: ''
-locked: false

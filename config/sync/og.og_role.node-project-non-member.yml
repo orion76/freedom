@@ -1,0 +1,16 @@
+uuid: 05074fac-dc75-4f7e-b32c-75646f86c7b2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node-project-non-member
+label: Non-member
+weight: 3
+is_admin: null
+group_type: node
+group_bundle: project
+group_id: null
+permissions:
+  - subscribe
+role_type: required

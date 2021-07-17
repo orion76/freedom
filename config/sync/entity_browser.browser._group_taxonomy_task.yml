@@ -1,0 +1,31 @@
+uuid: 70eccc92-9ec4-45a9-9fad-b574e5952bac
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.browser__group_taxonomy_task
+  module:
+    - views
+name: _group_taxonomy_task
+label: '(group taxonomy) Task'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  cf9b2561-a386-4663-82ab-70e8833e9ab2:
+    settings:
+      view: browser__group_taxonomy_task
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: cf9b2561-a386-4663-82ab-70e8833e9ab2
+    weight: 1
+    label: view
+    id: view

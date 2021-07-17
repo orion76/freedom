@@ -1,0 +1,11 @@
+uuid: 5bc4b963-23f0-4b34-b5ea-9fcee03327b3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.group_section
+id: taxonomy_term.group_section
+target_entity_type_id: taxonomy_term
+target_bundle: group_section
+default_langcode: site_default
+language_alterable: false

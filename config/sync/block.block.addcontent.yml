@@ -1,0 +1,34 @@
+uuid: 479476ab-8109-459f-9412-79a2a25a3e1d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.gpb_og.add_content
+  module:
+    - collapsiblock
+    - system
+  theme:
+    - radix_sub
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: addcontent
+theme: radix_sub
+region: sidebar_left
+weight: -11
+provider: null
+plugin: 'system_menu_block:gpb_og.add_content'
+settings:
+  id: 'system_menu_block:gpb_og.add_content'
+  label: 'Add content'
+  provider: system
+  label_display: visible
+  level: '1'
+  depth: '0'
+  expand_all_items: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/project\r\n/project/*"
+    negate: false
+    context_mapping: {  }

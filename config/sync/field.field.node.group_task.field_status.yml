@@ -1,0 +1,33 @@
+uuid: 3a798f2a-a87b-4dc3-b1e3-8a10caec05b5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.group_task
+    - taxonomy.vocabulary.group__task_status
+  content:
+    - 'taxonomy_term:group__task_status:775566d9-265d-48ed-a3db-0bfed20324ec'
+id: node.group_task.field_status
+field_name: field_status
+entity_type: node
+bundle: group_task
+label: Статус
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 775566d9-265d-48ed-a3db-0bfed20324ec
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      group__task_status: group__task_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

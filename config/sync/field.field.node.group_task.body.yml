@@ -1,0 +1,23 @@
+uuid: b07fd2a9-a57f-4b7f-9f8a-ce6286d00797
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.group_task
+  module:
+    - text
+id: node.group_task.body
+field_name: body
+entity_type: node
+bundle: group_task
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

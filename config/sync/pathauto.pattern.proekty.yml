@@ -1,0 +1,34 @@
+uuid: e0d82260-48bd-48a5-be62-69b2a9c31299
+langcode: ru
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: proekty
+label: Проекты
+type: 'canonical_entities:node'
+pattern: 'project/[node:nid]'
+selection_criteria:
+  4ae4a1a6-077c-4ba8-a98e-6b58c3230b0c:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4ae4a1a6-077c-4ba8-a98e-6b58c3230b0c
+  cadcffac-ef63-4244-af11-fb8b2ac3cb3d:
+    id: language
+    langcodes:
+      en: en
+      ru: ru
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: cadcffac-ef63-4244-af11-fb8b2ac3cb3d
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

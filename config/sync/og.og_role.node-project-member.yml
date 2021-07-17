@@ -1,0 +1,23 @@
+uuid: 4865b889-5e61-4453-8308-734b7bb653e7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node-project-member
+label: Member
+weight: 1
+is_admin: null
+group_type: node
+group_bundle: project
+group_id: null
+permissions:
+  - 'create group_material content'
+  - 'create group_task content'
+  - 'edit own group_material content'
+  - 'edit own group_task content'
+  - 'view any group_material content'
+  - 'view any group_task content'
+  - 'view own group_material content'
+  - 'view own group_task content'
+role_type: required

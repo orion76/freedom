@@ -1,0 +1,15 @@
+uuid: 0121c11c-49dc-482d-8915-264118b2d2d1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node-project-administrator
+label: Administrator
+weight: 2
+is_admin: true
+group_type: node
+group_bundle: project
+group_id: null
+permissions: {  }
+role_type: null

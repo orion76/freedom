@@ -1,0 +1,18 @@
+uuid: 3dd94eb5-d660-47d8-a391-ba597652c39a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: '(group) Task'
+type: group_task
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,37 @@
+uuid: 83c44c6f-92a4-4d4a-ae53-775f2494f93e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.gpb-og-membership
+  module:
+    - collapsiblock
+    - og
+    - system
+  theme:
+    - radix_sub
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: ogmembership
+theme: radix_sub
+region: sidebar_left
+weight: -11
+provider: null
+plugin: 'system_menu_block:gpb-og-membership'
+settings:
+  id: 'system_menu_block:gpb-og-membership'
+  label: Участие
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  og_group_type:
+    id: og_group_type
+    group_types:
+      node-project: node-project
+    negate: false
+    context_mapping:
+      og: '@og.context:og'

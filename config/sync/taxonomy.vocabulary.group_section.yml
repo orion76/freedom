@@ -1,0 +1,8 @@
+uuid: fb3c30e7-cbce-47ed-93ea-e83f3c494a64
+langcode: ru
+status: true
+dependencies: {  }
+name: (group)Раздел
+vid: group_section
+description: (group)Раздел
+weight: 0

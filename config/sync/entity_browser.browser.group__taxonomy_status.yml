@@ -1,0 +1,31 @@
+uuid: 308c13d4-4724-4f79-b0b7-dbf4212f2540
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.browser__group_taxonomy_status
+  module:
+    - views
+name: group__taxonomy_status
+label: '(group) Taxonomy Status'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  d3427470-1b11-4a13-b8f2-9c28af7bd006:
+    settings:
+      view: browser__group_taxonomy_status
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: d3427470-1b11-4a13-b8f2-9c28af7bd006
+    weight: 1
+    label: view
+    id: view

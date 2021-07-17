@@ -1,0 +1,8 @@
+uuid: 9dd56221-87c3-4265-b487-4028d09d738f
+langcode: ru
+status: true
+dependencies: {  }
+name: Задача
+vid: group__task
+description: group__task
+weight: 0

@@ -1,0 +1,10 @@
+uuid: a98e4c00-abd1-4c62-abaf-0dd539f8052f
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ht_-iYp8Gj4pnesc_0ilHBi6xiVVBBEa3vI4hT_cvqQ
+id: freedom_group
+label: Group
+description: 'User profile sections'
+locked: true

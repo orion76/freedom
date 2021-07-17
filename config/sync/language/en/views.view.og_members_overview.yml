@@ -1,0 +1,47 @@
+label: 'Members overview'
+description: 'Overview of the existing group members'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        og_membership_bulk_form:
+          label: 'Bulk update'
+          action_title: Action
+        name:
+          label: Name
+          separator: ', '
+        created:
+          label: 'Member since'
+          separator: ', '
+        state:
+          label: State
+          separator: ', '
+        roles_target_id:
+          label: Roles
+          separator: ', '
+      arguments:
+        entity_type:
+          exception:
+            title: All
+        entity_id:
+          exception:
+            title: All

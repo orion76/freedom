@@ -1,0 +1,10 @@
+uuid: f7a08ce0-adbc-4513-bd2f-b0494f266b44
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ek7jDCI__pRgobGLs9lKMMrfgGli5fHaT-wUNFs2REg
+id: gpb_og.add_content
+label: 'Add content'
+description: 'Add content'
+locked: true

@@ -1,0 +1,22 @@
+uuid: cc7b6ef8-dcb3-48e4-9179-bf74bf17f7e9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.group__task
+  module:
+    - text
+id: taxonomy_term.group__task.default
+targetEntityType: taxonomy_term
+bundle: group__task
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

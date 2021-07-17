@@ -1,0 +1,37 @@
+uuid: 78971d1c-9581-4748-973f-b16837073492
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.group_task.body
+    - field.field.node.group_task.comment
+    - field.field.node.group_task.field_status
+    - field.field.node.group_task.og_audience
+    - node.type.group_task
+  module:
+    - text
+    - user
+id: node.group_task.teaser
+targetEntityType: node
+bundle: group_task
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment: true
+  field_status: true
+  langcode: true
+  og_audience: true

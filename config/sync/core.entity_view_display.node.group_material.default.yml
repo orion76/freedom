@@ -1,0 +1,48 @@
+uuid: f7409c2c-c344-4e7f-bbdf-d77a688c604a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.group_material.body
+    - field.field.node.group_material.field_files
+    - field.field.node.group_material.og_audience
+    - node.type.group_material
+  module:
+    - text
+    - user
+id: node.group_material.default
+targetEntityType: node
+bundle: group_material
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_files:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  og_audience:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

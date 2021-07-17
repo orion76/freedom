@@ -1,0 +1,11 @@
+uuid: f27e5d3f-e09b-4270-b0d2-bb6f16705925
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.group_material
+id: node.group_material
+target_entity_type_id: node
+target_bundle: group_material
+default_langcode: site_default
+language_alterable: false

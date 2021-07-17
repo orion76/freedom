@@ -1,0 +1,10 @@
+uuid: e65362e2-9a97-4b3c-b3ed-90c394bd0d91
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dnEfr3bRCb29QcbOsnjvedHhMPUhwfdJCkYF5uPccDM
+id: freedom_group_settings
+label: 'Group settings'
+description: 'Group settings'
+locked: true

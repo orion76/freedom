@@ -1,0 +1,79 @@
+uuid: e9949a5d-b5cc-46de-89ae-65c60a76afcb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.group_task.body
+    - field.field.node.group_task.comment
+    - field.field.node.group_task.field_status
+    - field.field.node.group_task.og_audience
+    - node.type.group_task
+  module:
+    - comment
+    - field_layout
+    - gpb_og
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.group_task.default
+targetEntityType: node
+bundle: group_task
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_status:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  og_audience:
+    type: gpb_og_reference
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  moderation_state: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

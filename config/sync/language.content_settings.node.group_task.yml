@@ -1,0 +1,11 @@
+uuid: 168dec8e-610c-4e81-bb4e-8a93c58b34e5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.group_task
+id: node.group_task
+target_entity_type_id: node
+target_bundle: group_task
+default_langcode: site_default
+language_alterable: false

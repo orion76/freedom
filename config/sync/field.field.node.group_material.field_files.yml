@@ -1,0 +1,36 @@
+uuid: 21819525-ebdb-4c7d-8576-09e7438b4c9b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.group_material
+id: node.group_material.field_files
+field_name: field_files
+entity_type: node
+bundle: group_material
+label: Файлы
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

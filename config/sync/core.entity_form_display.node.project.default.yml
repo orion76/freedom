@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
-    - field.field.node.project.field_initiative
+    - field.field.node.project.field_access
     - node.type.project
   module:
     - content_moderation
@@ -38,8 +38,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_initiative:
-    weight: 1
+  field_access:
+    weight: 26
     settings:
       match_operator: CONTAINS
       match_limit: 10

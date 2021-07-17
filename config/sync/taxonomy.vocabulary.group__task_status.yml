@@ -1,0 +1,8 @@
+uuid: 40f90f4c-e7c9-4627-bd80-6d478ea6ac79
+langcode: ru
+status: true
+dependencies: {  }
+name: (group)Статус
+vid: group__task_status
+description: '(group) Task status'
+weight: 0

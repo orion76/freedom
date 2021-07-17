@@ -1,0 +1,26 @@
+uuid: ef801f41-4843-4771-a65e-6e8f4f14c9b6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_audience
+    - node.type.group_material
+    - node.type.project
+  module:
+    - og
+id: node.group_material.og_audience
+field_name: og_audience
+entity_type: node
+bundle: group_material
+label: 'Groups audience'
+description: 'OG group audience reference field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'og:default'
+  handler_settings:
+    target_bundles:
+      project: project
+field_type: og_standard_reference
