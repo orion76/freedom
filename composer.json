@@ -51,6 +51,7 @@
     "drupal/chosen": "^3.0",
     "drupal/collapsiblock": "^3.0",
     "drupal/components": "^2.2",
+    "drupal/config_split": "^1.7",
     "drupal/console": "~1.0",
     "drupal/core-composer-scaffold": "^8.8",
     "drupal/core-project-message": "^8.8",
