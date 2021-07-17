@@ -1,0 +1,22 @@
+uuid: c39545a4-b9e4-45a2-a88c-bb33792dac7c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.user__notes
+id: node.user__notes.promote
+field_name: promote
+entity_type: node
+bundle: user__notes
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
