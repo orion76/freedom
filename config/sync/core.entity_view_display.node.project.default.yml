@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
-    - field.field.node.project.field_access
     - node.type.project
   module:
     - og
@@ -22,24 +21,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_access:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   og_group:
     weight: 0
     type: og_group_subscribe
     region: content
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
 hidden:

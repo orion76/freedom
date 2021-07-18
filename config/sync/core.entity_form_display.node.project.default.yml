@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
-    - field.field.node.project.field_access
     - node.type.project
   module:
     - content_moderation
@@ -38,16 +37,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_access:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   langcode:
     type: language_select
     weight: 3
